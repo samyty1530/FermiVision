@@ -1,0 +1,229 @@
+{
+  "nav": {
+    "products": "Products",
+    "industries": "Industries",
+    "downloads": "Downloads",
+    "about": "About",
+    "contact": "Contact",
+    "home": "Home",
+    "solutions": "Solutions"
+  },
+  "hero": {
+    "title": "Pioneering the Future of Metrology Technology",
+    "subtitle": "Industry-leading solutions with proprietary algorithms and advanced data processing",
+    "cta": {
+      "learnMore": "Learn More"
+    }
+  },
+  "partners": {
+    "title": "Our products have helped create industry-leading products from around the world."
+  },
+  "industries": {
+    "title": "Explore Applicable Industries",
+    "subtitle": "Driving Innovation in Electronics, Aerospace, and Electric Mobility with Advanced Computer Vision and Optical Metrology",
+    "pageTitle": "Industries We Serve",
+    "pageSubtitle": "Discover how our vision technology solutions transform operations across diverse sectors",
+    "item1": {
+      "title": "PCB Manufacturing",
+      "subtitle": "Specialized vision solutions for PCB manufacturing",
+      "description": "Metrology guarantees the integrity of microscopic traces and vias, essential for reliable signal transmission. By monitoring critical dimensions and detecting defects, metrology supports the mass production of highly intricate boards used in everything from consumer electronics to advanced industrial systems.",
+      "alt": "PCB Manufacturing Industry"
+    },
+    "item2": {
+      "title": "ARVR and Personal Devices",
+      "subtitle": "Solutions for a wide range of personal electronics",
+      "description": "In augmented reality (AR) and virtual reality (VR) technologies, metrology ensures the accuracy of components like lenses, sensors, and microdisplays. Precise measurements enable seamless integration, reducing latency and improving user experience. For personal devices, metrology aids in miniaturization, ensuring tight tolerances for compact and efficient designs.",
+      "alt": "ARVR and Personal Devices Industry"
+    },
+    "item3": {
+      "title": "Aerospace",
+      "subtitle": "Elevating safety and performance with advanced metrology solutions",
+      "description": "Accuracy is indispensable for achieving extreme precision in manufacturing aircraft and spacecraft components. It ensures tight tolerances for aerodynamic surfaces, engine parts, and structural elements. Advanced metrology tools verify alignment and assembly, enhancing safety and performance. By enabling innovations in lightweight materials and propulsion systems, metrology drives progress in one of the most demanding engineering fields.",
+      "alt": "Aerospace Industry"
+    },
+    "item4": {
+      "title": "New Energy Automotives",
+      "subtitle": "Driving electric innovation with precision optical measurement",
+      "description": "The transition to electric and hybrid vehicles depends heavily on precise battery cell manufacturing and electric motor components. Metrology ensures uniformity in battery cell assembly, critical for performance and safety. It also supports aerodynamic optimization and efficient drivetrain production through accurate measurements.",
+      "alt": "New Energy Automotives Industry"
+    },
+    "overview": "Fermi Vision provides cutting-edge computer vision solutions across multiple industries."
+  },
+  "products": {
+    "featured": {
+      "title": "Product Series",
+      "subtitle": "Tailored to your product manufacturing needs",
+      "item1": {
+        "title": "Vision Series U",
+        "description": "Advanced vision technology for precision applications",
+        "alt": "Vision Series U Product"
+      },
+      "item2": {
+        "title": "Vision Series A",
+        "description": "Advanced vision technology for high-speed applications",
+        "alt": "Vision Series A Product"
+      },
+      "item3": {
+        "title": "Vision Series F",
+        "description": "Advanced vision technology for complex environments",
+        "alt": "Vision Series F Product"
+      },
+      "item4": {
+        "title": "Vision Series B",
+        "description": "Advanced vision technology for specialized applications",
+        "alt": "Vision Series B Product"
+      }
+    },
+    "categories": {
+      "title": "Product Categories",
+      "u_series": "Imaging Solutions",
+      "a_series": "Automated Metrology Solutions",
+      "f_series": "Advanced Optical Metrology Solutions",
+      "b_series": "Specialized Vision Solutions",
+      "accessories": "Accessories & Components"
+    },
+    "pageTitle": "Our Products",
+    "pageSubtitle": "Discover our comprehensive range of computer vision and optical solutions.",
+    "searchResults": "Search Results for ",
+    "searchSubtitle": "Showing products matching your search criteria"
+  },
+  "news": {
+    "title": "News & Events",
+    "readMore": "Read More",
+    "item1": {
+      "title": "Latest Announcement 1",
+      "description": "Fermi Vision announces new developments in vision technology that will revolutionize the industry with unprecedented precision and reliability.",
+      "date": "June 1, 2023",
+      "alt": "News Item 1"
+    },
+    "item2": {
+      "title": "Latest Announcement 2",
+      "description": "Fermi Vision announces new developments in vision technology that will revolutionize the industry with unprecedented precision and reliability.",
+      "date": "June 2, 2023",
+      "alt": "News Item 2"
+    }
+  },
+  "search": {
+    "placeholder": "Search products..."
+  },
+  "downloads": {
+    "title": "Downloads",
+    "subtitle": "Access product documentation, software updates, and technical resources.",
+    "categories": {
+      "software": "Software Downloads",
+      "documentation": "Product Documentation",
+      "drivers": "Drivers & Firmware",
+      "certifications": "Certifications"
+    },
+    "requestForm": {
+      "title": "Request Additional Resources",
+      "subtitle": "Complete the form below to request access to additional resources",
+      "name": "Full Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "product": "Product of Interest",
+      "reason": "Reason for Request",
+      "submit": "Submit Request",
+      "success": "Your request has been submitted successfully. We will contact you shortly.",
+      "required": "Required field"
+    }
+  },
+  "about": {
+    "title": "About Fermi Vision",
+    "subtitle": "Leading the future of machine vision measurement technology",
+    "overview": {
+      "title": "Company Overview",
+      "content": "Shenzhen Fermi Vision Co., Ltd. is a high-tech enterprise specializing in the development of proprietary machine vision measurement systems, holding full intellectual property rights (IPRs) over key innovations. Committed to designing industry-leading solutions, our product suite delivers metrology-grade accuracy, real-time processing speed, and customized industrial solutions to meet the specific needs of our clients."
+    },
+    "products": {
+      "title": "Product Portfolio",
+      "description": "The product portfolio includes a diverse array of cutting-edge instruments, combining metrology-grade accuracy and real-time reading speeds:",
+      "bSeries": {
+        "name": "B Series",
+        "description": "Massive micro-size targets measurement devices"
+      },
+      "fSeries": {
+        "name": "F Series",
+        "description": "Strobe fly-through measurement instruments"
+      },
+      "aSeries": {
+        "name": "A Series",
+        "description": "High-efficiency full-image scanning and stitching measurement instruments"
+      },
+      "uSeries": {
+        "name": "U Series",
+        "description": "2.5D general-purpose machine vision inspection instruments"
+      },
+      "accessories": {
+        "name": "Metrology Accessories",
+        "description": "Metrology accessories and components"
+      }
+    },
+    "applications": {
+      "title": "Main Product Applications",
+      "description": "Our instruments allow for comprehensive inspection and measurement of high-density and high-precision products, including:",
+      "item1": "Silicon-based carrier boards",
+      "item2": "Micro-holes",
+      "item3": "Line widths and spacings",
+      "item4": "Mini LEDs",
+      "item5": "IC carrier boards",
+      "item6": "Photovoltaics",
+      "item7": "New energy industry components"
+    },
+    "excellence": {
+      "title": "Industry Excellence",
+      "content": "Each series of inspection instruments has been meticulously designed to achieve superior levels of precision and speed. This positions the company's offerings at the forefront of the industry, enabling them to effectively compete with imported instruments."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully. We will get back to you soon.",
+      "required": "Required field"
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Business Hours"
+    }
+  },
+  "footer": {
+    "company": {
+      "description": "Pioneering the future of technology with innovative solutions for tomorrow's challenges."
+    },
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "contactUs": "Contact Us",
+    "copyright": "All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "sitemap": "Sitemap",
+    "blog": "Blog",
+    "caseStudies": "Case Studies",
+    "whitePapers": "White Papers",
+    "documentation": "Documentation",
+    "support": "Support"
+  },
+  "header": {
+    "companyName": "Fermi Vision",
+    "searchPlaceholder": "Search products..."
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "backToTop": "Back to Top",
+    "loading": "Loading...",
+    "download": "Download",
+    "sendAnotherMessage": "Send Another Message",
+    "submitAnotherRequest": "Submit Another Request"
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "nav": {
+    "products": "产品",
+    "industries": "行业",
+    "downloads": "下载",
+    "about": "关于我们",
+    "contact": "联系我们",
+    "home": "首页",
+    "solutions": "解决方案"
+  },
+  "hero": {
+    "title": "计量技术的未来先驱",
+    "subtitle": "具有专有算法和先进数据处理的行业领先解决方案",
+    "cta": {
+      "learnMore": "了解更多"
+    }
+  },
+  "partners": {
+    "title": "我们的产品帮助全球创造了行业领先的产品。"
+  },
+  "industries": {
+    "title": "探索适用行业",
+    "subtitle": "利用先进的计算机视觉与光学测量技术，驱动电子、航空航天与新能源出行的创新",
+    "pageTitle": "我们服务的行业",
+    "pageSubtitle": "了解我们的视觉技术解决方案如何改变各个行业的运营",
+    "item1": {
+      "title": "PCB制造",
+      "subtitle": "专业的PCB制造视觉解决方案",
+      "description": "计量技术保证微观走线和通孔的完整性，对可靠的信号传输至关重要。通过监控关键尺寸和检测缺陷，计量技术支持从消费电子产品到先进工业系统中使用的高度复杂电路板的大规模生产。",
+      "alt": "PCB制造业"
+    },
+    "item2": {
+      "title": "AR/VR和个人设备",
+      "subtitle": "广泛个人电子设备解决方案",
+      "description": "在增强现实(AR)和虚拟现实(VR)技术中，计量技术确保镜头、传感器和微显示器等组件的精度。精确测量实现无缝集成，减少延迟并改善用户体验。对于个人设备，计量技术有助于小型化，确保紧凑高效设计的严格公差。",
+      "alt": "AR/VR和个人设备行业"
+    },
+    "item3": {
+      "title": "航空航天",
+      "subtitle": "通过先进计量解决方案提升安全性和性能",
+      "description": "精度对于在制造飞机和航天器组件中实现极端精密度是不可或缺的。它确保空气动力学表面、发动机部件和结构元件的严格公差。先进的计量工具验证对齐和装配，提高安全性和性能。通过在轻量化材料和推进系统方面实现创新，计量技术推动了最具挑战性工程领域之一的进步。",
+      "alt": "航空航天行业"
+    },
+    "item4": {
+      "title": "新能源汽车",
+      "subtitle": "通过精密光学测量推动电动创新",
+      "description": "向电动和混合动力汽车的转型在很大程度上依赖于精密的电池单元制造和电机组件。计量技术确保电池单元装配的一致性，对性能和安全至关重要。它还通过精确测量支持空气动力学优化和高效传动系统生产。",
+      "alt": "新能源汽车行业"
+    },
+    "overview": "Fermi Vision 为多个行业提供尖端计算机视觉解决方案。"
+  },
+  "products": {
+    "featured": {
+      "title": "产品系列",
+      "subtitle": "为您的产品制造需求量身定制",
+      "item1": {
+        "title": "视觉系列 U",
+        "description": "用于精密应用的先进视觉技术",
+        "alt": "视觉系列 U 产品"
+      },
+      "item2": {
+        "title": "视觉系列 A",
+        "description": "用于高速应用的先进视觉技术",
+        "alt": "视觉系列 A 产品"
+      },
+      "item3": {
+        "title": "视觉系列 F",
+        "description": "用于复杂环境的先进视觉技术",
+        "alt": "视觉系列 F 产品"
+      },
+      "item4": {
+        "title": "视觉系列 B",
+        "description": "用于专业应用的先进视觉技术",
+        "alt": "视觉系列 B 产品"
+      }
+    },
+    "categories": {
+      "title": "产品类别",
+      "u_series": "成像解决方案",
+      "a_series": "自动化计量解决方案",
+      "f_series": "先进光学计量解决方案",
+      "b_series": "专业视觉解决方案",
+      "accessories": "配件和组件"
+    },
+    "pageTitle": "我们的产品",
+    "pageSubtitle": "探索我们全面的计算机视觉和光学解决方案。",
+    "searchResults": "搜索结果: ",
+    "searchSubtitle": "显示符合您搜索条件的产品"
+  },
+  "news": {
+    "title": "新闻与活动",
+    "readMore": "阅读更多",
+    "item1": {
+      "title": "最新公告 1",
+      "description": "Fermi Vision 宣布视觉技术的新发展，将以前所未有的精度和可靠性彻底改变行业。",
+      "date": "2023年6月1日",
+      "alt": "新闻项目 1"
+    },
+    "item2": {
+      "title": "最新公告 2",
+      "description": "Fermi Vision 宣布视觉技术的新发展，将以前所未有的精度和可靠性彻底改变行业。",
+      "date": "2023年6月2日",
+      "alt": "新闻项目 2"
+    }
+  },
+  "search": {
+    "placeholder": "搜索产品..."
+  },
+  "downloads": {
+    "title": "下载",
+    "subtitle": "获取产品文档、软件更新和技术资源。",
+    "categories": {
+      "software": "软件下载",
+      "documentation": "产品文档",
+      "drivers": "驱动程序和固件",
+      "certifications": "认证"
+    },
+    "requestForm": {
+      "title": "请求额外资源",
+      "subtitle": "填写下面的表格以请求访问额外资源",
+      "name": "全名",
+      "email": "电子邮件地址",
+      "company": "公司名称",
+      "product": "感兴趣的产品",
+      "reason": "请求原因",
+      "submit": "提交请求",
+      "success": "您的请求已成功提交。我们将很快与您联系。",
+      "required": "必填字段"
+    }
+  },
+  "about": {
+    "title": "关于 Fermi Vision",
+    "subtitle": "引领机器视觉测量技术的未来",
+    "overview": {
+      "title": "公司概况",
+      "content": "深圳费米视觉有限公司是一家专业从事自主机器视觉测量系统开发的高新技术企业，拥有关键创新的完整知识产权(IPRs)。致力于设计行业领先的解决方案，我们的产品套件提供计量级精度、实时处理速度和定制化工业解决方案，以满足客户的特定需求。"
+    },
+    "products": {
+      "title": "产品组合",
+      "description": "产品组合包括多样化的尖端仪器阵列，结合计量级精度和实时读取速度：",
+      "bSeries": {
+        "name": "B 系列",
+        "description": "大规模微尺寸目标测量设备"
+      },
+      "fSeries": {
+        "name": "F 系列",
+        "description": "频闪飞行测量仪器"
+      },
+      "aSeries": {
+        "name": "A 系列",
+        "description": "高效全图像扫描和拼接测量仪器"
+      },
+      "uSeries": {
+        "name": "U 系列",
+        "description": "2.5D 通用机器视觉检测仪器"
+      },
+      "accessories": {
+        "name": "计量配件",
+        "description": "计量配件和组件"
+      }
+    },
+    "applications": {
+      "title": "主要产品应用",
+      "description": "我们的仪器允许对高密度和高精度产品进行全面检测和测量，包括：",
+      "item1": "硅基载板",
+      "item2": "微孔",
+      "item3": "线宽和间距",
+      "item4": "Mini LED",
+      "item5": "IC载板",
+      "item6": "光伏",
+      "item7": "新能源行业组件"
+    },
+    "excellence": {
+      "title": "行业卓越",
+      "content": "每个系列的检测仪器都经过精心设计，以实现卓越的精度和速度水平。这使公司的产品处于行业前沿，能够有效地与进口仪器竞争。"
+    }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "与我们的团队取得联系",
+    "form": {
+      "title": "发送消息给我们",
+      "name": "全名",
+      "email": "电子邮件地址",
+      "subject": "主题",
+      "message": "消息",
+      "submit": "发送消息",
+      "success": "您的消息已成功发送。我们将尽快回复您。",
+      "required": "必填字段"
+    },
+    "info": {
+      "title": "联系信息",
+      "address": "地址",
+      "phone": "电话",
+      "email": "电子邮件",
+      "hours": "营业时间"
+    }
+  },
+  "footer": {
+    "company": {
+      "description": "通过创新解决方案开创技术的未来，迎接明天的挑战。"
+    },
+    "quickLinks": "快速链接",
+    "resources": "资源",
+    "contactUs": "联系我们",
+    "copyright": "版权所有。",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "服务条款",
+    "sitemap": "网站地图",
+    "blog": "博客",
+    "caseStudies": "案例研究",
+    "whitePapers": "白皮书",
+    "documentation": "文档",
+    "support": "支持"
+  },
+  "header": {
+    "companyName": "Fermi Vision",
+    "searchPlaceholder": "搜索产品..."
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "viewAll": "查看全部",
+    "backToTop": "返回顶部",
+    "loading": "加载中...",
+    "download": "下载",
+    "sendAnotherMessage": "发送另一条消息",
+    "submitAnotherRequest": "提交另一个请求"
+  }
+}
