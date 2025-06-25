@@ -22,7 +22,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/logo.svg"
+        logo="/images/temp_FV_logo.png"
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -82,12 +82,12 @@ const Home = () => {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
             <img
-              src="/images/home-partners-1-apple.jpg"
+              src="/images/partners-1-apple.jpg"
               alt="Apple"
               className="h-12 md:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home-partners-2-foxconn.jpg"
+              src="/images/partners-2-foxconn.jpg"
               alt="Foxconn"
               className="h-12 md:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
@@ -163,7 +163,7 @@ const Home = () => {
                   <div className="transition-all duration-1000">
                     <div className="overflow-visible rounded-lg shadow-md">
                       <img
-                        src={`/images/home-industries-${item}.jpg`}
+                        src={`/images/industries-${item}.jpg`}
                         alt={t(
                           `industries.item${item}.alt`,
                           `Industry ${item}`,
@@ -226,7 +226,7 @@ const Home = () => {
                     {series}
                   </div>
                   <img
-                    src={`/images/home-products-${index + 1}.jpg`}
+                    src={`/images/products-${index + 1}.jpg`}
                     alt={t(
                       `products.featured.item${index + 1}.alt`,
                       `Vision Series ${series}`,
@@ -266,7 +266,7 @@ const Home = () => {
                 <div className="md:w-1/2">
                   <div className="rounded-lg overflow-hidden shadow-md">
                     <img
-                      src={`/images/home-news-${item}.jpg`}
+                      src={`/images/news-${item}.jpg`}
                       alt={t(`news.item${item}.alt`, `News Item ${item}`)}
                       className="w-full h-full object-cover"
                     />

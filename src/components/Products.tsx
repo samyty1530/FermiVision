@@ -57,14 +57,14 @@ const Products = () => {
         name: "Vision Series U",
         series: "U",
         description: "Compact sensor for real-time object detection",
-        image: "/images/product-1.jpg",
+        image: "/images/products-1.jpg",
       },
       {
         id: 2,
         name: "Vision Series U Pro",
         series: "U",
         description: "Advanced 3D scanning technology for complex objects",
-        image: "/images/product-2.jpg",
+        image: "/images/products-2.jpg",
       },
     ],
     a_series: [
@@ -73,14 +73,14 @@ const Products = () => {
         name: "Vision Series A - A5",
         series: "A",
         description: "Comprehensive software for image processing and analysis",
-        image: "/images/product-4.jpg",
+        image: "/images/products-4.jpg",
       },
       {
         id: 5,
         name: "Vision Series A - Recognition",
         series: "A",
         description: "Cloud-based API for real-time object recognition",
-        image: "/images/product-5.jpg",
+        image: "/images/products-5.jpg",
       },
     ],
     f_series: [
@@ -89,14 +89,14 @@ const Products = () => {
         name: "Vision Series F - Factory",
         series: "F",
         description: "End-to-end vision system for manufacturing environments",
-        image: "/images/product-6.jpg",
+        image: "/images/products-6.jpg",
       },
       {
         id: 7,
         name: "Vision Series F - Navigation",
         series: "F",
         description: "Integrated vision system for autonomous vehicles",
-        image: "/images/product-7.jpg",
+        image: "/images/products-7.jpg",
       },
     ],
     accessories: [
@@ -104,13 +104,13 @@ const Products = () => {
         id: 8,
         name: "Precision Lens Kit",
         description: "High-quality lenses for vision cameras",
-        image: "/images/product-8.jpg",
+        image: "/images/products-8.jpg",
       },
       {
         id: 9,
         name: "Mounting Solutions",
         description: "Versatile mounting options for vision hardware",
-        image: "/images/product-9.jpg",
+        image: "/images/products-9.jpg",
       },
     ],
   };
@@ -161,7 +161,7 @@ const Products = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/logo.svg"
+        logo="/images/temp_FV_logo.png"
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
