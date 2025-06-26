@@ -39,7 +39,8 @@ const Downloads = () => {
           size: "245 MB",
           date: "2023-05-15",
           icon: <Code className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-software-1.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
         },
         {
           id: 2,
@@ -48,7 +49,8 @@ const Downloads = () => {
           size: "180 MB",
           date: "2023-04-22",
           icon: <Code className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-software-2.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&q=80",
         },
         {
           id: 3,
@@ -57,7 +59,8 @@ const Downloads = () => {
           size: "125 MB",
           date: "2023-06-01",
           icon: <Code className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-software-3.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80",
         },
       ],
     },
@@ -72,7 +75,8 @@ const Downloads = () => {
           size: "8.5 MB",
           date: "2023-03-10",
           icon: <FileText className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-doc-1.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
         },
         {
           id: 5,
@@ -81,7 +85,8 @@ const Downloads = () => {
           size: "3.2 MB",
           date: "2023-05-20",
           icon: <FileText className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-doc-2.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&q=80",
         },
         {
           id: 6,
@@ -91,7 +96,8 @@ const Downloads = () => {
           size: "5.7 MB",
           date: "2023-04-15",
           icon: <FileText className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-doc-3.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80",
         },
       ],
     },
@@ -106,7 +112,8 @@ const Downloads = () => {
           size: "18.3 MB",
           date: "2023-06-05",
           icon: <Download className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-driver-1.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
         },
         {
           id: 8,
@@ -115,7 +122,8 @@ const Downloads = () => {
           size: "45.1 MB",
           date: "2023-05-12",
           icon: <Download className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-driver-2.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&q=80",
         },
         {
           id: 9,
@@ -124,7 +132,8 @@ const Downloads = () => {
           size: "32.7 MB",
           date: "2023-04-30",
           icon: <Download className="h-6 w-6 text-primary" />,
-          imageUrl: "/images/download-driver-3.jpg",
+          imageUrl:
+            "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80",
         },
       ],
     },

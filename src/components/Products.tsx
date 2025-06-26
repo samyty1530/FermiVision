@@ -57,14 +57,16 @@ const Products = () => {
         name: "Vision Series U",
         series: "U",
         description: "Compact sensor for real-time object detection",
-        image: "/images/products-1.jpg",
+        image:
+          "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
       },
       {
         id: 2,
         name: "Vision Series U Pro",
         series: "U",
         description: "Advanced 3D scanning technology for complex objects",
-        image: "/images/products-2.jpg",
+        image:
+          "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&q=80",
       },
     ],
     a_series: [
@@ -73,14 +75,16 @@ const Products = () => {
         name: "Vision Series A - A5",
         series: "A",
         description: "Comprehensive software for image processing and analysis",
-        image: "/images/products-4.jpg",
+        image:
+          "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80",
       },
       {
         id: 5,
         name: "Vision Series A - Recognition",
         series: "A",
         description: "Cloud-based API for real-time object recognition",
-        image: "/images/products-5.jpg",
+        image:
+          "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
       },
     ],
     f_series: [
@@ -89,14 +93,16 @@ const Products = () => {
         name: "Vision Series F - Factory",
         series: "F",
         description: "End-to-end vision system for manufacturing environments",
-        image: "/images/products-6.jpg",
+        image:
+          "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&q=80",
       },
       {
         id: 7,
         name: "Vision Series F - Navigation",
         series: "F",
         description: "Integrated vision system for autonomous vehicles",
-        image: "/images/products-7.jpg",
+        image:
+          "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=400&q=80",
       },
     ],
     accessories: [
@@ -104,13 +110,15 @@ const Products = () => {
         id: 8,
         name: "Precision Lens Kit",
         description: "High-quality lenses for vision cameras",
-        image: "/images/products-8.jpg",
+        image:
+          "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80",
       },
       {
         id: 9,
         name: "Mounting Solutions",
         description: "Versatile mounting options for vision hardware",
-        image: "/images/products-9.jpg",
+        image:
+          "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=400&q=80",
       },
     ],
   };

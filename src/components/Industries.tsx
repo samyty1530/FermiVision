@@ -17,7 +17,8 @@ const Industries = () => {
         "Specialized vision solutions for PCB manufacturing",
         "Metrology guarantees the integrity of microscopic traces and vias, essential for reliable signal transmission. By monitoring critical dimensions and detecting defects, metrology supports the mass production of highly intricate boards used in everything from consumer electronics to advanced industrial systems.",
       ),
-      image: "/images/industries-1.jpg",
+      image:
+        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
       challenges: [
         "Quality control and defect detection",
         "Process optimization",
@@ -39,7 +40,8 @@ const Industries = () => {
         "Solutions for a wide range of personal electronics",
         "In augmented reality (AR) and virtual reality (VR) technologies, metrology ensures the accuracy of components like lenses, sensors, and microdisplays. Precise measurements enable seamless integration, reducing latency and improving user experience. For personal devices, metrology aids in miniaturization, ensuring tight tolerances for compact and efficient designs.",
       ),
-      image: "/images/industries-2.jpg",
+      image:
+        "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80",
       challenges: [
         "Diagnostic accuracy",
         "Patient monitoring",
@@ -61,7 +63,8 @@ const Industries = () => {
         "Elevating safety and performance with advanced metrology solutions",
         "Accuracy is indispensable for achieving extreme precision in manufacturing aircraft and spacecraft components. It ensures tight tolerances for aerodynamic surfaces, engine parts, and structural elements. Advanced metrology tools verify alignment and assembly, enhancing safety and performance. By enabling innovations in lightweight materials and propulsion systems, metrology drives progress in one of the most demanding engineering fields.",
       ),
-      image: "/images/industries-3.jpg",
+      image:
+        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
       challenges: [
         "Perimeter security",
         "Threat detection",
@@ -83,7 +86,8 @@ const Industries = () => {
         "Driving electric innovation with precision optical measurement",
         "The transition to electric and hybrid vehicles depends heavily on precise battery cell manufacturing and electric motor components. Metrology ensures uniformity in battery cell assembly, critical for performance and safety. It also supports aerodynamic optimization and efficient drivetrain production through accurate measurements.",
       ),
-      image: "/images/industries-4.jpg",
+      image:
+        "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80",
       challenges: [
         "Object detection and tracking",
         "Lane detection",

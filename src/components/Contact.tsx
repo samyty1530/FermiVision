@@ -220,10 +220,7 @@ const Contact = () => {
                         <h3 className="font-semibold text-gray-900 mb-1">
                           {t("contact.info.email", "Email")}
                         </h3>
-                        <a
-                          href="mailto:info@fermivision.com"
-                          className="text-sm hover:text-primary transition-colors"
-                        ></a>
+
                         <p className="text-gray-600">sales@fermivision.com</p>
                       </div>
                     </div>
@@ -237,7 +234,7 @@ const Contact = () => {
                   {/* In a real application, you would embed a Google Map or similar here */}
                   <div className="w-full h-full">
                     <img
-                      src="/images/contact-map.jpg"
+                      src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80"
                       alt="Office Location Map"
                       className="w-full h-full object-cover"
                     />
