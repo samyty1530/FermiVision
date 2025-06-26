@@ -4,6 +4,8 @@ import Home from "./components/home";
 import Products from "./components/Products";
 import Industries from "./components/Industries";
 import Downloads from "./components/Downloads";
+import News from "./components/News";
+import NewsArticle from "./components/NewsArticle";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import routes from "tempo-routes";
@@ -27,6 +29,8 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/downloads" element={<Downloads />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/news/:slug" element={<NewsArticle />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>

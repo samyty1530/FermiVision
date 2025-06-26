@@ -170,11 +170,12 @@ const Downloads = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/temp_FV_logo.png"
+        logo="/images/FV_logo_250625.png"
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
           { label: t("nav.downloads", "Downloads"), href: "/downloads" },
+          { label: t("nav.news", "News"), href: "/news" },
           { label: t("nav.about", "About"), href: "/about" },
           { label: t("nav.contact", "Contact"), href: "/contact" },
         ]}

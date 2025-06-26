@@ -70,6 +70,7 @@ const About = () => {
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
           { label: t("nav.downloads", "Downloads"), href: "/downloads" },
+          { label: t("nav.news", "News"), href: "/news" },
           { label: t("nav.about", "About"), href: "/about" },
           { label: t("nav.contact", "Contact"), href: "/contact" },
         ]}

@@ -11,11 +11,12 @@ interface HeaderProps {
 }
 
 const Header = ({
-  logo = "/logo.svg",
+  logo = "/FV_logo_250625.svg",
   navLinks = [
     { label: "Home", href: "/" },
     { label: "Products", href: "/products" },
     { label: "Solutions", href: "/solutions" },
+    { label: "News", href: "/news" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ],
@@ -37,25 +38,22 @@ const Header = ({
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 shadow-sm">
-      <div className="container mx-auto px-4 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div className="container mx-auto px-4 py-1 flex flex-wrap items-center justify-between gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src={logo || "/images/logo.svg"}
+            src={logo || "/images/FV_logo_250625.svg"}
             alt="Fermi Vision"
-            className="h-8"
+            className="h-20"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.src = "/images/logo-fallback.png";
             }}
           />
-          <span className="ml-2 text-xl font-bold text-gray-900">
-            Fermi Vision
-          </span>
         </Link>
 
         {/* Search Bar */}
-        <div className="relative order-3 md:order-none w-full md:w-auto md:max-w-4xl md:min-w-[500px] flex-grow md:flex-grow-0 mt-2 md:mt-0">
+        <div className="relative order-3 md:order-none w-full md:flex-1 md:mx-8 mt-2 md:mt-0">
           <div className="relative flex items-center">
             <Input
               type="text"
@@ -100,19 +98,6 @@ const Header = ({
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              {/* Mobile Search */}
-              <div className="relative flex items-center py-2">
-                <Input
-                  type="text"
-                  placeholder="Search products..."
-                  className="pr-8 w-full"
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  onKeyDown={handleSearch}
-                />
-                <Search className="absolute right-2 h-4 w-4 text-gray-400" />
-              </div>
-
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
