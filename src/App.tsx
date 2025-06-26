@@ -19,7 +19,7 @@ function App() {
   }, []);
 
   return (
-    <I18nextProvider i18n={i18n} className="justify-center items-end">
+    <I18nextProvider i18n={i18n}>
       <Suspense fallback={<p>Loading...</p>}>
         <>
           <Routes>

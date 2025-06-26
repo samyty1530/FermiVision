@@ -82,12 +82,12 @@ const Home = () => {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-24">
             <img
-              src="/images/partners-1-apple.jpg"
+              src="/images/home_partners-apple.jpg"
               alt="Apple"
               className="h-12 md:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/partners-2-foxconn.jpg"
+              src="/images/home_partners-foxconn.jpg"
               alt="Foxconn"
               className="h-12 md:h-16 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
@@ -163,7 +163,7 @@ const Home = () => {
                   <div className="transition-all duration-1000">
                     <div className="overflow-visible rounded-lg shadow-md">
                       <img
-                        src={`/images/industries-${item}.jpg`}
+                        src={`/images/home_industries-${item}.jpg`}
                         alt={t(
                           `industries.item${item}.alt`,
                           `Industry ${item}`,
@@ -226,7 +226,7 @@ const Home = () => {
                     {series}
                   </div>
                   <img
-                    src={`/images/products-${index + 1}.jpg`}
+                    src={`/images/home-products-1-${series === "U" ? "U" : series === "A" ? "A8" : series === "F" ? "F5" : "B"}.jpg`}
                     alt={t(
                       `products.featured.item${index + 1}.alt`,
                       `Vision Series ${series}`,
@@ -266,7 +266,7 @@ const Home = () => {
                 <div className="md:w-1/2">
                   <div className="rounded-lg overflow-hidden shadow-md">
                     <img
-                      src={`/images/news-${item}.jpg`}
+                      src={`https://images.unsplash.com/photo-${item === 1 ? "1581091226033-b5875c1b8b29" : "1581091226033-b5875c1b8b29"}?w=400&q=80`}
                       alt={t(`news.item${item}.alt`, `News Item ${item}`)}
                       className="w-full h-full object-cover"
                     />
