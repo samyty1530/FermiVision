@@ -244,7 +244,7 @@ const ProductDetail = () => {
                 </p>
                 <div className="space-y-6">
                   <h2 className="text-2xl font-semibold text-gray-900">
-                    {t("products.keyFeatures", "Key Features")}
+                    {t("products.keyFeatures", "Applications & Key Features")}
                   </h2>
                   <ul className="space-y-3">
                     {product.features.map((feature, index) => (
@@ -256,11 +256,11 @@ const ProductDetail = () => {
                   </ul>
                 </div>
                 <div className="mt-10">
-                  <Link to="/contact">
+                  <Link to="/customer-request">
                     <Button className="bg-primary hover:bg-primary-700 text-white px-8 py-6 text-lg">
                       {t(
-                        "products.contactUs",
-                        "Contact Us for More Information",
+                        "products.downloadCatalog",
+                        "Download Product Catalog",
                       )}
                     </Button>
                   </Link>

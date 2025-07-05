@@ -187,9 +187,6 @@ const Products = () => {
                     key={product.series}
                     className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 relative"
                   >
-                    <div className="absolute top-4 left-4 bg-primary text-white text-sm font-bold py-1 px-3 rounded-full">
-                      {product.series.toUpperCase()}
-                    </div>
                     <div className="h-64 overflow-hidden">
                       <img
                         src={product.image}

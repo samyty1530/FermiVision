@@ -1,7 +1,7 @@
 {
   "nav": {
     "products": "Products",
-    "industries": "Industries",
+    "industries": "Industries", 
     "downloads": "Downloads",
     "news": "News",
     "about": "About",
@@ -203,7 +203,8 @@
     },
     "quickLinks": "Quick Links",
     "resources": "Resources",
-    "contactUs": "Contact Us",
+    "contactUs": "Contact Us for More Information",
+    "downloadCatalog": "Download Product Catalog",
     "copyright": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
@@ -225,6 +226,33 @@
     "loading": "Loading...",
     "download": "Download",
     "sendAnotherMessage": "Send Another Message",
-    "submitAnotherRequest": "Submit Another Request"
+    "submitAnotherRequest": "Submit Another Request",
+    "backToProducts": "Back to Products"
+  },
+  "customerRequest": {
+    "title": "Customer Request Form",
+    "subtitle": "Complete the form below - To receive our products catalog and our technical experts can help you select the best solution for your specific application.",
+    "successTitle": "Request Submitted Successfully!",
+    "successMessage": "Thank you for your request. Our technical experts will review your requirements and send you the product catalog along with personalized recommendations shortly.",
+    "submitAnother": "Submit Another Request",
+    "form": {
+      "name": "Your Name",
+      "company": "Company",
+      "email": "Company Email",
+      "description": "Short description of what you want to solve",
+      "descriptionPlaceholder": "Ex - Want solution to check for GD&T for small holes and SMT components on a PCB panel in the 50 um range, pcb panel size is ~40x40cm, accuracy tolerance X um",
+      "interests": "Please check the item(s) you are interested in:",
+      "priceRequest": "Price request",
+      "applicationConsultation": "Application consultation",
+      "applicationTesting": "Application testing",
+      "generalInquiry": "General inquiry",
+      "submit": "Request Product Catalog"
+    },
+    "representatives": {
+      "title": "Would you like to connect with one of our technical representatives?",
+      "wechat": "WeChat",
+      "wechatId": "ID: FermiVision2024",
+      "phone": "Phone"
+    }
   }
 }

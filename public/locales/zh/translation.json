@@ -225,6 +225,33 @@
     "loading": "加载中...",
     "download": "下载",
     "sendAnotherMessage": "发送另一条消息",
-    "submitAnotherRequest": "提交另一个请求"
+    "submitAnotherRequest": "提交另一个请求",
+    "backToProducts": "返回产品页面"
+  },
+  "customerRequest": {
+    "title": "客户需求表单",
+    "subtitle": "请填写以下表单 - 获取我们的产品目录，我们的技术专家将帮助您为您的特定应用选择最佳解决方案。",
+    "successTitle": "请求提交成功！",
+    "successMessage": "感谢您的请求。我们的技术专家将审查您的需求，并很快向您发送产品目录以及个性化建议。",
+    "submitAnother": "提交另一个请求",
+    "form": {
+      "name": "您的姓名",
+      "company": "公司",
+      "email": "公司邮箱",
+      "description": "您想要解决的问题的简短描述",
+      "descriptionPlaceholder": "例如 - 需要解决方案来检查PCB面板上小孔和SMT组件的GD&T，精度范围为50微米，PCB面板尺寸约为40x40厘米，精度公差X微米",
+      "interests": "请选择您感兴趣的项目：",
+      "priceRequest": "价格咨询",
+      "applicationConsultation": "应用咨询",
+      "applicationTesting": "应用测试",
+      "generalInquiry": "一般咨询",
+      "submit": "申请产品目录"
+    },
+    "representatives": {
+      "title": "您是否希望与我们的技术代表联系？",
+      "wechat": "微信",
+      "wechatId": "ID: FermiVision2024",
+      "phone": "电话"
+    }
   }
 }

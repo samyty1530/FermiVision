@@ -9,6 +9,7 @@ import News from "./components/News";
 import NewsArticle from "./components/NewsArticle";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import CustomerRequestForm from "./components/CustomerRequestForm";
 import routes from "tempo-routes";
 import "./i18n/i18n";
 import { I18nextProvider } from "react-i18next";
@@ -35,6 +36,7 @@ function App() {
             <Route path="/news/:slug" element={<NewsArticle />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/customer-request" element={<CustomerRequestForm />} />
           </Routes>
           {import.meta.env.VITE_TEMPO === "true" && useRoutes(routes)}
         </>

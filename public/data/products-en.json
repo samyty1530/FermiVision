@@ -15,40 +15,40 @@
   {
     "series": "a",
     "title": "Vision Series A",
-    "description": "Automated metrology solution designed for high-volume manufacturing environments. The Vision Series A delivers rapid, consistent measurements with minimal operator intervention.",
+    "description": "Designed for high-speed applications requiring full-range image scanning and stitching, the A Series offers unmatched precision for large-scale inspections.",
     "image": "/images/product-series/vision-a.jpg",
     "features": [
-      "High-speed scanning up to 1000 components per minute",
-      "Automated calibration system",
-      "Multi-point measurement capability",
-      "Advanced pattern recognition",
-      "Comprehensive data logging and reporting"
+      "Specifically designed for products requiring full-range size measurements - PCBs, FPCs, HDI boards, IC carrier, boards, mass-produced 3C products, and more",
+      "Supports a flexible combination of multiple lenses and cameras addressing the combined requirements of efficiency and precision in various measurement environments",
+      "Optional additional sensors and lasers available for precise height difference and flatness measurements",
+      "Includes advanced and comprehensive metrology assessment",
+      "Fully automated programming functions, SPC, and more"
     ]
   },
   {
     "series": "f",
     "title": "Vision Series F",
-    "description": "Specialized optical metrology system for fine feature measurement in semiconductor and electronics manufacturing. The Vision Series F excels at detecting microscopic defects with unprecedented accuracy.",
+    "description": "The F Series sets the benchmark for next-generation efficiency with its high-speed stroboscopic measurement capabilities, ideal for rapid throughput environments.",
     "image": "/images/product-series/vision-f.jpg",
     "features": [
-      "Sub-micron measurement accuracy",
-      "Specialized for semiconductor applications",
-      "Advanced illumination control",
-      "3D topography mapping",
-      "Cleanroom compatible design"
+      "Satisfies the full-range measurement requirements for high-density, high-precision products, including Mini-LEDs, IC carrier boards, photovoltaic components, and more.",
+      "Optional additional sensors and lasers available for precise height difference and flatness measurements",
+      "Includes advanced and comprehensive metrology assessment",
+      "Advanced stroboscopic synchronous electric control system",
+      "Fully automated programming functions, SPC, and more"
     ]
   },
   {
     "series": "b",
     "title": "Vision Series B",
-    "description": "Robust inspection system for harsh industrial environments. The Vision Series B maintains measurement precision even in challenging conditions with dust, vibration, or temperature variations.",
+    "description": "Engineered for instantaneous measurements of a large number of micron-sized features. The B Series delivers unparalleled accuracy in the inspection of fine-scale components.",
     "image": "/images/product-series/vision-b.jpg",
     "features": [
-      "IP65 rated enclosure for harsh environments",
-      "Vibration-resistant optical system",
-      "Wide operating temperature range (-10°C to 50°C)",
-      "Remote monitoring and control capabilities",
-      "Reinforced construction for industrial durability"
+      "Satisfies the full-range measurement requirements for high-density, high-precision products, including silicon-based carrier boards, micro-sized holes, line widths/spacings, Mini-LEDs, IC carrier boards, and more",
+      "Advanced stroboscopic synchronous electric control system",
+      "Dual-axis linear motion system",
+      "Includes advanced and comprehensive metrology assessment",
+      "Fully automated programming functions, SPC, and more"
     ]
   },
   {
