@@ -1,0 +1,80 @@
+[
+  {
+    "series": "c",
+    "title": "Vision Series C",
+    "description": "High-precision optical measurement system for complex industrial applications. The Vision Series C combines advanced imaging technology with sophisticated analysis algorithms to deliver unmatched accuracy in quality control processes.",
+    "image": "/images/product-series/vision-c.jpg",
+    "features": [
+      "Ultra-high resolution imaging up to 0.1μm",
+      "Multi-angle inspection capability",
+      "Real-time defect detection and classification",
+      "Customizable measurement parameters",
+      "Industry 4.0 integration ready"
+    ]
+  },
+  {
+    "series": "a",
+    "title": "Vision Series A",
+    "description": "Automated metrology solution designed for high-volume manufacturing environments. The Vision Series A delivers rapid, consistent measurements with minimal operator intervention.",
+    "image": "/images/product-series/vision-a.jpg",
+    "features": [
+      "High-speed scanning up to 1000 components per minute",
+      "Automated calibration system",
+      "Multi-point measurement capability",
+      "Advanced pattern recognition",
+      "Comprehensive data logging and reporting"
+    ]
+  },
+  {
+    "series": "f",
+    "title": "Vision Series F",
+    "description": "Specialized optical metrology system for fine feature measurement in semiconductor and electronics manufacturing. The Vision Series F excels at detecting microscopic defects with unprecedented accuracy.",
+    "image": "/images/product-series/vision-f.jpg",
+    "features": [
+      "Sub-micron measurement accuracy",
+      "Specialized for semiconductor applications",
+      "Advanced illumination control",
+      "3D topography mapping",
+      "Cleanroom compatible design"
+    ]
+  },
+  {
+    "series": "b",
+    "title": "Vision Series B",
+    "description": "Robust inspection system for harsh industrial environments. The Vision Series B maintains measurement precision even in challenging conditions with dust, vibration, or temperature variations.",
+    "image": "/images/product-series/vision-b.jpg",
+    "features": [
+      "IP65 rated enclosure for harsh environments",
+      "Vibration-resistant optical system",
+      "Wide operating temperature range (-10°C to 50°C)",
+      "Remote monitoring and control capabilities",
+      "Reinforced construction for industrial durability"
+    ]
+  },
+  {
+    "series": "u",
+    "title": "Vision Series U",
+    "description": "Versatile imaging solution for general-purpose quality control applications. The Vision Series U offers an excellent balance of performance and affordability for diverse inspection needs.",
+    "image": "/images/product-series/vision-u.jpg",
+    "features": [
+      "Modular design for application flexibility",
+      "User-friendly interface with minimal training required",
+      "Rapid deployment and setup",
+      "Comprehensive measurement toolkit",
+      "Scalable from manual to fully automated operation"
+    ]
+  },
+  {
+    "series": "accessories",
+    "title": "Accessories & Components",
+    "description": "Enhance the capabilities of your Fermi Vision systems with our range of specialized accessories and components. From advanced lighting solutions to precision mounting hardware, we offer everything needed to optimize your measurement setup.",
+    "image": "/images/product-series/accessories.jpg",
+    "features": [
+      "Specialized illumination systems",
+      "Precision mounting hardware",
+      "Calibration standards and tools",
+      "Environmental control accessories",
+      "Connectivity and integration components"
+    ]
+  }
+]

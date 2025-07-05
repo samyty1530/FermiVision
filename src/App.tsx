@@ -2,6 +2,7 @@ import { Suspense, useEffect } from "react";
 import { useRoutes, Routes, Route } from "react-router-dom";
 import Home from "./components/home";
 import Products from "./components/Products";
+import ProductDetail from "./components/ProductDetail";
 import Industries from "./components/Industries";
 import Downloads from "./components/Downloads";
 import News from "./components/News";
@@ -27,6 +28,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/products/:series" element={<ProductDetail />} />
             <Route path="/industries" element={<Industries />} />
             <Route path="/downloads" element={<Downloads />} />
             <Route path="/news" element={<News />} />
