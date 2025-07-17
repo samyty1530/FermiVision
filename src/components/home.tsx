@@ -8,8 +8,8 @@ import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Home = () => {
   const { t, ready } = useTranslation();
-  const [currentIndustryIndex, setCurrentIndustryIndex] = useState(1);
-  const [currentProductIndex, setCurrentProductIndex] = useState(1);
+  const [currentIndustryIndex, setCurrentIndustryIndex] = useState(1.5);
+  const [currentProductIndex, setCurrentProductIndex] = useState(1.5);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isUserControlled, setIsUserControlled] = useState(false);
   const industries = [1, 2, 3, 4];
@@ -44,36 +44,36 @@ const Home = () => {
   ];
 
   const moveToIndustry = (index: number) => {
-    // Only allow centering on 2nd or n-1 industry (index 1 or 2 for 4 items)
-    if (index >= 1 && index <= industries.length - 2) {
+    // Allow centering on any industry except the first and last
+    if (index >= 0 && index < industries.length) {
       setCurrentIndustryIndex(index);
     }
   };
 
   const movePrevious = () => {
-    setCurrentIndustryIndex((prev) => (prev > 1 ? prev - 1 : prev));
+    setCurrentIndustryIndex((prev) => (prev > 0 ? prev - 1 : prev));
   };
 
   const moveNext = () => {
     setCurrentIndustryIndex((prev) =>
-      prev < industries.length - 2 ? prev + 1 : prev,
+      prev < industries.length - 1 ? prev + 1 : prev,
     );
   };
 
   const moveToProduct = (index: number) => {
-    // Only allow centering on 2nd or n-1 product (index 1 or 2 for 4 items)
-    if (index >= 1 && index <= products.length - 2) {
+    // Allow centering on any product
+    if (index >= 0 && index < products.length) {
       setCurrentProductIndex(index);
     }
   };
 
   const moveProductPrevious = () => {
-    setCurrentProductIndex((prev) => (prev > 1 ? prev - 1 : prev));
+    setCurrentProductIndex((prev) => (prev > 0 ? prev - 1 : prev));
   };
 
   const moveProductNext = () => {
     setCurrentProductIndex((prev) =>
-      prev < products.length - 2 ? prev + 1 : prev,
+      prev < products.length - 1 ? prev + 1 : prev,
     );
   };
 
@@ -274,10 +274,13 @@ const Home = () => {
             </div>
           </div>
           <div className="relative overflow-hidden px-24">
+            {/* Fade gradients */}
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
             <div
               className="flex gap-8 transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(calc(50% - ${currentIndustryIndex * (384 + 32) + 192}px))`,
+                transform: `translateX(calc(-${currentIndustryIndex * (384 + 32)}px + 50%))`,
               }}
             >
               {industries.map((item, index) => (
@@ -328,7 +331,7 @@ const Home = () => {
                 variant="outline"
                 size="icon"
                 onClick={movePrevious}
-                disabled={currentIndustryIndex <= 1}
+                disabled={currentIndustryIndex <= 0}
                 className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -337,7 +340,7 @@ const Home = () => {
                 variant="outline"
                 size="icon"
                 onClick={moveNext}
-                disabled={currentIndustryIndex >= industries.length - 2}
+                disabled={currentIndustryIndex >= industries.length - 1}
                 className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2"
               >
                 <ChevronRight className="h-4 w-4" />
@@ -365,10 +368,13 @@ const Home = () => {
             </div>
           </div>
           <div className="relative overflow-hidden px-24">
+            {/* Fade gradients */}
+            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-50 via-gray-50/80 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-50 via-gray-50/80 to-transparent z-10 pointer-events-none"></div>
             <div
               className="flex gap-8 transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(calc(50% - ${currentProductIndex * (320 + 32) + 160}px))`,
+                transform: `translateX(calc(-${currentProductIndex * (320 + 32)}px + 50%))`,
               }}
             >
               {products.map((series, index) => (
@@ -378,13 +384,10 @@ const Home = () => {
                   onClick={() => moveToProduct(index)}
                 >
                   <Link
-                    to={`/products?category=${series.toLowerCase()}_series`}
+                    to={`/products/${series.toLowerCase()}`}
                     className="block transition-all duration-300 hover:opacity-90"
                   >
                     <div className="overflow-hidden rounded-lg shadow-md bg-white relative">
-                      <div className="absolute top-4 left-4 bg-blue-600 text-white text-sm font-bold py-1 px-3 rounded-full">
-                        {series}
-                      </div>
                       <img
                         src={`/images/home-products-1-${series === "U" ? "U" : series === "A" ? "A8" : series === "F" ? "F5" : "B"}.jpg`}
                         alt={t(
@@ -417,7 +420,7 @@ const Home = () => {
                 variant="outline"
                 size="icon"
                 onClick={moveProductPrevious}
-                disabled={currentProductIndex <= 1}
+                disabled={currentProductIndex <= 0}
                 className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2"
               >
                 <ChevronLeft className="h-4 w-4" />
@@ -426,7 +429,7 @@ const Home = () => {
                 variant="outline"
                 size="icon"
                 onClick={moveProductNext}
-                disabled={currentProductIndex >= products.length - 2}
+                disabled={currentProductIndex >= products.length - 1}
                 className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2"
               >
                 <ChevronRight className="h-4 w-4" />

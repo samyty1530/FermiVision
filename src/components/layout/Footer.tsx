@@ -1,15 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import {
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Linkedin, Mail, Phone, MapPin } from "lucide-react";
 
 interface FooterProps {
   companyName?: string;
@@ -17,23 +9,17 @@ interface FooterProps {
   companyPhone?: string;
   companyEmail?: string;
   socialLinks?: {
-    facebook?: string;
-    twitter?: string;
     linkedin?: string;
-    instagram?: string;
   };
 }
 
 const Footer = ({
   companyName = "Fermi Vision",
-  companyAddress = "123 Tech Avenue, Boston, MA 02110",
-  companyPhone = "+1 (555) 123-4567",
-  companyEmail = "info@fermivision.com",
+  companyAddress = "Shenzhen, China",
+  companyPhone = "+86 189 2346 0852",
+  companyEmail = "sales@fermivision.com",
   socialLinks = {
-    facebook: "https://facebook.com",
-    twitter: "https://twitter.com",
     linkedin: "https://linkedin.com",
-    instagram: "https://instagram.com",
   },
 }: FooterProps) => {
   const { i18n } = useTranslation();
@@ -49,26 +35,6 @@ const Footer = ({
               tomorrow's challenges.
             </p>
             <div className="flex space-x-4">
-              {socialLinks.facebook && (
-                <a
-                  href={socialLinks.facebook}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                >
-                  <Facebook className="h-5 w-5 hover:text-primary transition-colors" />
-                </a>
-              )}
-              {socialLinks.twitter && (
-                <a
-                  href={socialLinks.twitter}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="h-5 w-5 hover:text-primary transition-colors" />
-                </a>
-              )}
               {socialLinks.linkedin && (
                 <a
                   href={socialLinks.linkedin}
@@ -77,16 +43,6 @@ const Footer = ({
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="h-5 w-5 hover:text-primary transition-colors" />
-                </a>
-              )}
-              {socialLinks.instagram && (
-                <a
-                  href={socialLinks.instagram}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Instagram"
-                >
-                  <Instagram className="h-5 w-5 hover:text-primary transition-colors" />
                 </a>
               )}
             </div>
@@ -102,6 +58,7 @@ const Footer = ({
                 <Link
                   to="/"
                   className="hover:text-primary transition-colors text-sm"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   Home
                 </Link>
@@ -110,32 +67,18 @@ const Footer = ({
                 <Link
                   to="/products"
                   className="hover:text-primary transition-colors text-sm"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
                   Products
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/solutions"
+                  to="/industries"
                   className="hover:text-primary transition-colors text-sm"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
-                  Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/about"
-                  className="hover:text-primary transition-colors text-sm"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-primary transition-colors text-sm"
-                >
-                  Contact
+                  Industries
                 </Link>
               </li>
             </ul>
@@ -147,42 +90,38 @@ const Footer = ({
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/blog"
+                  to="/news"
                   className="hover:text-primary transition-colors text-sm"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
-                  Blog
+                  News & Events
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/case-studies"
+                  to="/about"
                   className="hover:text-primary transition-colors text-sm"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
-                  Case Studies
+                  About Us
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/white-papers"
+                  to="/contact"
                   className="hover:text-primary transition-colors text-sm"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
-                  White Papers
+                  Contact Us
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/documentation"
+                  to="/customer-request"
                   className="hover:text-primary transition-colors text-sm"
+                  onClick={() => window.scrollTo(0, 0)}
                 >
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/support"
-                  className="hover:text-primary transition-colors text-sm"
-                >
-                  Support
+                  Customer Request Form
                 </Link>
               </li>
             </ul>

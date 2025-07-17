@@ -11,11 +11,10 @@ interface HeaderProps {
 }
 
 const Header = ({
-  logo = "/FV_logo_250625.svg",
+  logo = "/images/FV_logo_250625.png",
   navLinks = [
-    { label: "Home", href: "/" },
     { label: "Products", href: "/products" },
-    { label: "Solutions", href: "/solutions" },
+    { label: "Industries", href: "/industries" },
     { label: "News", href: "/news" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
@@ -42,12 +41,12 @@ const Header = ({
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src={logo || "/images/FV_logo_250625.svg"}
+            src={logo}
             alt="Fermi Vision"
             className="h-20"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = "/images/logo-fallback.png";
+              target.src = "/images/FV_logo_250625.png";
             }}
           />
         </Link>
