@@ -152,7 +152,7 @@ const NewsArticle = () => {
       <Footer
         companyName="Fermi Vision"
         companyAddress="Shenzhen, China"
-        companyPhone="+86 158 8956 4803"
+        companyPhone="+86 189 2346 0852"
         companyEmail="sales@fermivision.com"
         socialLinks={{
           linkedin: "https://linkedin.com",

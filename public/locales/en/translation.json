@@ -86,7 +86,21 @@
     "pageTitle": "Our Product Series",
     "pageSubtitle": "Discover our comprehensive range of computer vision and optical solutions.",
     "searchResults": "Search Results for ",
-    "searchSubtitle": "Showing products matching your search criteria"
+    "searchSubtitle": "Showing products matching your search criteria",
+    "technicalProcess": {
+      "title": "Our Technical Solution Process",
+      "subtitle": "Free consultation with our technical team and evaluation of your specific technical application. We value your time and provide a streamlined process to get you the right solution.",
+      "stepsTitle": "Our normal customer support process for helping you find the best matched product for your application:",
+      "step1": "Provide us with requirements for the type of product and dimensions you want to inspect, accuracy required, and any other requirements",
+      "step2": "One of our representatives will reach out to set up a quick video or call to discuss your specific needs",
+      "step3": "If a product seems like a good match for your application, we'll ask you to mail us a sample of your part for testing",
+      "step4": "We will test and share the test report for confirmation of performance",
+      "step5": "Set up a purchase order with our sales representative after receiving test results",
+      "step6": "Customization - By request and needs, special optical components, lighting systems, and software capabilities can be added",
+      "step7": "Continue to receive technical support during installation and training for warranty period",
+      "optional": "Optional:",
+      "startProcess": "Start Your Technical Evaluation"
+    }
   },
   "news": {
     "title": "News & Events",

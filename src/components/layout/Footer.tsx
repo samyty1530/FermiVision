@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 import {
   Facebook,
   Twitter,
@@ -35,6 +36,7 @@ const Footer = ({
     instagram: "https://instagram.com",
   },
 }: FooterProps) => {
+  const { i18n } = useTranslation();
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 px-4 md:px-8">
       <div className="container mx-auto">
@@ -223,19 +225,19 @@ const Footer = ({
               to="/privacy-policy"
               className="hover:text-primary transition-colors"
             >
-              Privacy Policy
+              {i18n.language === "en" ? "Privacy Policy" : "隐私政策"}
             </Link>
             <Link
               to="/terms-of-service"
               className="hover:text-primary transition-colors"
             >
-              Terms of Service
+              {i18n.language === "en" ? "Terms of Service" : "使用条款"}
             </Link>
             <Link
               to="/sitemap"
               className="hover:text-primary transition-colors"
             >
-              Sitemap
+              {i18n.language === "en" ? "Sitemap" : "网站地图"}
             </Link>
           </div>
         </div>

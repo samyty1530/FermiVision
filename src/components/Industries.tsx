@@ -157,7 +157,7 @@ const Industries = () => {
                     {industry.description}
                   </p>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
                     {/* Challenges */}
                     <div>
                       <h3 className="text-xl font-semibold mb-3 text-gray-800">
@@ -188,6 +188,20 @@ const Industries = () => {
                       </ul>
                     </div>
                   </div>
+
+                  {/* Learn More Button */}
+                  <div className="mt-4">
+                    <Button
+                      className="bg-primary hover:bg-primary-700 text-white px-8 py-3 min-w-[160px]"
+                      onClick={() => {
+                        // Placeholder for case study navigation
+                        // In a real application, this would navigate to specific case studies
+                        console.log(`Navigate to ${industry.name} case study`);
+                      }}
+                    >
+                      {t("common.learnMore", "Learn More")}
+                    </Button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -199,7 +213,7 @@ const Industries = () => {
       <Footer
         companyName="Fermi Vision"
         companyAddress="Shenzhen, China"
-        companyPhone="+86 158 8956 4803"
+        companyPhone="+86 189 2346 0852"
         companyEmail="sales@fermivision.com"
         socialLinks={{
           linkedin: "https://linkedin.com",

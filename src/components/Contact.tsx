@@ -209,7 +209,7 @@ const Contact = () => {
                         <h3 className="font-semibold text-gray-900 mb-1">
                           {t("contact.info.phone", "Phone")}
                         </h3>
-                        <p className="text-gray-600">+86 158 8956 4803</p>
+                        <p className="text-gray-600">+86 189 2346 0852</p>
                         <p className="text-gray-600">xxx</p>
                       </div>
                     </div>
@@ -251,7 +251,7 @@ const Contact = () => {
       <Footer
         companyName="Fermi Vision"
         companyAddress="Shenzhen, China"
-        companyPhone="+86 158 8956 4803"
+        companyPhone="+86 189 2346 0852"
         companyEmail="sales@fermivision.com"
         socialLinks={{
           linkedin: "https://linkedin.com",

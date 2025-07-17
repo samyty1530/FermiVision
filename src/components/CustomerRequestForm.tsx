@@ -99,12 +99,6 @@ const CustomerRequestForm = () => {
             <h1 className="text-4xl font-bold mb-4 text-white">
               {t("customerRequest.title", "Customer Request Form")}
             </h1>
-            <p className="text-xl text-gray-100 max-w-4xl mx-auto">
-              {t(
-                "customerRequest.subtitle",
-                "Complete the form below - To receive our products catalog and our technical experts can help you select the best solution for your specific application.",
-              )}
-            </p>
           </div>
         </section>
 
@@ -138,6 +132,11 @@ const CustomerRequestForm = () => {
                 </div>
               ) : (
                 <div className="bg-white rounded-lg shadow-md p-8">
+                  <p className="text-lg font-bold text-gray-900 mb-8 text-left">
+                    Complete the form below to receive our products catalog and
+                    our technical experts can help you select the best solution
+                    for your specific application.
+                  </p>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Name */}
                     <div className="space-y-2">
@@ -348,7 +347,7 @@ const CustomerRequestForm = () => {
                     <h3 className="font-semibold text-gray-900">
                       {t("customerRequest.representatives.phone", "Phone")}
                     </h3>
-                    <p className="text-gray-600 text-sm">+86 158 8956 4803</p>
+                    <p className="text-gray-600 text-sm">+86 189 2346 0852</p>
                   </div>
                 </div>
               </div>
@@ -361,7 +360,7 @@ const CustomerRequestForm = () => {
       <Footer
         companyName="Fermi Vision"
         companyAddress="Shenzhen, China"
-        companyPhone="+86 158 8956 4803"
+        companyPhone="+86 189 2346 0852"
         companyEmail="sales@fermivision.com"
         socialLinks={{
           linkedin: "https://linkedin.com",

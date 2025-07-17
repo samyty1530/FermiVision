@@ -249,7 +249,7 @@ const ProductDetail = () => {
                   <ul className="space-y-3">
                     {product.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <Check className="h-5 w-5 text-primary mr-2 mt-0.5" />
+                        <Check className="h-5 w-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -279,7 +279,7 @@ const ProductDetail = () => {
                 "Technical Specifications",
               )}
             </h2>
-            <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
+            <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8 mb-12">
               <p className="text-center text-gray-600 mb-8">
                 {t(
                   "products.specificationMessage",
@@ -287,7 +287,7 @@ const ProductDetail = () => {
                 )}
               </p>
               <div className="flex justify-center">
-                <Link to="/contact">
+                <Link to="/customer-request">
                   <Button
                     variant="outline"
                     className="border-primary text-primary hover:bg-primary-50"
@@ -295,6 +295,122 @@ const ProductDetail = () => {
                     {t(
                       "products.requestSpecs",
                       "Request Detailed Specifications",
+                    )}
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Our Technical Solution Process Section */}
+            <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md p-8">
+              <h3 className="text-2xl font-bold mb-4 text-center text-gray-900">
+                {t(
+                  "products.technicalProcess.title",
+                  "Our Technical Solution Process",
+                )}
+              </h3>
+              <p className="text-center text-primary mb-8 text-base">
+                {t(
+                  "products.technicalProcess.subtitle",
+                  "Free consultation with our technical team and evaluation of your specific technical application. We value your time and provide a streamlined process to get you the right solution.",
+                )}
+              </p>
+
+              <div className="space-y-4">
+                <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                  {t(
+                    "products.technicalProcess.stepsTitle",
+                    "Our normal customer support process for helping you find the best matched product for your application:",
+                  )}
+                </h4>
+                <div className="space-y-3">
+                  <div className="flex items-start">
+                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
+                      1)
+                    </span>
+                    <p className="text-gray-700">
+                      {t(
+                        "products.technicalProcess.step1",
+                        "Provide us with requirements for the type of product and dimensions you want to inspect, accuracy required, and any other requirements",
+                      )}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
+                      2)
+                    </span>
+                    <p className="text-gray-700">
+                      {t(
+                        "products.technicalProcess.step2",
+                        "One of our representatives will reach out to set up a quick video or call to discuss your specific needs",
+                      )}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
+                      3)
+                    </span>
+                    <p className="text-gray-700">
+                      {t(
+                        "products.technicalProcess.step3",
+                        "If a product seems like a good match for your application, we'll ask you to mail us a sample of your part for testing.",
+                      )}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
+                      4)
+                    </span>
+                    <p className="text-gray-700">
+                      {t(
+                        "products.technicalProcess.step4",
+                        "We will test and email the test report for confirmation of performance.",
+                      )}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
+                      5)
+                    </span>
+                    <p className="text-gray-700">
+                      {t(
+                        "products.technicalProcess.step5",
+                        "Set up a purchase order with our sales representative after receiving test results.",
+                      )}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
+                      6)
+                    </span>
+                    <p className="text-gray-600 italic">
+                      {t("products.technicalProcess.optional", "Optional:")}{" "}
+                      {t(
+                        "products.technicalProcess.step6",
+                        "Customization - By request and needs, special optical components, lighting systems, and software capabilities can be added.",
+                      )}
+                    </p>
+                  </div>
+                  <div className="flex items-start">
+                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
+                      7)
+                    </span>
+                    <p className="text-gray-700">
+                      {t(
+                        "products.technicalProcess.step7",
+                        "Continue to receive technical support during installation and training for warranty period.",
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 text-center">
+                <Link to="/customer-request">
+                  <Button className="bg-primary hover:bg-primary-700 text-white px-8 py-3">
+                    {t(
+                      "products.technicalProcess.startProcess",
+                      "Start Your Technical Evaluation",
                     )}
                   </Button>
                 </Link>
