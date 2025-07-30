@@ -8,6 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 
 const CustomerRequestForm = () => {
@@ -325,20 +326,41 @@ const CustomerRequestForm = () => {
               </h2>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 {/* WeChat */}
-                <div className="bg-white rounded-lg p-6 shadow-md flex items-center gap-4">
-                  <MessageCircle className="h-8 w-8 text-green-600" />
-                  <div className="text-left">
-                    <h3 className="font-semibold text-gray-900">
-                      {t("customerRequest.representatives.wechat", "WeChat")}
-                    </h3>
-                    <p className="text-gray-600 text-sm">
-                      {t(
-                        "customerRequest.representatives.wechatId",
-                        "ID: FermiVision2024",
-                      )}
-                    </p>
-                  </div>
-                </div>
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="bg-white rounded-lg p-6 shadow-md flex items-center gap-4 hover:shadow-lg transition-shadow cursor-pointer">
+                      <MessageCircle className="h-8 w-8 text-green-600" />
+                      <div className="text-left">
+                        <h3 className="font-semibold text-gray-900">
+                          {t(
+                            "customerRequest.representatives.wechat",
+                            "WeChat",
+                          )}
+                        </h3>
+                        <p className="text-gray-600 text-sm">
+                          Connect with one of our representatives
+                        </p>
+                      </div>
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-md">
+                    <div className="text-center">
+                      <h3 className="text-lg font-semibold mb-4">
+                        Connect with WeChat
+                      </h3>
+                      <div className="bg-gray-100 p-4 rounded-lg mb-4">
+                        <img
+                          src="/images/FV_Wechat_QR.png"
+                          alt="WeChat QR Code"
+                          className="mx-auto w-48 h-48"
+                        />
+                      </div>
+                      <p className="text-gray-600">
+                        Connect with one of our representatives
+                      </p>
+                    </div>
+                  </DialogContent>
+                </Dialog>
 
                 {/* Phone */}
                 <div className="bg-white rounded-lg p-6 shadow-md flex items-center gap-4">

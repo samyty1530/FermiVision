@@ -106,15 +106,7 @@ const Footer = ({
                   About Us
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="hover:text-primary transition-colors text-sm"
-                  onClick={() => window.scrollTo(0, 0)}
-                >
-                  Contact Us
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/customer-request"

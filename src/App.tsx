@@ -1,10 +1,10 @@
 import { Suspense, useEffect } from "react";
-import { useRoutes, Routes, Route } from "react-router-dom";
+import { useRoutes, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./components/home";
 import Products from "./components/Products";
 import ProductDetail from "./components/ProductDetail";
 import Industries from "./components/Industries";
-import Downloads from "./components/Downloads";
+
 import News from "./components/News";
 import NewsArticle from "./components/NewsArticle";
 import About from "./components/About";
@@ -18,11 +18,18 @@ import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
 
 function App() {
+  const location = useLocation();
+
   // Initialize i18n
   useEffect(() => {
     // This ensures i18n is initialized when the app loads
     // The actual initialization happens in i18n.ts
   }, []);
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <I18nextProvider i18n={i18n}>
@@ -33,7 +40,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/products/:series" element={<ProductDetail />} />
             <Route path="/industries" element={<Industries />} />
-            <Route path="/downloads" element={<Downloads />} />
+
             <Route path="/news" element={<News />} />
             <Route path="/news/:slug" element={<NewsArticle />} />
             <Route path="/about" element={<About />} />

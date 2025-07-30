@@ -17,12 +17,26 @@ const Header = ({
     { label: "Industries", href: "/industries" },
     { label: "News", href: "/news" },
     { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact Us", href: "/contact" },
   ],
 }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
+
+  // Filter out Downloads from navLinks and ensure Contact shows as Contact Us
+  const filteredNavLinks = navLinks
+    .filter(
+      (link) =>
+        !link.href.includes("/downloads") &&
+        !link.label.toLowerCase().includes("download"),
+    )
+    .map((link) => {
+      if (link.href === "/contact" && link.label === "Contact") {
+        return { ...link, label: "Contact Us" };
+      }
+      return link;
+    });
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -68,7 +82,7 @@ const Header = ({
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {navLinks.map((link) => (
+          {filteredNavLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
@@ -97,7 +111,7 @@ const Header = ({
         <div className="md:hidden bg-white border-t border-gray-200">
           <div className="container mx-auto px-4 py-4">
             <nav className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
+              {filteredNavLinks.map((link) => (
                 <Link
                   key={link.href}
                   to={link.href}

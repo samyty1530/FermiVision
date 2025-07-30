@@ -6,7 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -210,7 +211,6 @@ const Contact = () => {
                           {t("contact.info.phone", "Phone")}
                         </h3>
                         <p className="text-gray-600">+86 189 2346 0852</p>
-                        <p className="text-gray-600">xxx</p>
                       </div>
                     </div>
 
@@ -223,6 +223,45 @@ const Contact = () => {
                         </h3>
 
                         <p className="text-gray-600">sales@fermivision.com</p>
+                      </div>
+                    </div>
+
+                    {/* WeChat */}
+                    <div className="flex items-start">
+                      <MessageCircle className="h-6 w-6 text-primary mr-4 mt-1" />
+                      <div>
+                        <h3 className="font-semibold text-gray-900 mb-1">
+                          WeChat
+                        </h3>
+                        <Dialog>
+                          <DialogTrigger asChild>
+                            <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer flex items-center">
+                              <img
+                                src="/images/home_socials-wechat.png"
+                                alt="WeChat"
+                                className="h-6 w-6 mr-2"
+                              />
+                              Connect with one of our representatives
+                            </button>
+                          </DialogTrigger>
+                          <DialogContent className="max-w-md">
+                            <div className="text-center">
+                              <h3 className="text-lg font-semibold mb-4">
+                                Connect with WeChat
+                              </h3>
+                              <div className="bg-gray-100 p-4 rounded-lg mb-4">
+                                <img
+                                  src="/images/FV_Wechat_QR.png"
+                                  alt="WeChat QR Code"
+                                  className="mx-auto w-48 h-48"
+                                />
+                              </div>
+                              <p className="text-gray-600">
+                                Connect with one of our representatives
+                              </p>
+                            </div>
+                          </DialogContent>
+                        </Dialog>
                       </div>
                     </div>
 

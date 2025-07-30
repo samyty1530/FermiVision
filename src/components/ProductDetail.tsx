@@ -309,96 +309,116 @@ const ProductDetail = () => {
                   "Our Technical Solution Process",
                 )}
               </h3>
-              <p className="text-center text-primary mb-8 text-base">
+              <p className="text-center text-primary font-bold mb-8 text-base">
                 {t(
                   "products.technicalProcess.subtitle",
-                  "Free consultation with our technical team and evaluation of your specific technical application. We value your time and provide a streamlined process to get you the right solution.",
+                  "We value your time and offer a streamlined, expert-driven process to ensure you receive the optimal solution for your inspection needs.",
                 )}
               </p>
 
               <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-gray-900 mb-4">
+                <h4 className="text-lg font-bold text-gray-900 mb-4">
                   {t(
                     "products.technicalProcess.stepsTitle",
-                    "Our normal customer support process for helping you find the best matched product for your application:",
+                    "Here's how our standard support process works:",
                   )}
                 </h4>
-                <div className="space-y-3">
-                  <div className="flex items-start">
-                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
-                      1)
-                    </span>
+                <div className="space-y-4">
+                  <div className="space-y-2">
+                    <h5 className="font-bold text-gray-900">
+                      {t(
+                        "products.technicalProcess.step1Title",
+                        "1. Submit Your Requirements",
+                      )}
+                    </h5>
                     <p className="text-gray-700">
                       {t(
                         "products.technicalProcess.step1",
-                        "Provide us with requirements for the type of product and dimensions you want to inspect, accuracy required, and any other requirements",
+                        "Let us know what you're looking to inspect — including product type, dimensions, required accuracy, and any specific conditions or constraints.",
                       )}
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
-                      2)
-                    </span>
+                  <div className="space-y-2">
+                    <h5 className="font-bold text-gray-900">
+                      {t(
+                        "products.technicalProcess.step2Title",
+                        "2. Initial Consultation",
+                      )}
+                    </h5>
                     <p className="text-gray-700">
                       {t(
                         "products.technicalProcess.step2",
-                        "One of our representatives will reach out to set up a quick video or call to discuss your specific needs",
+                        "A technical representative will contact you to schedule a quick video meeting or call to better understand your application.",
                       )}
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
-                      3)
-                    </span>
+                  <div className="space-y-2">
+                    <h5 className="font-bold text-gray-900">
+                      {t(
+                        "products.technicalProcess.step3Title",
+                        "3. Sample Testing",
+                      )}
+                    </h5>
                     <p className="text-gray-700">
                       {t(
                         "products.technicalProcess.step3",
-                        "If a product seems like a good match for your application, we'll ask you to mail us a sample of your part for testing.",
+                        "If one of our systems looks like a good fit, we'll ask you to send a sample part for evaluation.",
                       )}
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
-                      4)
-                    </span>
+                  <div className="space-y-2">
+                    <h5 className="font-bold text-gray-900">
+                      {t(
+                        "products.technicalProcess.step4Title",
+                        "4. Performance Verification",
+                      )}
+                    </h5>
                     <p className="text-gray-700">
                       {t(
                         "products.technicalProcess.step4",
-                        "We will test and email the test report for confirmation of performance.",
+                        "We'll conduct testing and provide a detailed report demonstrating the system's capabilities on your sample.",
                       )}
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
-                      5)
-                    </span>
+                  <div className="space-y-2">
+                    <h5 className="font-bold text-gray-900">
+                      {t(
+                        "products.technicalProcess.step5Title",
+                        "5. Quotation & Purchase",
+                      )}
+                    </h5>
                     <p className="text-gray-700">
                       {t(
                         "products.technicalProcess.step5",
-                        "Set up a purchase order with our sales representative after receiving test results.",
+                        "Once performance is confirmed, our sales team will assist with finalizing a purchase order.",
                       )}
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
-                      6)
-                    </span>
-                    <p className="text-gray-600 italic">
-                      {t("products.technicalProcess.optional", "Optional:")}{" "}
+                  <div className="space-y-2">
+                    <h5 className="font-bold text-gray-900">
+                      {t(
+                        "products.technicalProcess.step6Title",
+                        "6. Optional Customization",
+                      )}
+                    </h5>
+                    <p className="text-gray-700">
                       {t(
                         "products.technicalProcess.step6",
-                        "Customization - By request and needs, special optical components, lighting systems, and software capabilities can be added.",
+                        "We offer tailored upgrades — such as specialized optics, lighting systems, or software features — based on your unique requirements.",
                       )}
                     </p>
                   </div>
-                  <div className="flex items-start">
-                    <span className="text-primary mr-4 mt-0.5 flex-shrink-0 text-xl font-bold">
-                      7)
-                    </span>
+                  <div className="space-y-2">
+                    <h5 className="font-bold text-gray-900">
+                      {t(
+                        "products.technicalProcess.step7Title",
+                        "7. Ongoing Technical Support",
+                      )}
+                    </h5>
                     <p className="text-gray-700">
                       {t(
                         "products.technicalProcess.step7",
-                        "Continue to receive technical support during installation and training for warranty period.",
+                        "Our team provides installation guidance, user training, and continued technical support throughout the warranty period.",
                       )}
                     </p>
                   </div>
