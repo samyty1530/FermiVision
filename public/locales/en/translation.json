@@ -27,25 +27,25 @@
     "item1": {
       "title": "PCB Manufacturing",
       "subtitle": "Specialized vision solutions for PCB manufacturing",
-      "description": "Metrology guarantees the integrity of microscopic traces and vias, essential for reliable signal transmission. By monitoring critical dimensions and detecting defects, metrology supports the mass production of highly intricate boards used in everything from consumer electronics to advanced industrial systems.",
+      "description": "In modern electronics manufacturing, printed circuit boards (PCBs) have evolved into complex, multilayered platforms supporting high-density interconnects, microvias, and ultra-fine trace geometries. Ensuring dimensional integrity at this scale is critical—not only for electrical performance but also for downstream assembly, thermal reliability, and regulatory compliance.\n\nWhile optical metrology has become the industry's preferred approach for non-contact inspection, it still faces key limitations in high-mix production environments.",
       "alt": "PCB Manufacturing Industry"
     },
     "item2": {
       "title": "ARVR and Personal Devices",
       "subtitle": "Solutions for a wide range of personal electronics",
-      "description": "In augmented reality (AR) and virtual reality (VR) technologies, metrology ensures the accuracy of components like lenses, sensors, and microdisplays. Precise measurements enable seamless integration, reducing latency and improving user experience. For personal devices, metrology aids in miniaturization, ensuring tight tolerances for compact and efficient designs.",
+      "description": "As augmented reality (AR), virtual reality (VR), and compact consumer electronics evolve, the demand for ultra-precise components has surged. From curved optical lenses and microdisplays to LiDAR assemblies and wearable sensors, dimensional accuracy directly impacts performance metrics such as latency, field of view, image clarity, and mechanical reliability.\n\nIn these high-precision form factors, even micron-level deviations can degrade optical alignment or compromise enclosure integrity. Metrology plays a crucial role in verifying that every component—from aspheric lenses to housing grooves—meets design intent.",
       "alt": "ARVR and Personal Devices Industry"
     },
     "item3": {
       "title": "Aerospace",
       "subtitle": "Elevating safety and performance with advanced metrology solutions",
-      "description": "Accuracy is indispensable for achieving extreme precision in manufacturing aircraft and spacecraft components. It ensures tight tolerances for aerodynamic surfaces, engine parts, and structural elements. Advanced metrology tools verify alignment and assembly, enhancing safety and performance. By enabling innovations in lightweight materials and propulsion systems, metrology drives progress in one of the most demanding engineering fields.",
+      "description": "In aerospace manufacturing, tolerances aren't just specifications—they're safety-critical. From turbine blades and fuselage panels to guidance components and composite structures, dimensional accuracy ensures aerodynamic performance, structural reliability, and mission success.\n\nOptical metrology plays a pivotal role in verifying parts with complex geometries, reflective surfaces, or thermal sensitivity—where contact-based measurement is often impractical. As aircraft and spacecraft incorporate more lightweight materials and complex assemblies, manufacturers are under growing pressure to inspect faster, with tighter accuracy, and across increasingly varied production environments.",
       "alt": "Aerospace Industry"
     },
     "item4": {
       "title": "New Energy Automotives",
       "subtitle": "Driving electric innovation with precision optical measurement",
-      "description": "The transition to electric and hybrid vehicles depends heavily on precise battery cell manufacturing and electric motor components. Metrology ensures uniformity in battery cell assembly, critical for performance and safety. It also supports aerodynamic optimization and efficient drivetrain production through accurate measurements.",
+      "description": "The rise of electric and hybrid vehicles has introduced new manufacturing demands centered on ultra-tight tolerances, high-volume battery assembly, and precision motor components. As performance, range, and safety hinge on component accuracy, metrology has become a critical enabler across EV powertrain and structural production lines.\n\nUnlike traditional combustion vehicles, new energy platforms rely on dense, thermally sensitive assemblies—like pouch cells, busbars, stators, and rotor housings—where even sub-millimeter deviations can lead to efficiency losses or safety risks. In this fast-evolving field, inspection systems must keep pace with high-throughput environments, rapid design iterations, and vertically integrated supply chains.",
       "alt": "New Energy Automotives Industry"
     },
     "overview": "Fermi Vision provides cutting-edge computer vision solutions across multiple industries."
@@ -56,7 +56,7 @@
       "subtitle": "Tailored to your product manufacturing needs",
       "item1": {
         "title": "Vision Series U",
-        "description": "Advanced vision technology for precision applications",
+        "description": "Designed for full-panel, high-speed precision inspection of PCBs, FPCs, HDIs, IC substrates, and 3C products",
         "alt": "Vision Series U Product"
       },
       "item2": {
@@ -113,16 +113,34 @@
     "title": "News & Events",
     "readMore": "Read More",
     "item1": {
-      "title": "Latest Announcement 1",
-      "description": "Fermi Vision announces new developments in vision technology that will revolutionize the industry with unprecedented precision and reliability.",
+      "title": "Engineering Breakthrough: Cutting PCB Programming Time from Hours to Minutes",
+      "description": "How a leading multilayer PCB factory in Shenzhen streamlined full-panel inspections with Fermi Vision, reducing programming time from hours to minutes.",
       "date": "June 1, 2023",
-      "alt": "News Item 1"
+      "alt": "PCB Programming Efficiency White Paper"
     },
     "item2": {
-      "title": "Latest Announcement 2",
-      "description": "Fermi Vision announces new developments in vision technology that will revolutionize the industry with unprecedented precision and reliability.",
+      "title": "Adaptive Metrology for Export-Grade PCB Compliance",
+      "description": "A Zhuhai PCB factory adopts Fermi Vision to ensure compliance across new and legacy U.S. standards with unmatched speed.",
       "date": "June 2, 2023",
-      "alt": "News Item 2"
+      "alt": "PCB Compliance White Paper"
+    },
+    "item3": {
+      "title": "8000 Dimensions, 3 Minutes, One Machine",
+      "description": "How an international PCB trader hit telecom-grade inspection standards without scaling floor space",
+      "date": "April 11, 2024",
+      "alt": "High-Volume Antenna Board Inspection White Paper"
+    },
+    "item4": {
+      "title": "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix",
+      "description": "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3",
+      "date": "September 9, 2024",
+      "alt": "SK Hynix Semiconductor Efficiency White Paper"
+    },
+    "item5": {
+      "title": "Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection",
+      "description": "Thousands of press-fit holes measured in seconds with a physically simulated contact algorithm (PGA)",
+      "date": "February 1, 2025",
+      "alt": "Auto-Through-Hole Inspection White Paper"
     }
   },
   "search": {
@@ -212,7 +230,7 @@
     },
     "info": {
       "title": "Contact Information",
-      "address": "Address",
+      "address": "Headquarter",
       "phone": "Phone",
       "email": "Email",
       "hours": "Business Hours"

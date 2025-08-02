@@ -4,7 +4,10 @@ import Home from "./components/home";
 import Products from "./components/Products";
 import ProductDetail from "./components/ProductDetail";
 import Industries from "./components/Industries";
-
+import IndustryPCB from "./components/IndustryPCB";
+import IndustryARVR from "./components/IndustryARVR";
+import IndustryAerospace from "./components/IndustryAerospace";
+import IndustryNewEnergy from "./components/IndustryNewEnergy";
 import News from "./components/News";
 import NewsArticle from "./components/NewsArticle";
 import About from "./components/About";
@@ -40,6 +43,22 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/products/:series" element={<ProductDetail />} />
             <Route path="/industries" element={<Industries />} />
+            <Route
+              path="/industries/pcb-manufacturing"
+              element={<IndustryPCB />}
+            />
+            <Route
+              path="/industries/arvr-personal-devices"
+              element={<IndustryARVR />}
+            />
+            <Route
+              path="/industries/aerospace"
+              element={<IndustryAerospace />}
+            />
+            <Route
+              path="/industries/new-energy-automotives"
+              element={<IndustryNewEnergy />}
+            />
 
             <Route path="/news" element={<News />} />
             <Route path="/news/:slug" element={<NewsArticle />} />

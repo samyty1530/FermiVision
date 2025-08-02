@@ -20,26 +20,30 @@ const Home = () => {
     {
       image:
         "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80",
-      title: "Revolutionary Vision Technology",
+      title:
+        "Engineering Breakthrough: Cutting PCB Programming Time from Hours to Minutes",
       subtitle:
-        "Breakthrough algorithms achieving 99.9% defect detection accuracy",
+        "How a leading multilayer PCB factory in Shenzhen streamlined full-panel inspections with Fermi Vision, reducing programming time from hours to minutes.",
       newsId: "1",
+      slug: "engineering-breakthrough-pcb-programming-efficiency",
     },
     {
       image:
         "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80",
-      title: "Global Expansion Initiative",
+      title: "Adaptive Metrology for Export-Grade PCB Compliance",
       subtitle:
-        "Expanding across Asia-Pacific with localized support and services",
+        "A Zhuhai PCB factory adopts Fermi Vision to ensure compliance across new and legacy U.S. standards with unmatched speed.",
       newsId: "2",
+      slug: "adaptive-metrology-export-grade-pcb-compliance",
     },
     {
       image:
-        "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=1200&q=80",
-      title: "Strategic Industry Partnership",
+        "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80",
+      title: "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix",
       subtitle:
-        "Collaborating with leading semiconductor manufacturers for next-gen solutions",
-      newsId: "3",
+        "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3",
+      newsId: "4",
+      slug: "sk-hynix-semiconductor-efficiency-leap",
     },
   ];
 
@@ -105,7 +109,7 @@ const Home = () => {
           prev === heroBackgrounds.length - 1 ? 0 : prev + 1,
         );
       }
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, [isUserControlled, heroBackgrounds.length]);
@@ -172,7 +176,7 @@ const Home = () => {
             {heroBackgrounds[currentHeroIndex].subtitle}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to={`/news#news-${heroBackgrounds[currentHeroIndex].newsId}`}>
+            <Link to={`/news/${heroBackgrounds[currentHeroIndex].slug}`}>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary-700 text-white rounded-full w-[145] h-[45px] text-[18px]"
@@ -259,9 +263,9 @@ const Home = () => {
         </div>
       </section>
       {/* Industries Section */}
-      <section className="py-20 bg-white overflow-hidden">
+      <section className="py-12 bg-white overflow-hidden">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             {t("industries.title", "Explore Applicable Industries")}
           </h2>
           <div className="flex justify-center mb-12">
@@ -350,9 +354,9 @@ const Home = () => {
         </div>
       </section>
       {/* Featured Product Series */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-4 text-gray-900">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-900">
             {t("products.featured.title", "Product Series")}
           </h2>
           <div className="flex justify-center mb-12">
@@ -445,42 +449,65 @@ const Home = () => {
             {t("news.title", "News & Events")}
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {[1, 2].map((item) => (
-              <div
-                key={`news-${item}`}
-                className="flex flex-col md:flex-row gap-6"
-              >
-                <div className="md:w-1/2">
-                  <div className="rounded-lg overflow-hidden shadow-md">
-                    <img
-                      src={`https://images.unsplash.com/photo-${item === 1 ? "1581091226033-b5875c1b8b29" : "1581091226033-b5875c1b8b29"}?w=400&q=80`}
-                      alt={t(`news.item${item}.alt`, `News Item ${item}`)}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="md:w-1/2">
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&q=80"
+                    alt="8000 Dimensions, 3 Minutes, One Machine"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <div className="md:w-1/2">
-                  <h3 className="text-xl font-semibold mb-3">
-                    {t(`news.item${item}.title`, `Latest Announcement ${item}`)}
-                  </h3>
-                  <p className="text-gray-600 mb-4">
-                    {t(
-                      `news.item${item}.description`,
-                      `Fermi Vision announces new developments in vision technology that will revolutionize the industry with unprecedented precision and reliability.`,
-                    )}
-                  </p>
-                  <p className="text-sm text-gray-500">
-                    {t(`news.item${item}.date`, `June ${item}, 2023`)}
-                  </p>
+              </div>
+              <div className="md:w-1/2">
+                <h3 className="text-xl font-semibold mb-3">
+                  8000 Dimensions, 3 Minutes, One Machine
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  How an international PCB trader hit telecom-grade inspection
+                  standards without scaling floor space
+                </p>
+                <p className="text-sm text-gray-500">April 11, 2024</p>
+                <Link to="/news/unlocking-high-volume-antenna-board-inspection">
                   <Button
                     variant="outline"
                     className="mt-4 text-primary border-primary hover:bg-accent-50"
                   >
                     {t("news.readMore", "Read More")}
                   </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="md:w-1/2">
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img
+                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80"
+                    alt="Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection"
+                    className="w-full h-full object-cover"
+                  />
                 </div>
               </div>
-            ))}
+              <div className="md:w-1/2">
+                <h3 className="text-xl font-semibold mb-3">
+                  Fermi Vision Replaces Manual Pin Gauging with CAD-Driven
+                  Optical Inspection
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Thousands of press-fit holes measured in seconds with a
+                  physically simulated contact algorithm (PGA)
+                </p>
+                <p className="text-sm text-gray-500">February 1, 2025</p>
+                <Link to="/news/fermi-vision-replaces-manual-pin-gauging-cad-driven-optical-inspection">
+                  <Button
+                    variant="outline"
+                    className="mt-4 text-primary border-primary hover:bg-accent-50"
+                  >
+                    {t("news.readMore", "Read More")}
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

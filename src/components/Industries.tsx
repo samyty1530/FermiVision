@@ -14,88 +14,40 @@ const Industries = () => {
       name: t("industries.item1.title", "PCB Manufacturing"),
       description: t(
         "industries.item1.description",
-        "Metrology guarantees the integrity of microscopic traces and vias, essential for reliable signal transmission. By monitoring critical dimensions and detecting defects, metrology supports the mass production of highly intricate boards used in everything from consumer electronics to advanced industrial systems.",
+        "In modern electronics manufacturing, printed circuit boards (PCBs) have evolved into complex, multilayered platforms supporting high-density interconnects, microvias, and ultra-fine trace geometries. Ensuring dimensional integrity at this scale is critical—not only for electrical performance but also for downstream assembly, thermal reliability, and regulatory compliance.\n\nWhile optical metrology has become the industry's preferred approach for non-contact inspection, it still faces key limitations in high-mix production environments.",
       ),
       image:
         "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
-      challenges: [
-        "Quality control and defect detection",
-        "Process optimization",
-        "Automated inspection",
-        "Worker safety monitoring",
-      ],
-      solutions: [
-        "High-speed inspection systems",
-        "Defect classification AI",
-        "Production line monitoring",
-        "Predictive maintenance",
-      ],
     },
     {
       id: 2,
       name: t("industries.item2.title", "ARVR and Personal Devices"),
       description: t(
         "industries.item2.description",
-        "In augmented reality (AR) and virtual reality (VR) technologies, metrology ensures the accuracy of components like lenses, sensors, and microdisplays. Precise measurements enable seamless integration, reducing latency and improving user experience. For personal devices, metrology aids in miniaturization, ensuring tight tolerances for compact and efficient designs.",
+        "As augmented reality (AR), virtual reality (VR), and compact consumer electronics evolve, the demand for ultra-precise components has surged. From curved optical lenses and microdisplays to LiDAR assemblies and wearable sensors, dimensional accuracy directly impacts performance metrics such as latency, field of view, image clarity, and mechanical reliability.\n\nIn these high-precision form factors, even micron-level deviations can degrade optical alignment or compromise enclosure integrity. Metrology plays a crucial role in verifying that every component—from aspheric lenses to housing grooves—meets design intent.",
       ),
       image:
         "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80",
-      challenges: [
-        "Diagnostic accuracy",
-        "Patient monitoring",
-        "Surgical assistance",
-        "Medical imaging analysis",
-      ],
-      solutions: [
-        "AI-powered diagnostic tools",
-        "Real-time patient monitoring",
-        "Surgical navigation systems",
-        "Medical image enhancement",
-      ],
     },
     {
       id: 3,
       name: t("industries.item3.title", "Aerospace"),
       description: t(
         "industries.item3.description",
-        "Accuracy is indispensable for achieving extreme precision in manufacturing aircraft and spacecraft components. It ensures tight tolerances for aerodynamic surfaces, engine parts, and structural elements. Advanced metrology tools verify alignment and assembly, enhancing safety and performance. By enabling innovations in lightweight materials and propulsion systems, metrology drives progress in one of the most demanding engineering fields.",
+        "In aerospace manufacturing, tolerances aren't just specifications—they're safety-critical. From turbine blades and fuselage panels to guidance components and composite structures, dimensional accuracy ensures aerodynamic performance, structural reliability, and mission success.\n\nOptical metrology plays a pivotal role in verifying parts with complex geometries, reflective surfaces, or thermal sensitivity—where contact-based measurement is often impractical. As aircraft and spacecraft incorporate more lightweight materials and complex assemblies, manufacturers are under growing pressure to inspect faster, with tighter accuracy, and across increasingly varied production environments.",
       ),
       image:
         "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
-      challenges: [
-        "Perimeter security",
-        "Threat detection",
-        "Access control",
-        "Surveillance in challenging environments",
-      ],
-      solutions: [
-        "Intelligent surveillance systems",
-        "Facial recognition technology",
-        "Behavior analysis",
-        "Low-light vision systems",
-      ],
     },
     {
       id: 4,
       name: t("industries.item4.title", "New Energy Automotives"),
       description: t(
         "industries.item4.description",
-        "The transition to electric and hybrid vehicles depends heavily on precise battery cell manufacturing and electric motor components. Metrology ensures uniformity in battery cell assembly, critical for performance and safety. It also supports aerodynamic optimization and efficient drivetrain production through accurate measurements.",
+        "The rise of electric and hybrid vehicles has introduced new manufacturing demands centered on ultra-tight tolerances, high-volume battery assembly, and precision motor components. As performance, range, and safety hinge on component accuracy, metrology has become a critical enabler across EV powertrain and structural production lines.\n\nUnlike traditional combustion vehicles, new energy platforms rely on dense, thermally sensitive assemblies—like pouch cells, busbars, stators, and rotor housings—where even sub-millimeter deviations can lead to efficiency losses or safety risks. In this fast-evolving field, inspection systems must keep pace with high-throughput environments, rapid design iterations, and vertically integrated supply chains.",
       ),
       image:
         "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80",
-      challenges: [
-        "Object detection and tracking",
-        "Lane detection",
-        "Environmental perception",
-        "All-weather operation",
-      ],
-      solutions: [
-        "Advanced driver assistance systems",
-        "360° perception systems",
-        "LiDAR integration",
-        "Night vision capabilities",
-      ],
     },
   ];
 
@@ -153,40 +105,14 @@ const Industries = () => {
                 {/* Content */}
                 <div className="md:w-1/2 flex flex-col justify-center">
                   <h2 className="text-3xl font-bold mb-4">{industry.name}</h2>
-                  <p className="text-lg text-gray-600 mb-6">
-                    {industry.description}
-                  </p>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                    {/* Challenges */}
-                    <div>
-                      <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                        Challenges
-                      </h3>
-                      <ul className="space-y-2">
-                        {industry.challenges.map((challenge, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className="text-blue-600 mr-2">•</span>
-                            <span>{challenge}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Solutions */}
-                    <div>
-                      <h3 className="text-xl font-semibold mb-3 text-gray-800">
-                        Our Solutions
-                      </h3>
-                      <ul className="space-y-2">
-                        {industry.solutions.map((solution, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className="text-blue-600 mr-2">•</span>
-                            <span>{solution}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="text-lg text-gray-600 mb-6">
+                    {industry.description
+                      .split("\n\n")
+                      .map((paragraph, index) => (
+                        <p key={index} className={index > 0 ? "mt-4" : ""}>
+                          {paragraph}
+                        </p>
+                      ))}
                   </div>
 
                   {/* Learn More Button */}
@@ -194,9 +120,24 @@ const Industries = () => {
                     <Button
                       className="bg-primary hover:bg-primary-700 text-white px-8 py-3 min-w-[160px]"
                       onClick={() => {
-                        // Placeholder for case study navigation
-                        // In a real application, this would navigate to specific case studies
-                        console.log(`Navigate to ${industry.name} case study`);
+                        // Navigate to industry-specific pages
+                        if (industry.id === 1) {
+                          window.location.href =
+                            "/industries/pcb-manufacturing";
+                        } else if (industry.id === 2) {
+                          window.location.href =
+                            "/industries/arvr-personal-devices";
+                        } else if (industry.id === 3) {
+                          window.location.href = "/industries/aerospace";
+                        } else if (industry.id === 4) {
+                          window.location.href =
+                            "/industries/new-energy-automotives";
+                        } else {
+                          // Placeholder for other industries
+                          console.log(
+                            `Navigate to ${industry.name} case study`,
+                          );
+                        }
                       }}
                     >
                       {t("common.learnMore", "Learn More")}

@@ -57,11 +57,10 @@
     "description": "Versatile imaging solution for general-purpose quality control applications. The Vision Series U offers an excellent balance of performance and affordability for diverse inspection needs.",
     "image": "/images/product-series/vision-u.jpg",
     "features": [
-      "Modular design for application flexibility",
-      "User-friendly interface with minimal training required",
-      "Rapid deployment and setup",
-      "Comprehensive measurement toolkit",
-      "Scalable from manual to fully automated operation"
+      "High-speed, full-panel inspection of PCBs, FPCs, HDIs, IC substrates, and 3C products",
+      "5–10× faster than traditional vision systems with full 2.5D capability",
+      "FlashPro software with CAD import, SPC, image stitching, and offline programming",
+      "Fast setup and simplified programming for high-mix, high-throughput production"
     ]
   },
   {
