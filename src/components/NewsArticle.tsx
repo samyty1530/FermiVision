@@ -6,6 +6,7 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { ArrowLeft, Calendar, User, Tag, ExternalLink } from "lucide-react";
 import { getArticleBySlug } from "@/data/news-articles";
+import Breadcrumbs from "./layout/Breadcrumbs";
 
 const NewsArticle = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -36,21 +37,16 @@ const NewsArticle = () => {
         ]}
       />
 
-      {/* Page Content */}
-      <main className="flex-grow pt-24 pb-16">
-        {/* Back Navigation */}
-        <section className="py-8 border-b border-gray-200">
-          <div className="container mx-auto px-4">
-            <Link
-              to="/news"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-700 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              {t("common.backToNews", "Back to News")}
-            </Link>
-          </div>
-        </section>
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: t("nav.news", "News"), href: "/news" },
+          { label: article.title },
+        ]}
+      />
 
+      {/* Page Content */}
+      <main className="flex-grow pt-[132px] pb-16">
         {/* Article Header */}
         <section className="py-12">
           <div className="container mx-auto px-4">
@@ -118,13 +114,6 @@ const NewsArticle = () => {
               {/* Action Buttons */}
               <div className="mt-12 pt-8 border-t border-gray-200">
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link to="/news">
-                    <Button variant="outline" className="w-full sm:w-auto">
-                      <ArrowLeft className="h-4 w-4 mr-2" />
-                      {t("common.backToNews", "Back to News")}
-                    </Button>
-                  </Link>
-
                   {article.externalLink && (
                     <Link to={article.externalLink}>
                       <Button className="w-full sm:w-auto bg-primary hover:bg-primary-700">

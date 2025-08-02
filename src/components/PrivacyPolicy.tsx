@@ -1,6 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import MainLayout from "./layout/MainLayout";
+import Breadcrumbs from "./layout/Breadcrumbs";
 
 const PrivacyPolicy = () => {
   const { t, i18n } = useTranslation();
@@ -8,7 +9,14 @@ const PrivacyPolicy = () => {
 
   return (
     <MainLayout>
-      <div className="container mx-auto pt-32 pb-12 px-6 md:px-12">
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: currentLanguage === "en" ? "Privacy Policy" : "隐私政策" },
+        ]}
+      />
+
+      <div className="container mx-auto pt-[132px] pb-12 px-6 md:px-12">
         <h1 className="text-4xl font-bold mb-8 text-gray-900">
           {currentLanguage === "en" ? "Privacy Policy" : "隐私政策"}
         </h1>

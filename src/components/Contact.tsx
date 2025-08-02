@@ -8,6 +8,7 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import Breadcrumbs from "./layout/Breadcrumbs";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -56,8 +57,11 @@ const Contact = () => {
         ]}
       />
 
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: t("nav.contact", "Contact") }]} />
+
       {/* Page Content */}
-      <main className="flex-grow pt-24 pb-16">
+      <main className="flex-grow pt-[132px] pb-16">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-[#098fc8] via-[#098fc8] to-transparent py-16">
           <div className="container mx-auto px-4 text-center">

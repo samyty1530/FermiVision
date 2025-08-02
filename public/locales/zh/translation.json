@@ -48,7 +48,7 @@
       "description": "电动和混合动力汽车的兴起引入了以超严格公差、大批量电池装配和精密电机组件为中心的新制造需求。随着性能、续航里程和安全性取决于组件精度，计量技术已成为电动汽车动力总成和结构生产线的关键推动因素。\n\n与传统燃烧车辆不同，新能源平台依赖于密集的热敏感装配——如软包电池、汇流条、定子和转子外壳——即使是亚毫米偏差也可能导致效率损失或安全风险。在这个快速发展的领域，检测系统必须跟上高通量环境、快速设计迭代和垂直整合供应链的步伐。",
       "alt": "新能源汽车行业"
     },
-    "overview": "Fermi Vision 为多个行业提供尖端计算机视觉解决方案。"
+    "overview": "费米视觉为多个行业提供尖端计算机视觉解决方案。"
   },
   "products": {
     "featured": {
@@ -87,6 +87,46 @@
     "pageSubtitle": "探索我们全面的计算机视觉和光学解决方案。",
     "searchResults": "搜索结果: ",
     "searchSubtitle": "显示符合您搜索条件的产品",
+    "noResults": "未找到产品",
+    "tryDifferentSearch": "请尝试不同的搜索词",
+    "notFound": "产品未找到",
+    "notFoundMessage": "无法找到请求的产品。",
+    "backToProducts": "返回产品页面",
+    "keyFeatures": "应用和主要特性",
+    "downloadCatalog": "下载产品目录",
+    "technicalSpecifications": "技术规格",
+    "specificationMessage": "如需详细技术规格和定制选项，请联系我们的销售团队。",
+    "requestSpecs": "申请详细规格",
+    "relatedProducts": "相关产品",
+    "viewAllProducts": "查看所有产品",
+    "videoPlaceholder": "产品视频",
+    "videoComingSoon": "视频即将推出",
+    "series": {
+      "c": {
+        "title": "视觉系列 C",
+        "description": "用于复杂工业应用的高精度光学测量系统"
+      },
+      "a": {
+        "title": "视觉系列 A",
+        "description": "专为大批量制造环境设计的自动化计量解决方案"
+      },
+      "f": {
+        "title": "视觉系列 F",
+        "description": "用于精细特征测量的专业光学计量系统"
+      },
+      "b": {
+        "title": "视觉系列 B",
+        "description": "用于恶劣工业环境的坚固检测系统"
+      },
+      "u": {
+        "title": "视觉系列 U",
+        "description": "用于通用质量控制应用的多功能成像解决方案"
+      },
+      "accessories": {
+        "title": "配件和组件",
+        "description": "通过我们的专业配件系列增强您的费米视觉系统功能"
+      }
+    },
     "technicalProcess": {
       "title": "我们的技术解决方案流程",
       "subtitle": "我们珍惜您的时间，提供专家驱动的简化流程，确保您获得最适合您检测需求的解决方案。",
@@ -111,6 +151,7 @@
   },
   "news": {
     "title": "新闻与活动",
+    "subtitle": "了解费米视觉的最新发展、公告和见解。",
     "readMore": "阅读更多",
     "item1": {
       "title": "工程突破：将PCB编程时间从数小时缩短至数分钟",
@@ -151,7 +192,7 @@
     "subtitle": "获取产品文档、软件更新和技术资源。",
     "categories": {
       "software": "软件下载",
-      "documentation": "产品文档",
+      "documentation": "产品目录",
       "drivers": "驱动程序和固件",
       "certifications": "认证"
     },
@@ -169,7 +210,7 @@
     }
   },
   "about": {
-    "title": "关于 Fermi Vision",
+    "title": "关于费米视觉",
     "subtitle": "引领机器视觉测量技术的未来",
     "overview": {
       "title": "公司概况",
@@ -242,7 +283,8 @@
     },
     "quickLinks": "快速链接",
     "resources": "资源",
-    "contactUs": "联系我们",
+    "contactUs": "联系我们获取更多信息",
+    "downloadCatalog": "下载产品目录",
     "copyright": "版权所有。",
     "privacyPolicy": "隐私政策",
     "termsOfService": "服务条款",
@@ -254,7 +296,7 @@
     "support": "支持"
   },
   "header": {
-    "companyName": "Fermi Vision",
+    "companyName": "费米视觉",
     "searchPlaceholder": "搜索产品..."
   },
   "common": {
@@ -265,7 +307,9 @@
     "download": "下载",
     "sendAnotherMessage": "发送另一条消息",
     "submitAnotherRequest": "提交另一个请求",
-    "backToProducts": "返回产品页面"
+    "backToProducts": "返回产品页面",
+    "readFullArticle": "阅读完整文章",
+    "viewRelatedPage": "查看相关页面"
   },
   "customerRequest": {
     "title": "客户需求表单",
@@ -292,5 +336,20 @@
       "wechatId": "ID: FermiVision2024",
       "phone": "电话"
     }
+  },
+  "newsArticles": {
+    "executiveSummary": "执行摘要",
+    "background": "背景",
+    "challenge": "挑战",
+    "solution": "解决方案",
+    "results": "结果",
+    "conclusion": "结论",
+    "keyInnovations": "关键创新",
+    "industryImpact": "行业影响",
+    "breakthroughHighlights": "突破亮点",
+    "contactInfo": "了解更多信息，请访问：www.fermivision.com 或联系 sales@fermivision.com 申请演示。",
+    "learnMore": "了解更多信息，请访问：",
+    "orContact": "或联系",
+    "forDemo": "申请演示。"
   }
 }

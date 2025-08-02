@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import Breadcrumbs from "./layout/Breadcrumbs";
 import { Download, FileText, Code } from "lucide-react";
 
 const Downloads = () => {
@@ -181,8 +182,11 @@ const Downloads = () => {
         ]}
       />
 
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: t("nav.downloads", "Downloads") }]} />
+
       {/* Page Content */}
-      <main className="flex-grow pt-24 pb-16">
+      <main className="flex-grow pt-[132px] pb-16">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-[#098fc8] via-[#0772a0] to-[#00365c] py-16">
           <div className="container mx-auto px-4">

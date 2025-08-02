@@ -10,6 +10,7 @@ import Footer from "./layout/Footer";
 import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
+import Breadcrumbs from "./layout/Breadcrumbs";
 
 const CustomerRequestForm = () => {
   const { t } = useTranslation();
@@ -79,21 +80,16 @@ const CustomerRequestForm = () => {
         ]}
       />
 
-      {/* Page Content */}
-      <main className="flex-grow pt-24 pb-16">
-        {/* Navigation */}
-        <section className="py-8 border-b border-gray-200">
-          <div className="container mx-auto px-4">
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-700 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              {t("common.backToProducts", "Back to Products")}
-            </Link>
-          </div>
-        </section>
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: t("nav.products", "Products"), href: "/products" },
+          { label: t("customerRequest.title", "Customer Request Form") },
+        ]}
+      />
 
+      {/* Page Content */}
+      <main className="flex-grow pt-[132px] pb-16">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-[#098fc8] via-[#098fc8] to-transparent py-16">
           <div className="container mx-auto px-4 text-center">

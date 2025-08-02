@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { ArrowLeft, Check, Play, Image } from "lucide-react";
+import Breadcrumbs from "./layout/Breadcrumbs";
 
 interface ProductData {
   series: string;
@@ -106,7 +107,15 @@ const ProductDetail = () => {
             { label: t("nav.contact", "Contact"), href: "/contact" },
           ]}
         />
-        <main className="flex-grow pt-24 pb-16">
+        {/* Breadcrumbs */}
+        <Breadcrumbs
+          items={[
+            { label: t("nav.products", "Products"), href: "/products" },
+            { label: "Product Not Found" },
+          ]}
+        />
+
+        <main className="flex-grow pt-[140px] pb-16">
           <div className="container mx-auto px-4">
             <div className="text-center py-16">
               <h1 className="text-3xl font-bold mb-4 text-gray-900">
@@ -155,20 +164,15 @@ const ProductDetail = () => {
         ]}
       />
 
-      <main className="flex-grow pt-24 pb-16">
-        {/* Navigation */}
-        <section className="py-8 border-b border-gray-200">
-          <div className="container mx-auto px-4">
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 text-primary hover:text-primary-700 transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              {t("products.backToProducts", "Back to Products")}
-            </Link>
-          </div>
-        </section>
+      {/* Breadcrumbs */}
+      <Breadcrumbs
+        items={[
+          { label: t("nav.products", "Products"), href: "/products" },
+          { label: product?.title || "Product" },
+        ]}
+      />
 
+      <main className="flex-grow pt-[140px] pb-16">
         {/* Product Header */}
         <section className="py-12">
           <div className="container mx-auto px-4">

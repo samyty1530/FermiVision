@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import Breadcrumbs from "./layout/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -148,8 +149,9 @@ const Home = () => {
           { label: t("nav.contact", "Contact"), href: "/contact" },
         ]}
       />
+
       {/* Hero Section with Scrolling Backgrounds */}
-      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden mt-[80px]">
         {/* Background Images */}
         {heroBackgrounds.map((bg, index) => (
           <div

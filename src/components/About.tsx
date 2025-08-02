@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
+import Breadcrumbs from "./layout/Breadcrumbs";
 
 const About = () => {
   const { t } = useTranslation();
@@ -76,8 +77,11 @@ const About = () => {
         ]}
       />
 
+      {/* Breadcrumbs */}
+      <Breadcrumbs items={[{ label: t("nav.about", "About") }]} />
+
       {/* Page Content */}
-      <main className="flex-grow pt-24 pb-16">
+      <main className="flex-grow pt-[132px] pb-16">
         {/* Hero Section with Gradient Background */}
         <section className="bg-gradient-to-r from-[#098fc8] via-[#0772a0] to-[#00365c] py-16">
           <div className="container mx-auto px-4 text-center">

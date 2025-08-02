@@ -21,11 +21,6 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "How a leading multilayer PCB factory in Shenzhen streamlined full-panel inspections with Fermi Vision, reducing programming time from hours to minutes.",
     content: `
-      <div class="white-paper-header">
-        <h2>Engineering Breakthrough in PCB Inspection Efficiency</h2>
-        <p class="subtitle">How a leading multilayer PCB factory in Shenzhen streamlined full-panel inspections with Fermi Vision</p>
-      </div>
-      
       <h3>Executive Summary</h3>
       <p>A major multilayer PCB manufacturer in Shenzhen faced increasing complexity and demand for rapid, high-volume inspections across hundreds of board types. Traditional optical metrology systems required extensive manual programming and lacked flexibility.</p>
       
@@ -130,11 +125,6 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "A Zhuhai PCB factory adopts Fermi Vision to ensure compliance across new and legacy U.S. standards with unmatched speed.",
     content: `
-      <div class="white-paper-header">
-        <h2>Adaptive Metrology for Export-Grade PCB Compliance</h2>
-        <p class="subtitle">A Zhuhai PCB factory adopts Fermi Vision to ensure compliance across new and legacy U.S. standards</p>
-      </div>
-      
       <h3>Executive Summary</h3>
       <p>As global PCB suppliers face increasingly diverse compliance requirements, the ability to adapt inspection protocols quickly is essential. In this case, a Zhuhai-based PCB factory was tasked with dimensionally verifying export-bound boards under both old and new U.S. standards for curvature and positioning. Competing systems required separate modules or entirely new equipment to support different benchmarks—slowing throughput and inflating operational costs.</p>
       
@@ -174,11 +164,6 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "How an international PCB trader hit telecom-grade inspection standards without scaling floor space",
     content: `
-      <div class="white-paper-header">
-        <h2>Unlocking High-Volume Antenna Board Inspection</h2>
-        <p class="subtitle">How an international PCB trader hit telecom-grade inspection standards without scaling floor space</p>
-      </div>
-      
       <h3>Executive Summary</h3>
       <p>An international PCB trader specializing in antenna boards faced an ambitious challenge: inspect over 8000 dimensions per board—across 200 transmitting units—while holding inspection time under 10 minutes. Traditional systems took over 40 minutes and required multiple machines running in parallel. Fermi Vision delivered a purpose-built workflow using a dual-phase pre-scan and high-speed fly-capture process that completed inspection in under 3 minutes—on a single machine.</p>
       
@@ -233,11 +218,6 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3",
     content: `
-      <div class="white-paper-header">
-        <h2>Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix</h2>
-        <p class="subtitle">Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3</p>
-      </div>
-      
       <p><em>Seoul, South Korea — September 9, 2024</em></p>
       
       <p>In a major advancement for semiconductor inspection technology, SK Hynix has adopted Fermi Vision's advanced vision system for full-panel inspection of gold-powder terminal diameters and positions across high-density IC substrates.</p>
@@ -276,11 +256,6 @@ export const newsArticles: NewsArticle[] = [
     excerpt:
       "Thousands of press-fit holes measured in seconds with a physically simulated contact algorithm (PGA)",
     content: `
-      <div class="white-paper-header">
-        <h2>Auto-Through-Hole Inspection Revolutionizes PCB QA at Leading Shenzhen Factory</h2>
-        <p class="subtitle">Thousands of press-fit holes measured in seconds with a physically simulated contact algorithm (PGA)</p>
-      </div>
-      
       <p><em>Shenzhen, China — February 1, 2025</em></p>
       
       <p>A major PCB manufacturing facility has retired its legacy pin gauges in favor of a Fermi Vision-powered inspection system that measures thousands of press-fit holes in seconds — all without human intervention.</p>
