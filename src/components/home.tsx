@@ -172,10 +172,16 @@ const Home = () => {
         {/* Content */}
         <div className="container mx-auto px-4 z-20 text-center relative">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            {heroBackgrounds[currentHeroIndex].title}
+            {t(
+              `news.item${currentHeroIndex + 1}.title`,
+              heroBackgrounds[currentHeroIndex].title,
+            )}
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto mb-8">
-            {heroBackgrounds[currentHeroIndex].subtitle}
+            {t(
+              `news.item${currentHeroIndex + 1}.description`,
+              heroBackgrounds[currentHeroIndex].subtitle,
+            )}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to={`/news/${heroBackgrounds[currentHeroIndex].slug}`}>

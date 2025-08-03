@@ -288,12 +288,13 @@
     "copyright": "版权所有。",
     "privacyPolicy": "隐私政策",
     "termsOfService": "服务条款",
-    "sitemap": "网站地图",
     "blog": "博客",
     "caseStudies": "案例研究",
     "whitePapers": "白皮书",
     "documentation": "文档",
-    "support": "支持"
+    "support": "支持",
+    "newsEvents": "新闻与活动",
+    "aboutUs": "关于我们"
   },
   "header": {
     "companyName": "费米视觉",

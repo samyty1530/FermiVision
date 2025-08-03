@@ -22,17 +22,21 @@ const Footer = ({
     linkedin: "https://linkedin.com",
   },
 }: FooterProps) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 px-4 md:px-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4 text-white">{companyName}</h3>
+            <h3 className="text-xl font-bold mb-4 text-white">
+              {t("header.companyName", companyName)}
+            </h3>
             <p className="mb-4 text-sm">
-              Pioneering the future of technology with innovative solutions for
-              tomorrow's challenges.
+              {t(
+                "footer.company.description",
+                "Pioneering the future of technology with innovative solutions for tomorrow's challenges.",
+              )}
             </p>
             <div className="flex space-x-4">
               {socialLinks.linkedin && (
@@ -51,7 +55,7 @@ const Footer = ({
           {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">
-              Quick Links
+              {t("footer.quickLinks", "Quick Links")}
             </h3>
             <ul className="space-y-2">
               <li>
@@ -60,7 +64,7 @@ const Footer = ({
                   className="hover:text-primary transition-colors text-sm"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Home
+                  {t("nav.home", "Home")}
                 </Link>
               </li>
               <li>
@@ -69,7 +73,7 @@ const Footer = ({
                   className="hover:text-primary transition-colors text-sm"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Products
+                  {t("nav.products", "Products")}
                 </Link>
               </li>
               <li>
@@ -78,7 +82,7 @@ const Footer = ({
                   className="hover:text-primary transition-colors text-sm"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Industries
+                  {t("nav.industries", "Industries")}
                 </Link>
               </li>
             </ul>
@@ -86,7 +90,9 @@ const Footer = ({
 
           {/* Resources */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-white">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 text-white">
+              {t("footer.resources", "Resources")}
+            </h3>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -94,7 +100,7 @@ const Footer = ({
                   className="hover:text-primary transition-colors text-sm"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  News & Events
+                  {t("nav.news", "News")}
                 </Link>
               </li>
               <li>
@@ -103,7 +109,7 @@ const Footer = ({
                   className="hover:text-primary transition-colors text-sm"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  About Us
+                  {t("nav.about", "About")}
                 </Link>
               </li>
 
@@ -113,7 +119,7 @@ const Footer = ({
                   className="hover:text-primary transition-colors text-sm"
                   onClick={() => window.scrollTo(0, 0)}
                 >
-                  Customer Request Form
+                  {t("customerRequest.title", "Customer Request Form")}
                 </Link>
               </li>
             </ul>
@@ -122,7 +128,7 @@ const Footer = ({
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-white">
-              Contact Us
+              {t("footer.contactUs", "Contact Us")}
             </h3>
             <ul className="space-y-3">
               <li className="flex items-start">
@@ -148,27 +154,22 @@ const Footer = ({
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-sm text-center">
           <p>
-            &copy; {new Date().getFullYear()} {companyName}. All rights
-            reserved.
+            &copy; {new Date().getFullYear()}{" "}
+            {t("header.companyName", companyName)}.{" "}
+            {t("footer.copyright", "All rights reserved.")}
           </p>
           <div className="mt-2 space-x-4">
             <Link
               to="/privacy-policy"
               className="hover:text-primary transition-colors"
             >
-              {i18n.language === "en" ? "Privacy Policy" : "隐私政策"}
+              {t("footer.privacyPolicy", "Privacy Policy")}
             </Link>
             <Link
               to="/terms-of-service"
               className="hover:text-primary transition-colors"
             >
-              {i18n.language === "en" ? "Terms of Service" : "使用条款"}
-            </Link>
-            <Link
-              to="/sitemap"
-              className="hover:text-primary transition-colors"
-            >
-              {i18n.language === "en" ? "Sitemap" : "网站地图"}
+              {t("footer.termsOfService", "Terms of Service")}
             </Link>
           </div>
         </div>

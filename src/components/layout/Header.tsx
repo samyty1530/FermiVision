@@ -1,6 +1,7 @@
 import React, { useState, KeyboardEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Menu, X, Search } from "lucide-react";
+import { useTranslation } from "react-i18next";
 // Import the default export from LanguageSwitcher
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Input } from "@/components/ui/input";
@@ -20,6 +21,7 @@ const Header = ({
     { label: "Contact Us", href: "/contact" },
   ],
 }: HeaderProps) => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const navigate = useNavigate();
@@ -70,7 +72,7 @@ const Header = ({
           <div className="relative flex items-center">
             <Input
               type="text"
-              placeholder="Search products..."
+              placeholder={t("search.placeholder", "Search products...")}
               className="pr-8 w-full"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
