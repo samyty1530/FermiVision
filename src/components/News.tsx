@@ -52,8 +52,10 @@ const News = () => {
               {t("news.title", "News & Events")}
             </h1>
             <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-              Stay updated with the latest developments, announcements, and
-              insights from Fermi Vision.
+              {t(
+                "news.subtitle",
+                "Stay updated with the latest developments, announcements, and insights from Fermi Vision.",
+              )}
             </p>
           </div>
         </section>
@@ -82,14 +84,17 @@ const News = () => {
                         <div className="md:w-2/3 p-6">
                           <div className="flex items-center justify-between mb-2">
                             <span className="text-sm text-primary font-medium">
-                              {item.date}
+                              {t(`news.articles.${item.id}.date`, item.date)}
                             </span>
                           </div>
                           <h2 className="text-2xl font-bold mb-3 text-gray-900">
-                            {item.title}
+                            {t(`news.articles.${item.id}.title`, item.title)}
                           </h2>
                           <p className="text-gray-600 leading-relaxed mb-4">
-                            {item.excerpt}
+                            {t(
+                              `news.articles.${item.id}.excerpt`,
+                              item.excerpt,
+                            )}
                           </p>
 
                           {/* Action Buttons */}

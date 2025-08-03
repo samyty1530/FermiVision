@@ -96,7 +96,7 @@ const Contact = () => {
                       onClick={() => setFormSubmitted(false)}
                       className="mt-4 bg-primary hover:bg-primary-700 text-white"
                     >
-                      Send Another Message
+                      {t("common.sendAnotherMessage", "Send Another Message")}
                     </Button>
                   </div>
                 ) : (
@@ -245,7 +245,10 @@ const Contact = () => {
                                 alt="WeChat"
                                 className="h-6 w-6 mr-2"
                               />
-                              Connect with one of our representatives
+                              {t(
+                                "customerRequest.representatives.title",
+                                "Connect with one of our representatives",
+                              )}
                             </button>
                           </DialogTrigger>
                           <DialogContent className="max-w-md">
@@ -261,7 +264,10 @@ const Contact = () => {
                                 />
                               </div>
                               <p className="text-gray-600">
-                                Connect with one of our representatives
+                                {t(
+                                  "customerRequest.representatives.title",
+                                  "Connect with one of our representatives",
+                                )}
                               </p>
                             </div>
                           </DialogContent>

@@ -28,7 +28,7 @@ const IndustryPCB = () => {
       <Breadcrumbs
         items={[
           { label: t("nav.industries", "Industries"), href: "/industries" },
-          { label: "PCB Manufacturing" },
+          { label: t("industries.item1.title", "PCB Manufacturing") },
         ]}
       />
 
@@ -40,13 +40,18 @@ const IndustryPCB = () => {
             <div className="max-w-4xl mx-auto">
               {/* Industry Title */}
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                PCB Manufacturing: The State of Optical Metrology
+                {t(
+                  "industries.pcb.title",
+                  "PCB Manufacturing: The State of Optical Metrology",
+                )}
               </h1>
 
               {/* Industry Overview */}
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                Advanced metrology solutions for modern printed circuit board
-                manufacturing processes.
+                {t(
+                  "industries.pcb.subtitle",
+                  "Advanced metrology solutions for modern printed circuit board manufacturing processes.",
+                )}
               </p>
 
               {/* Featured Image */}
@@ -68,81 +73,101 @@ const IndustryPCB = () => {
               <div className="text-gray-700 leading-relaxed space-y-8">
                 <div>
                   <p className="text-lg mb-6">
-                    In modern electronics manufacturing, printed circuit boards
-                    (PCBs) have evolved into complex, multilayered platforms
-                    supporting <strong>high-density interconnects</strong>,{" "}
-                    <strong>microvias</strong>, and{" "}
-                    <strong>ultra-fine trace geometries</strong>. Ensuring
-                    dimensional integrity at this scale is critical—not only for
-                    electrical performance but also for downstream assembly,
-                    thermal reliability, and regulatory compliance.
+                    {t(
+                      "industries.pcb.overview1",
+                      "In modern electronics manufacturing, printed circuit boards (PCBs) have evolved into complex, multilayered platforms supporting high-density interconnects, microvias, and ultra-fine trace geometries. Ensuring dimensional integrity at this scale is critical—not only for electrical performance but also for downstream assembly, thermal reliability, and regulatory compliance.",
+                    )}
                   </p>
 
                   <p className="text-lg">
-                    While optical metrology has become the industry's preferred
-                    approach for non-contact inspection, it still faces key
-                    limitations in high-mix production environments:
+                    {t(
+                      "industries.pcb.overview2",
+                      "While optical metrology has become the industry's preferred approach for non-contact inspection, it still faces key limitations in high-mix production environments:",
+                    )}
                   </p>
                 </div>
 
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                    Common Challenges in PCB Optical Inspection
+                    {t(
+                      "industries.pcb.challengesTitle",
+                      "Common Challenges in PCB Optical Inspection",
+                    )}
                   </h2>
 
                   <div className="space-y-5">
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Manual Programming Bottlenecks:
+                        {t(
+                          "industries.pcb.challenge1Title",
+                          "Manual Programming Bottlenecks:",
+                        )}
                       </h3>
                       <p className="text-lg">
-                        Most systems still rely on time-consuming, manual
-                        feature selection and alignment workflows, which scale
-                        poorly with diverse board types.
+                        {t(
+                          "industries.pcb.challenge1Desc",
+                          "Most systems still rely on time-consuming, manual feature selection and alignment workflows, which scale poorly with diverse board types.",
+                        )}
                       </p>
                     </div>
 
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Limited CAD Integration:
+                        {t(
+                          "industries.pcb.challenge2Title",
+                          "Limited CAD Integration:",
+                        )}
                       </h3>
                       <p className="text-lg">
-                        Inspection systems often operate in isolation from
-                        upstream design tools, forcing duplication of effort and
-                        increasing the risk of oversight.
+                        {t(
+                          "industries.pcb.challenge2Desc",
+                          "Inspection systems often operate in isolation from upstream design tools, forcing duplication of effort and increasing the risk of oversight.",
+                        )}
                       </p>
                     </div>
 
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Rigid Standards Support:
+                        {t(
+                          "industries.pcb.challenge3Title",
+                          "Rigid Standards Support:",
+                        )}
                       </h3>
                       <p className="text-lg">
-                        Some equipment lacks flexibility to support different
-                        international dimensional standards or composite fitting
-                        benchmarks.
+                        {t(
+                          "industries.pcb.challenge3Desc",
+                          "Some equipment lacks flexibility to support different international dimensional standards or composite fitting benchmarks.",
+                        )}
                       </p>
                     </div>
 
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Measurement Throughput:
+                        {t(
+                          "industries.pcb.challenge4Title",
+                          "Measurement Throughput:",
+                        )}
                       </h3>
                       <p className="text-lg">
-                        High-resolution imaging over large boards with thousands
-                        of features can lead to long cycle times—especially when
-                        multiple machines are required.
+                        {t(
+                          "industries.pcb.challenge4Desc",
+                          "High-resolution imaging over large boards with thousands of features can lead to long cycle times—especially when multiple machines are required.",
+                        )}
                       </p>
                     </div>
 
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        Complex Feature Interpretation:
+                        {t(
+                          "industries.pcb.challenge5Title",
+                          "Complex Feature Interpretation:",
+                        )}
                       </h3>
                       <p className="text-lg">
-                        Features like curved traces, irregular pads, or
-                        gold-powdered terminals present challenges for
-                        traditional edge-detection and measurement algorithms.
+                        {t(
+                          "industries.pcb.challenge5Desc",
+                          "Features like curved traces, irregular pads, or gold-powdered terminals present challenges for traditional edge-detection and measurement algorithms.",
+                        )}
                       </p>
                     </div>
                   </div>
@@ -150,34 +175,31 @@ const IndustryPCB = () => {
 
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                    Where the Industry Lags
+                    {t(
+                      "industries.pcb.industryLagsTitle",
+                      "Where the Industry Lags",
+                    )}
                   </h2>
                   <p className="text-lg">
-                    Despite advances in imaging hardware, many PCB inspection
-                    tools are constrained by{" "}
-                    <strong>legacy software architectures</strong> that limit
-                    their adaptability, automation potential, and integration
-                    into modern production workflows. As a result, inspection
-                    becomes a <strong>rate-limiting step</strong>—slowing new
-                    product introductions (NPI), increasing operational
-                    overhead, and introducing quality risks.
+                    {t(
+                      "industries.pcb.industryLagsDesc",
+                      "Despite advances in imaging hardware, many PCB inspection tools are constrained by legacy software architectures that limit their adaptability, automation potential, and integration into modern production workflows. As a result, inspection becomes a rate-limiting step—slowing new product introductions (NPI), increasing operational overhead, and introducing quality risks.",
+                    )}
                   </p>
                 </div>
 
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
-                    Fermi Vision's Approach
+                    {t(
+                      "industries.pcb.fermiApproachTitle",
+                      "Fermi Vision's Approach",
+                    )}
                   </h2>
                   <p className="text-lg">
-                    Fermi Vision addresses these gaps by rethinking the
-                    relationship between hardware precision and software
-                    intelligence. With support for{" "}
-                    <strong>CAD-driven auto-programming</strong>,{" "}
-                    <strong>dynamic multi-standard tolerancing</strong>, and{" "}
-                    <strong>hybrid scan workflows</strong> (e.g., pre-scan +
-                    fly-capture), we help manufacturers unlock new levels of
-                    inspection speed, accuracy, and flexibility—without scaling
-                    floor space or increasing headcount.
+                    {t(
+                      "industries.pcb.fermiApproachDesc",
+                      "Fermi Vision addresses these gaps by rethinking the relationship between hardware precision and software intelligence. With support for CAD-driven auto-programming, dynamic multi-standard tolerancing, and hybrid scan workflows (e.g., pre-scan + fly-capture), we help manufacturers unlock new levels of inspection speed, accuracy, and flexibility—without scaling floor space or increasing headcount.",
+                    )}
                   </p>
                 </div>
               </div>

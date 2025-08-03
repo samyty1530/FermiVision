@@ -225,14 +225,18 @@ const Downloads = () => {
                             {item.description}
                           </p>
                           <div className="flex items-center text-sm text-gray-500">
-                            <span className="mr-4">Size: {item.size}</span>
-                            <span>Updated: {item.date}</span>
+                            <span className="mr-4">
+                              {t("downloads.size", "Size")}: {item.size}
+                            </span>
+                            <span>
+                              {t("downloads.updated", "Updated")}: {item.date}
+                            </span>
                           </div>
                         </div>
                       </div>
                       <Button className="w-full bg-primary hover:bg-primary-700 text-white flex items-center justify-center gap-2">
                         <Download className="h-4 w-4" />
-                        Download
+                        {t("common.download", "Download")}
                       </Button>
                     </div>
                   ))}
@@ -267,7 +271,7 @@ const Downloads = () => {
                   onClick={() => setFormSubmitted(false)}
                   className="mt-4 bg-primary hover:bg-primary-700 text-white"
                 >
-                  Submit Another Request
+                  {t("common.submitAnotherRequest", "Submit Another Request")}
                 </Button>
               </div>
             ) : (
@@ -288,7 +292,10 @@ const Downloads = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      placeholder="John Doe"
+                      placeholder={t(
+                        "downloads.requestForm.namePlaceholder",
+                        "John Doe",
+                      )}
                     />
                   </div>
 
@@ -305,7 +312,10 @@ const Downloads = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      placeholder="john.doe@example.com"
+                      placeholder={t(
+                        "downloads.requestForm.emailPlaceholder",
+                        "john.doe@example.com",
+                      )}
                     />
                   </div>
                 </div>
@@ -322,7 +332,10 @@ const Downloads = () => {
                     value={formData.company}
                     onChange={handleInputChange}
                     required
-                    placeholder="Acme Corporation"
+                    placeholder={t(
+                      "downloads.requestForm.companyPlaceholder",
+                      "Acme Corporation",
+                    )}
                   />
                 </div>
 
@@ -338,22 +351,41 @@ const Downloads = () => {
                     required
                   >
                     <SelectTrigger id="product">
-                      <SelectValue placeholder="Select a product" />
+                      <SelectValue
+                        placeholder={t(
+                          "downloads.requestForm.productPlaceholder",
+                          "Select a product",
+                        )}
+                      />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="vision-series-x">
-                        Vision Series X
+                        {t(
+                          "downloads.products.visionSeriesX",
+                          "Vision Series X",
+                        )}
                       </SelectItem>
                       <SelectItem value="vision-series-y">
-                        Vision Series Y
+                        {t(
+                          "downloads.products.visionSeriesY",
+                          "Vision Series Y",
+                        )}
                       </SelectItem>
                       <SelectItem value="vision-series-z">
-                        Vision Series Z
+                        {t(
+                          "downloads.products.visionSeriesZ",
+                          "Vision Series Z",
+                        )}
                       </SelectItem>
                       <SelectItem value="vision-analytics">
-                        Vision Analytics Suite
+                        {t(
+                          "downloads.products.visionAnalytics",
+                          "Vision Analytics Suite",
+                        )}
                       </SelectItem>
-                      <SelectItem value="other">Other</SelectItem>
+                      <SelectItem value="other">
+                        {t("downloads.products.other", "Other")}
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
@@ -370,7 +402,10 @@ const Downloads = () => {
                     value={formData.reason}
                     onChange={handleInputChange}
                     required
-                    placeholder="Please describe why you need access to these resources..."
+                    placeholder={t(
+                      "downloads.requestForm.reasonPlaceholder",
+                      "Please describe why you need access to these resources...",
+                    )}
                     rows={4}
                   />
                 </div>

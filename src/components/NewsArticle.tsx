@@ -55,12 +55,16 @@ const NewsArticle = () => {
               <div className="flex flex-wrap items-center gap-4 mb-6 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  <span>{article.date}</span>
+                  <span>
+                    {t(`news.articles.${article.id}.date`, article.date)}
+                  </span>
                 </div>
                 {article.author && (
                   <div className="flex items-center gap-2">
                     <User className="h-4 w-4" />
-                    <span>{article.author}</span>
+                    <span>
+                      {t(`news.articles.${article.id}.author`, article.author)}
+                    </span>
                   </div>
                 )}
                 {article.tags && article.tags.length > 0 && (
@@ -72,7 +76,10 @@ const NewsArticle = () => {
                           key={index}
                           className="bg-gray-100 text-gray-700 px-2 py-1 rounded-full text-xs"
                         >
-                          {tag}
+                          {t(
+                            `news.tags.${tag.toLowerCase().replace(/\s+/g, "")}`,
+                            tag,
+                          )}
                         </span>
                       ))}
                     </div>
@@ -82,12 +89,12 @@ const NewsArticle = () => {
 
               {/* Article Title */}
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                {article.title}
+                {t(`news.articles.${article.id}.title`, article.title)}
               </h1>
 
               {/* Article Excerpt */}
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                {article.excerpt}
+                {t(`news.articles.${article.id}.excerpt`, article.excerpt)}
               </p>
 
               {/* Featured Image */}
@@ -108,7 +115,12 @@ const NewsArticle = () => {
             <div className="max-w-4xl mx-auto">
               <div
                 className="article-content text-gray-700 leading-relaxed"
-                dangerouslySetInnerHTML={{ __html: article.content }}
+                dangerouslySetInnerHTML={{
+                  __html: t(
+                    `news.articles.${article.id}.content`,
+                    article.content,
+                  ),
+                }}
               />
 
               {/* Action Buttons */}
@@ -117,7 +129,7 @@ const NewsArticle = () => {
                   {article.externalLink && (
                     <Link to={article.externalLink}>
                       <Button className="w-full sm:w-auto bg-primary hover:bg-primary-700">
-                        {t("common.viewRelatedPage", "View Related Page")}
+                        {t("common.learnMore", "Learn More")}
                         <ExternalLink className="h-4 w-4 ml-2" />
                       </Button>
                     </Link>
