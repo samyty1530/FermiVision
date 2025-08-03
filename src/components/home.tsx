@@ -139,7 +139,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo_250625.png"
+        logo="/images/FV_logo.png"
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -258,14 +258,19 @@ const Home = () => {
               className="h-10 md:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home_partners-dongxun.png"
-              alt="Dongxun"
+              src="/images/home-partners-unimicron.png"
+              alt="Unimicron"
               className="h-10 md:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home_partners-fangzheng.png"
-              alt="Fangzheng"
-              className="h-5 md:h-6 object-contain opacity-80 hover:opacity-100 transition-opacity"
+              src="/images/home-partners-chongda.png"
+              alt="Chongda"
+              className="h-10 md:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
+            />
+            <img
+              src="/images/home-partners-SK.png"
+              alt="SK"
+              className="h-10 md:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
           </div>
         </div>

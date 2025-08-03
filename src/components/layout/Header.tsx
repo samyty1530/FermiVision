@@ -12,7 +12,7 @@ interface HeaderProps {
 }
 
 const Header = ({
-  logo = "/images/FV_logo_250625.png",
+  logo = "/images/FV_logo.png",
   navLinks = [
     { label: "Products", href: "/products" },
     { label: "Industries", href: "/industries" },
@@ -62,7 +62,7 @@ const Header = ({
             className="h-20"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = "/images/FV_logo_250625.png";
+              target.src = "/images/FV_logo.png";
             }}
           />
         </Link>

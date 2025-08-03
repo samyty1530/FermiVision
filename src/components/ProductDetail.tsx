@@ -67,7 +67,7 @@ const ProductDetail = () => {
     return (
       <div className="flex flex-col min-h-screen bg-background">
         <Header
-          logo="/images/FV_logo_250625.png"
+          logo="/images/FV_logo.png"
           navLinks={[
             { label: t("nav.products", "Products"), href: "/products" },
             { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -97,7 +97,7 @@ const ProductDetail = () => {
     return (
       <div className="flex flex-col min-h-screen bg-background">
         <Header
-          logo="/images/FV_logo_250625.png"
+          logo="/images/FV_logo.png"
           navLinks={[
             { label: t("nav.products", "Products"), href: "/products" },
             { label: t("nav.industries", "Industries"), href: "/industries" },
