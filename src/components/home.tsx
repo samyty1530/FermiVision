@@ -39,7 +39,7 @@ const Home = () => {
     },
     {
       image:
-        "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=1200&q=80",
+        "/images/news_SK.png",
       title: "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix",
       subtitle:
         "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3",
@@ -495,8 +495,8 @@ const Home = () => {
               <div className="md:w-1/2">
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=400&q=80"
-                    alt="Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection"
+                    src="/images/news_SK.png"
+                    alt="Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix"
                     className="w-full h-full object-cover"
                   />
                 </div>

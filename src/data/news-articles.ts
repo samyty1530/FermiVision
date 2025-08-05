@@ -243,7 +243,7 @@ export const newsArticles: NewsArticle[] = [
       </div>
     `,
     imageUrl:
-      "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=800&q=80",
+      "/images/news_SK.png",
     tags: ["Semiconductor", "SK Hynix", "Computer Vision", "Optical Metrology"],
     externalLink: "/products",
   },
