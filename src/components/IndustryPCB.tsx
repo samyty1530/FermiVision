@@ -57,7 +57,7 @@ const IndustryPCB = () => {
               {/* Featured Image */}
               <div className="mb-12">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80"
+                  src="/images/home_industries-1.jpg"
                   alt="PCB Manufacturing"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />

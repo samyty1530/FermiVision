@@ -57,7 +57,7 @@ const IndustryARVR = () => {
               {/* Featured Image */}
               <div className="mb-12">
                 <img
-                  src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80"
+                  src="/images/home_industries-2.jpg"
                   alt="AR/VR and Personal Devices"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />

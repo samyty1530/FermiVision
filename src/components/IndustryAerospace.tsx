@@ -57,7 +57,7 @@ const IndustryAerospace = () => {
               {/* Featured Image */}
               <div className="mb-12">
                 <img
-                  src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80"
+                  src="/images/home_industries-3.jpg"
                   alt="Aerospace"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />

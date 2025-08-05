@@ -9,7 +9,7 @@ import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 
 const Home = () => {
   const { t, ready } = useTranslation();
-  const [currentIndustryIndex, setCurrentIndustryIndex] = useState(1.5);
+  const [currentIndustryIndex, setCurrentIndustryIndex] = useState(2);
   const [currentProductIndex, setCurrentProductIndex] = useState(1.5);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isUserControlled, setIsUserControlled] = useState(false);
@@ -20,7 +20,7 @@ const Home = () => {
   const heroBackgrounds = [
     {
       image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80",
+        "/images/news_engBreakthrough.webp",
       title:
         "Engineering Breakthrough: Cutting PCB Programming Time from Hours to Minutes",
       subtitle:
@@ -290,32 +290,43 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="relative overflow-hidden px-24">
+          <div className="relative overflow-hidden px-8 md:px-24 py-8">
             {/* Fade gradients */}
-            <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
-            <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-white via-white/80 to-transparent z-10 pointer-events-none"></div>
             <div
-              className="flex gap-8 transition-transform duration-500 ease-in-out"
+              className="flex gap-6 md:gap-8 transition-transform duration-700 ease-out"
               style={{
-                transform: `translateX(calc(-${currentIndustryIndex * (384 + 32)}px + 50%))`,
+                transform: `translateX(calc(-${currentIndustryIndex * (384 + 24)}px + 50%))`,
               }}
             >
               {industries.map((item, index) => (
                 <div
                   key={`industry-${item}`}
-                  className="industry-item group flex-shrink-0 w-96 transition-all duration-500 cursor-pointer"
+                  className={`industry-item group flex-shrink-0 w-96 transition-all duration-500 cursor-pointer ${
+                    currentIndustryIndex === index 
+                      ? 'scale-105 z-20' 
+                      : 'scale-95 opacity-80'
+                  }`}
                   onClick={() => moveToIndustry(index)}
                 >
                   <Link to="/industries" className="block">
-                    <div className="transition-all duration-500">
-                      <div className="overflow-visible rounded-lg shadow-md">
+                    <div className="transition-all duration-500 pb-4">
+                      <div className="overflow-hidden rounded-xl shadow-lg bg-white relative group-hover:shadow-xl">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <img
                           src={`/images/home_industries-${item}.jpg`}
                           alt={t(
                             `industries.item${item}.alt`,
-                            `Industry ${item}`,
+                            item === 1
+                              ? "PCB Manufacturing Industry"
+                              : item === 2
+                                ? "AR/VR Industry"
+                                : item === 3
+                                  ? "Aerospace Industry"
+                                  : "New Energy Automobiles Industry",
                           )}
-                          className="w-full h-72 object-cover transition-transform duration-500 hover:scale-105"
+                          className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
                         />
                       </div>
                       <h3 className="text-xl font-semibold mt-5 mb-3 text-center transition-all duration-300 hover:text-2xl hover:text-primary">
@@ -324,7 +335,7 @@ const Home = () => {
                           `Industry Category ${item}`,
                         )}
                       </h3>
-                      <p className="text-gray-600 text-center text-base transition-all duration-300">
+                      <p className="text-gray-600 text-center text-sm leading-relaxed transition-all duration-300">
                         {t(
                           `industries.item${item}.subtitle`,
                           item === 1
@@ -341,28 +352,41 @@ const Home = () => {
                 </div>
               ))}
             </div>
+          </div>
 
-            {/* Navigation Buttons */}
-            <div className="flex justify-center gap-4 mt-8 px-4">
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={movePrevious}
-                disabled={currentIndustryIndex <= 0}
-                className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                onClick={moveNext}
-                disabled={currentIndustryIndex >= industries.length - 1}
-                className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </Button>
+          {/* Navigation Buttons - Moved outside overflow-hidden container */}
+          <div className="flex justify-center gap-6 mt-12 px-8">
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={movePrevious}
+              disabled={currentIndustryIndex <= 0}
+              className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2 shadow-lg hover:shadow-xl transition-all duration-300 w-10 h-10"
+            >
+              <ChevronLeft className="h-4 w-4" />
+            </Button>
+            <div className="flex gap-2 items-center">
+              {industries.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => moveToIndustry(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    currentIndustryIndex === index 
+                      ? 'bg-blue-600 scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
             </div>
+            <Button
+              variant="outline"
+              size="icon"
+              onClick={moveNext}
+              disabled={currentIndustryIndex >= industries.length - 1}
+              className="rounded-full bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed border-2 shadow-lg hover:shadow-xl transition-all duration-300 w-10 h-10"
+            >
+              <ChevronRight className="h-4 w-4" />
+            </Button>
           </div>
         </div>
       </section>

@@ -112,7 +112,7 @@ export const newsArticles: NewsArticle[] = [
       </div>
     `,
     imageUrl:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+      "/images/news_engBreakthrough.webp",
     author: "Fermi Vision Engineering Team",
     tags: ["PCB Manufacturing", "Computer Vision", "Optical Metrology"],
     externalLink: "/products",
