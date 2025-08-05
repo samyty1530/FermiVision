@@ -165,41 +165,42 @@ export const newsArticles: NewsArticle[] = [
       "How an international PCB trader hit telecom-grade inspection standards without scaling floor space",
     content: `
       <h3>Executive Summary</h3>
-      <p>An international PCB trader specializing in antenna boards faced an ambitious challenge: inspect over 8000 dimensions per board—across 200 transmitting units—while holding inspection time under 10 minutes. Traditional systems took over 40 minutes and required multiple machines running in parallel. Fermi Vision delivered a purpose-built workflow using a dual-phase pre-scan and high-speed fly-capture process that completed inspection in under 3 minutes—on a single machine.</p>
+      <p>An international PCB trading company, specializing in antenna boards, faced a high-throughput inspection challenge: Inspect 200 transmitting units per board, with 48 measurements per unit, totaling 800 key dimensions and 7,200 standard dimensions—per board.</p>
       
-      <p>This case exemplifies the intersection of speed, precision, and intelligent sequencing—delivering factory-level throughput with minimal footprint.</p>
+      <p>The original process took over 40 minutes and required multiple machines running in parallel. Fermi Vision deployed a proprietary workflow combining pre-scan mapping with high-speed fly-capture, enabling full inspection in under 3 minutes using just one machine.</p>
       
-      <h3>Background: Scaling Inspection Throughput</h3>
-      <p>High-volume antenna boards feature hundreds of densely packed circuits, each with strict line width and spacing requirements. Accurate inspection typically requires:</p>
+      <h3>Background – The Challenge of Dense RF Boards</h3>
+      <p>High-performance antenna boards integrate hundreds of dense transmission units, each requiring precise line width and spacing control.</p>
       
+      <p>The inspection requirements:</p>
       <ul>
-        <li>High magnification without sacrificing field of view</li>
-        <li>Fast image acquisition across large surface areas</li>
-        <li>Efficient sequencing across thousands of measurements</li>
+        <li>Accurate measurement of extremely small features</li>
+        <li>High throughput across hundreds of measurement points</li>
+        <li>Full coverage of all lower-width lines in under 10 minutes</li>
       </ul>
       
-      <p>Traditional methods struggle to balance these needs without scaling up equipment and manpower.</p>
+      <p>Conventional systems required 40 minutes per board and at least 6 machines running in parallel—creating a bottleneck in both cost and capacity.</p>
       
-      <h3>Fermi Vision's Innovation</h3>
-      <p>Instead of treating each transmitting unit as a separate measurement loop, Fermi Vision designed a hybrid strategy:</p>
+      <h3>Fermi Vision's Solution – Fly-Capture Meets Pre-Scan</h3>
+      <p>Fermi Vision rebuilt the workflow from scratch with two core stages:</p>
       
+      <h4>Pre-Scan Path Planning</h4>
+      <p>A low-resolution scan maps the entire board to precisely locate all measurement targets.</p>
+      
+      <h4>Fly-Capture Execution</h4>
+      <p>A high-speed camera captures targeted measurements using the pre-generated path, maintaining micron-level precision at continuous motion speeds.</p>
+      
+      <p>This eliminated the need for stopping between measurements and allowed the system to:</p>
       <ul>
-        <li>Pre-Scan Optimization: Scanned the full board at low resolution to establish a coarse map</li>
-        <li>Fly-Capture Pass: Executed rapid, high-res measurements only on identified targets using dynamic path planning</li>
+        <li>Cover 100% of required points</li>
+        <li>Reduce inspection time from 40+ minutes to under 3</li>
+        <li>Run the entire inspection with just one machine</li>
       </ul>
       
-      <p>This minimized movement, eliminated redundant passes, and kept cycle time under 3 minutes.</p>
+      <h3>Conclusion</h3>
+      <p>With high-volume demands and dense measurement requirements, traditional solutions fall short.</p>
       
-      <h3>Results</h3>
-      <ul>
-        <li>Time Saved: Cut total inspection time from 40 minutes to <3 minutes</li>
-        <li>Equipment Consolidation: From 6+ machines to just one</li>
-        <li>Accuracy Maintained: No compromise in dimensional precision</li>
-      </ul>
-      
-      <p>With Fermi Vision's help, the trader met aggressive SLAs for high-volume telecom customers while simplifying floor layout and reducing operator demand.</p>
-      
-      <p>This level of intelligent process engineering is a hallmark of Fermi Vision's commitment to scale without trade-offs.</p>
+      <p>Fermi Vision's hybrid scanning system breaks that limitation, achieving telecom-grade inspection at a fraction of the equipment footprint and cost—a leap forward for antenna and RF board manufacturers.</p>
       
       <div class="contact-info">
         <p>Learn more at: <a href="https://www.fermivision.com">www.fermivision.com</a> or contact <a href="mailto:sales@fermivision.com">sales@fermivision.com</a> for a demo.</p>

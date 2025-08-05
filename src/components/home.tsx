@@ -10,6 +10,8 @@ import { MEDIA, getProductImage, getIndustryImage } from "@/constants/media";
 
 const Home = () => {
   const { t, ready } = useTranslation();
+  
+
   const [currentIndustryIndex, setCurrentIndustryIndex] = useState(2);
   const [currentProductIndex, setCurrentProductIndex] = useState(2);
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
@@ -37,12 +39,28 @@ const Home = () => {
       slug: "adaptive-metrology-export-grade-pcb-compliance",
     },
     {
+      image: MEDIA.NEWS.ANTENNA_BOARD_INSPECTION,
+      title: "8000 Dimensions, 3 Minutes, One Machine",
+      subtitle:
+        "How an international PCB trader hit telecom-grade inspection standards without scaling floor space",
+      newsId: "3",
+      slug: "unlocking-high-volume-antenna-board-inspection",
+    },
+    {
       image: MEDIA.HERO.SK_HYNIX,
       title: "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix",
       subtitle:
         "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3",
       newsId: "4",
       slug: "sk-hynix-semiconductor-efficiency-leap",
+    },
+    {
+      image: MEDIA.NEWS.MANUAL_PIN_GAUGING,
+      title: "Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection",
+      subtitle:
+        "Thousands of press-fit holes measured in seconds with a physically simulated contact algorithm (PGA)",
+      newsId: "5",
+      slug: "fermi-vision-replaces-manual-pin-gauging-cad-driven-optical-inspection",
     },
   ];
 
@@ -241,32 +259,32 @@ const Home = () => {
           </h2>
           <div className="flex flex-wrap justify-center items-center gap-4 md:gap-8 lg:gap-16 px-4">
             <img
-              src="/images/home_partners-foxconn.jpg"
+              src={MEDIA.PARTNERS.FOXCONN}
               alt="Foxconn"
               className="h-8 md:h-10 lg:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home_partners-multek.png"
+              src={MEDIA.PARTNERS.MULTEK}
               alt="Multek"
               className="h-8 md:h-10 lg:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home_partners-huawei.png"
+              src={MEDIA.PARTNERS.HUAWEI}
               alt="Huawei"
               className="h-8 md:h-10 lg:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home-partners-unimicron.png"
+              src={MEDIA.PARTNERS.UNIMICRON}
               alt="Unimicron"
               className="h-8 md:h-10 lg:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home-partners-chongda.png"
+              src={MEDIA.PARTNERS.CHONGDA}
               alt="Chongda"
               className="h-8 md:h-10 lg:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
             <img
-              src="/images/home-partners-SK.png"
+              src={MEDIA.PARTNERS.SK}
               alt="SK"
               className="h-8 md:h-10 lg:h-12 object-contain opacity-80 hover:opacity-100 transition-opacity"
             />
@@ -606,62 +624,84 @@ const Home = () => {
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-900 px-4">
-            {t("news.title", "News & Events")}
+            {t("news.title", "费米视觉 News & Events")}
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
-            <div className="flex flex-col gap-4 md:gap-6">
-              <div className="md:w-1/2">
-                <div className="rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={MEDIA.NEWS.ANTENNA_BOARD_INSPECTION}
-                    alt="8000 Dimensions, 3 Minutes, One Machine"
-                    className="w-full h-48 md:h-full object-cover"
-                  />
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-48 md:h-56">
+                <img
+                  src={MEDIA.NEWS.ANTENNA_BOARD_INSPECTION}
+                  alt="8000 Dimensions, 3 Minutes, One Machine"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="md:w-1/2 px-4 md:px-0">
-                <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+              <div className="p-4 md:p-5">
+                <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
                   8000 Dimensions, 3 Minutes, One Machine
                 </h3>
-                <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
+                <p className="text-sm text-gray-600 mb-3 md:mb-4">
                   How an international PCB trader hit telecom-grade inspection
                   standards without scaling floor space
                 </p>
-                <p className="text-xs md:text-sm text-gray-500 mb-3 md:mb-0">April 11, 2024</p>
+                <p className="text-xs text-gray-500 mb-3 md:mb-4">April 11, 2024</p>
                 <Link to="/news/unlocking-high-volume-antenna-board-inspection">
                   <Button
                     variant="outline"
-                    className="mt-2 md:mt-4 text-primary border-primary hover:bg-accent-50 text-sm md:text-base"
+                    className="text-primary border-primary hover:bg-accent-50 text-sm"
                   >
                     {t("news.readMore", "Read More")}
                   </Button>
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col gap-4 md:gap-6">
-              <div className="md:w-1/2">
-                <div className="rounded-lg overflow-hidden shadow-md">
-                  <img
-                    src={MEDIA.NEWS.SK_HYNIX}
-                    alt="Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix"
-                    className="w-full h-48 md:h-full object-cover"
-                  />
-                </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-48 md:h-56">
+                <img
+                  src={MEDIA.NEWS.SK_HYNIX}
+                  alt="Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix"
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="md:w-1/2 px-4 md:px-0">
-                <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3">
+              <div className="p-4 md:p-5">
+                <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
+                  Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix
+                </h3>
+                <p className="text-sm text-gray-600 mb-3 md:mb-4">
+                  Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3
+                </p>
+                <p className="text-xs text-gray-500 mb-3 md:mb-4">September 9, 2024</p>
+                <Link to="/news/sk-hynix-semiconductor-efficiency-leap">
+                  <Button
+                    variant="outline"
+                    className="text-primary border-primary hover:bg-accent-50 text-sm"
+                  >
+                    {t("news.readMore", "Read More")}
+                  </Button>
+                </Link>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              <div className="h-48 md:h-56">
+                <img
+                  src={MEDIA.NEWS.MANUAL_PIN_GAUGING}
+                  alt="Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="p-4 md:p-5">
+                <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
                   Fermi Vision Replaces Manual Pin Gauging with CAD-Driven
                   Optical Inspection
                 </h3>
-                <p className="text-sm md:text-base text-gray-600 mb-3 md:mb-4">
+                <p className="text-sm text-gray-600 mb-3 md:mb-4">
                   Thousands of press-fit holes measured in seconds with a
                   physically simulated contact algorithm (PGA)
                 </p>
-                <p className="text-xs md:text-sm text-gray-500 mb-3 md:mb-0">February 1, 2025</p>
+                <p className="text-xs text-gray-500 mb-3 md:mb-4">February 1, 2025</p>
                 <Link to="/news/fermi-vision-replaces-manual-pin-gauging-cad-driven-optical-inspection">
                   <Button
                     variant="outline"
-                    className="mt-2 md:mt-4 text-primary border-primary hover:bg-accent-50 text-sm md:text-base"
+                    className="text-primary border-primary hover:bg-accent-50 text-sm"
                   >
                     {t("news.readMore", "Read More")}
                   </Button>

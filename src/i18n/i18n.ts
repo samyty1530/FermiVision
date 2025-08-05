@@ -13,6 +13,8 @@ i18n
   .use(initReactI18next)
   // Initialize i18next
   .init({
+    // Debug mode in development
+    debug: import.meta.env.DEV,
     // Default language
     fallbackLng: "en",
     // Debug mode in development
@@ -29,15 +31,22 @@ i18n
       // Path to load translations from
       loadPath: "/locales/{{lng}}/{{ns}}.json",
       crossDomain: true,
+      // Add some debugging
+      requestOptions: {
+        cache: 'no-cache'
+      }
     },
     // Language detection options
     detection: {
       // Order of detection methods
-      order: ["localStorage", "navigator"],
+      order: ["localStorage", "navigator", "htmlTag"],
       // Cache language in localStorage
       caches: ["localStorage"],
       // Local storage key
       lookupLocalStorage: "fermi-vision-language",
+      // Check for language in HTML tag
+      lookupFromPathIndex: 0,
+      lookupFromSubdomainIndex: 0,
     },
     // Supported languages
     supportedLngs: ["en", "zh"],
@@ -46,7 +55,6 @@ i18n
     react: {
       useSuspense: true,
     },
-    load: "languageOnly",
   });
 
 // Helper function to change language

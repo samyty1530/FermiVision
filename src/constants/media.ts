@@ -6,36 +6,15 @@ export const MEDIA = {
     OLD: "/images/FV_logo_250625.png",
   },
 
-  // News Images
-  NEWS: {
-    SK_HYNIX: "/images/news_SK.png",
+   // Home Page - Hero Backgrounds (for news articles)
+   HERO: {
     ENGINEERING_BREAKTHROUGH: "/images/news_engBreakthrough.webp",
-    // Placeholders for missing news images
     ADAPTIVE_METROLOGY: "/images/news_adaptive_metro.png",
-    MANUAL_PIN_GAUGING: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
-    ANTENNA_BOARD_INSPECTION: "/images/news_antenna_board.png", // placeholder - needs actual antenna board inspection image
+    SK_HYNIX: "/images/news_SK.png",
   },
 
-  // Home Page Products
-  PRODUCTS: {
-    SERIES_A: "/images/home-products-1-A8.jpg",
-    SERIES_B: "/images/home-products-1-A8.jpg", // placeholder - needs actual B series image
-    SERIES_C: "/images/home-products-1-F5.jpg", // placeholder - needs actual C series image
-    SERIES_F: "/images/home-products-1-F5.jpg",
-    SERIES_U: "/images/home-products-1-U.jpg",
-    ACCESSORIES: "/images/home-products-1-U.jpg", // placeholder - needs actual accessories image
-  },
-
-  // Home Page Industries
-  INDUSTRIES: {
-    PCB: "/images/home_industries-1.jpg",
-    ARVR: "/images/home_industries-2.jpg",
-    AEROSPACE: "/images/home_industries-3.jpg",
-    NEW_ENERGY: "/images/home_industries-4.jpg",
-  },
-
-  // Partner Logos
-  PARTNERS: {
+   // Partner Logos
+   PARTNERS: {
     DONGXUN: "/images/home_partners-dongxun.png",
     FANGZHENG: "/images/home_partners-fangzheng.png",
     FOXCONN: "/images/home_partners-foxconn.jpg",
@@ -46,6 +25,42 @@ export const MEDIA = {
     UNIMICRON: "/images/home-partners-unimicron.png",
   },
 
+// Products - Home page carousel images
+    PRODUCTS: {
+    SERIES_A: "/images/product_A8.jpg",
+    SERIES_B: "/images/xx.jpg", // placeholder - needs actual B series image
+    SERIES_C: "/images/xx.jpg", // placeholder - needs actual C series image
+    SERIES_F: "/images/product_F8.jpg",
+    SERIES_U: "/images/product_U.jpg",
+    ACCESSORIES: "/images/xx.jpg", // placeholder - needs actual accessories image
+    },
+
+    // Industries - Home page carousel images
+    INDUSTRIES: {
+    PCB: "/images/industries_pcb.jpg",
+    ARVR: "/images/industries_arvr.jpg",
+    AEROSPACE: "/images/industries_aero.jpg",
+    NEW_ENERGY: "/images/industries_auto.jpg",
+    },
+
+  // Industry Detail Page Images
+  INDUSTRY_DETAILS: {
+    PCB: "/images/industries_pcb.jpg",
+    ARVR: "/images/industries_arvr.jpg",
+    AEROSPACE: "/images/industries_aero.jpg",
+    NEW_ENERGY: "/images/industries_auto.jpg",
+  },
+
+  // News Images
+  NEWS: {
+    SK_HYNIX: "/images/news_SK.png",
+    ENGINEERING_BREAKTHROUGH: "/images/news_engBreakthrough.webp",
+    // Placeholders for missing news images
+    ADAPTIVE_METROLOGY: "/images/news_adaptive_metro.png",
+    MANUAL_PIN_GAUGING: "/images/news_pin_gauge.jpg",
+    ANTENNA_BOARD_INSPECTION: "/images/news_8000.jpg", // placeholder - needs actual antenna board inspection image
+  },
+
   // Social Media Icons
   SOCIAL: {
     LINKEDIN: "/images/home_socials-LI.png",
@@ -53,21 +68,58 @@ export const MEDIA = {
     WECHAT_QR: "/images/FV_Wechat_QR.png",
   },
 
-  // Hero Backgrounds (for news articles)
-  HERO: {
-    ENGINEERING_BREAKTHROUGH: "/images/news_engBreakthrough.webp",
-    ADAPTIVE_METROLOGY: "/images/news_adaptive_metro.png",
-    SK_HYNIX: "/images/news_SK.png",
+  // Vision Series A - Product Detail Page Images
+  VISION_SERIES_A: {
+    HERO: "/images/product_A8.jpg",
+    IMAGE_1: "/images/product_A_1.jpg",
+    IMAGE_2: "/images/product_A_2.jpg", 
+    IMAGE_3: "/images/product_A_3.jpg",
+    VIDEO: "/videos/vision-series-a-demo.mp4", // placeholder - needs actual demo video
   },
 
-  // Product Detail Images (placeholders for missing images)
-  PRODUCT_DETAILS: {
-    SERIES_A: "/images/home-products-1-A8.jpg", // placeholder - needs actual product detail image
-    SERIES_B: "/images/home-products-1-A8.jpg", // placeholder - needs actual product detail image
-    SERIES_C: "/images/home-products-1-F5.jpg", // placeholder - needs actual product detail image
-    SERIES_F: "/images/home-products-1-F5.jpg", // placeholder - needs actual product detail image
-    SERIES_U: "/images/home-products-1-U.jpg", // placeholder - needs actual product detail image
-    ACCESSORIES: "/images/home-products-1-U.jpg", // placeholder - needs actual product detail image
+  // Vision Series B - Product Detail Page Images
+  VISION_SERIES_B: {
+    HERO: "/images/product_.jpg", // placeholder - needs actual B series hero image
+    IMAGE_1: "/images/product_xx.jpg", // placeholder - needs actual B series image 1
+    IMAGE_2: "/images/product_xx.jpg", // placeholder - needs actual B series image 2
+    IMAGE_3: "/images/product_xx.jpg", // placeholder - needs actual B series image 3
+    VIDEO: "/videos/vision-series-b-demo.mp4", // placeholder - needs actual demo video
+  },
+
+  // Vision Series C - Product Detail Page Images
+  VISION_SERIES_C: {
+    HERO: "/images/product_F5.jpg", // placeholder - needs actual C series hero image
+    IMAGE_1: "/images/product_F_3.jpg",
+    IMAGE_2: "/images/xx.jpg",
+    IMAGE_3: "/images/xx", // placeholder - needs actual C series image 3
+    VIDEO: "/videos/vision-series-c-demo.mp4", // placeholder - needs actual demo video
+  },
+
+  // Vision Series F - Product Detail Page Images
+  VISION_SERIES_F: {
+    HERO: "/images/product_F8.JPG",
+    IMAGE_1: "/images/product_F5_1.jpg",
+    IMAGE_2: "/images/product_F5_2.jpg",
+    IMAGE_3: "/images/product_F_3.jpg",
+    VIDEO: "/videos/vision-series-f-demo.mp4", // placeholder - needs actual demo video
+  },
+
+  // Vision Series U - Product Detail Page Images
+  VISION_SERIES_U: {
+    HERO: "/images/product_U.jpg",
+    IMAGE_1: "/images/product_A_1.jpg", // placeholder - needs actual U series image 1
+    IMAGE_2: "/images/product_A_2.jpg", // placeholder - needs actual U series image 2
+    IMAGE_3: "/images/product_A_3.jpg", // placeholder - needs actual U series image 3
+    VIDEO: "/videos/vision-series-u-demo.mp4", // placeholder - needs actual demo video
+  },
+
+  // Accessories & Components - Product Detail Page Images
+  ACCESSORIES: {
+    HERO: "/images/product_U.jpg", // placeholder - needs actual accessories hero image
+    IMAGE_1: "/images/product_A_1.jpg", // placeholder - needs actual accessories image 1
+    IMAGE_2: "/images/product_A_2.jpg", // placeholder - needs actual accessories image 2
+    IMAGE_3: "/images/product_A_3.jpg", // placeholder - needs actual accessories image 3
+    VIDEO: "/videos/accessories-demo.mp4", // placeholder - needs actual demo video
   },
 
   // Videos (placeholders for missing videos)
@@ -109,39 +161,123 @@ export const getProductImage = (series: string): string => {
   }
 };
 
-// Helper function to get product detail image by series
-export const getProductDetailImage = (series: string): string => {
+// Helper function to get product detail hero image by series
+export const getProductDetailHero = (series: string): string => {
   switch (series.toUpperCase()) {
     case "A":
-      return MEDIA.PRODUCT_DETAILS.SERIES_A;
+      return MEDIA.VISION_SERIES_A.HERO;
     case "B":
-      return MEDIA.PRODUCT_DETAILS.SERIES_B;
+      return MEDIA.VISION_SERIES_B.HERO;
     case "C":
-      return MEDIA.PRODUCT_DETAILS.SERIES_C;
+      return MEDIA.VISION_SERIES_C.HERO;
     case "F":
-      return MEDIA.PRODUCT_DETAILS.SERIES_F;
+      return MEDIA.VISION_SERIES_F.HERO;
     case "U":
-      return MEDIA.PRODUCT_DETAILS.SERIES_U;
+      return MEDIA.VISION_SERIES_U.HERO;
     case "ACCESSORIES":
-      return MEDIA.PRODUCT_DETAILS.ACCESSORIES;
+      return MEDIA.ACCESSORIES.HERO;
     default:
-      return MEDIA.PRODUCT_DETAILS.SERIES_A; // fallback
+      return MEDIA.VISION_SERIES_A.HERO; // fallback
   }
 };
 
-// Helper function to get industry image by index
+// Helper function to get product detail images by series
+export const getProductDetailImages = (series: string): { IMAGE_1: string; IMAGE_2: string; IMAGE_3: string } => {
+  switch (series.toUpperCase()) {
+    case "A":
+      return {
+        IMAGE_1: MEDIA.VISION_SERIES_A.IMAGE_1,
+        IMAGE_2: MEDIA.VISION_SERIES_A.IMAGE_2,
+        IMAGE_3: MEDIA.VISION_SERIES_A.IMAGE_3,
+      };
+    case "B":
+      return {
+        IMAGE_1: MEDIA.VISION_SERIES_B.IMAGE_1,
+        IMAGE_2: MEDIA.VISION_SERIES_B.IMAGE_2,
+        IMAGE_3: MEDIA.VISION_SERIES_B.IMAGE_3,
+      };
+    case "C":
+      return {
+        IMAGE_1: MEDIA.VISION_SERIES_C.IMAGE_1,
+        IMAGE_2: MEDIA.VISION_SERIES_C.IMAGE_2,
+        IMAGE_3: MEDIA.VISION_SERIES_C.IMAGE_3,
+      };
+    case "F":
+      return {
+        IMAGE_1: MEDIA.VISION_SERIES_F.IMAGE_1,
+        IMAGE_2: MEDIA.VISION_SERIES_F.IMAGE_2,
+        IMAGE_3: MEDIA.VISION_SERIES_F.IMAGE_3,
+      };
+    case "U":
+      return {
+        IMAGE_1: MEDIA.VISION_SERIES_U.IMAGE_1,
+        IMAGE_2: MEDIA.VISION_SERIES_U.IMAGE_2,
+        IMAGE_3: MEDIA.VISION_SERIES_U.IMAGE_3,
+      };
+    case "ACCESSORIES":
+      return {
+        IMAGE_1: MEDIA.ACCESSORIES.IMAGE_1,
+        IMAGE_2: MEDIA.ACCESSORIES.IMAGE_2,
+        IMAGE_3: MEDIA.ACCESSORIES.IMAGE_3,
+      };
+    default:
+      return {
+        IMAGE_1: MEDIA.VISION_SERIES_A.IMAGE_1,
+        IMAGE_2: MEDIA.VISION_SERIES_A.IMAGE_2,
+        IMAGE_3: MEDIA.VISION_SERIES_A.IMAGE_3,
+      }; // fallback
+  }
+};
+
+// Helper function to get product detail video by series
+export const getProductDetailVideo = (series: string): string => {
+  switch (series.toUpperCase()) {
+    case "A":
+      return MEDIA.VISION_SERIES_A.VIDEO;
+    case "B":
+      return MEDIA.VISION_SERIES_B.VIDEO;
+    case "C":
+      return MEDIA.VISION_SERIES_C.VIDEO;
+    case "F":
+      return MEDIA.VISION_SERIES_F.VIDEO;
+    case "U":
+      return MEDIA.VISION_SERIES_U.VIDEO;
+    case "ACCESSORIES":
+      return MEDIA.ACCESSORIES.VIDEO;
+    default:
+      return MEDIA.VISION_SERIES_A.VIDEO; // fallback
+  }
+};
+
+// Helper function to get industry image by index (for home page carousel)
 export const getIndustryImage = (index: number): string => {
   switch (index) {
-    case 1:
+    case 0:
       return MEDIA.INDUSTRIES.PCB;
-    case 2:
+    case 1:
       return MEDIA.INDUSTRIES.ARVR;
-    case 3:
+    case 2:
       return MEDIA.INDUSTRIES.AEROSPACE;
-    case 4:
+    case 3:
       return MEDIA.INDUSTRIES.NEW_ENERGY;
     default:
       return MEDIA.INDUSTRIES.PCB; // fallback
+  }
+};
+
+// Helper function to get industry detail image by industry type
+export const getIndustryDetailImage = (industry: string): string => {
+  switch (industry.toUpperCase()) {
+    case "PCB":
+      return MEDIA.INDUSTRY_DETAILS.PCB;
+    case "ARVR":
+      return MEDIA.INDUSTRY_DETAILS.ARVR;
+    case "AEROSPACE":
+      return MEDIA.INDUSTRY_DETAILS.AEROSPACE;
+    case "NEW_ENERGY":
+      return MEDIA.INDUSTRY_DETAILS.NEW_ENERGY;
+    default:
+      return MEDIA.INDUSTRY_DETAILS.PCB; // fallback
   }
 };
 

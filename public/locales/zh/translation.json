@@ -160,7 +160,7 @@
     }
   },
   "news": {
-    "title": "新闻与活动",
+    "title": "费米视觉 News & Events",
     "subtitle": "了解费米视觉的最新发展、公告和见解。",
     "readMore": "阅读更多",
     "item1": {
@@ -398,7 +398,33 @@
     "contactInfo": "了解更多信息，请访问：www.fermivision.com 或联系 sales@fermivision.com 申请演示。",
     "learnMore": "了解更多信息，请访问：",
     "orContact": "或联系",
-    "forDemo": "申请演示。"
+    "forDemo": "申请演示。",
+    "antennaBoardInspection": {
+      "executiveSummary": "概述",
+      "executiveSummaryContent": "某国际PCB贸易商专注于天线板业务，在检测阶段面临高通量挑战：每块板上包含 200个传输单元，每个单元需测 48个尺寸点，总共 800个关键尺寸，7,200个普通尺寸。原流程耗时 超过40分钟，需 多台设备并行运行。费米视觉通过融合 预扫描路径规划 与 高速飞拍执行，使得 检测时间压缩至3分钟以内，且 仅需一台设备完成整板检测。",
+      "background": "检测背景：密集天线板的挑战",
+      "backgroundContent": "高性能天线板集成了数百个密集的传输单元，每个单元对 线宽与间距 的精度要求极高。客户要求：",
+      "requirements": [
+        "微小结构的高精度检测",
+        "多点快速覆盖能力",
+        "所有细线宽区域需 10分钟内完成全检测"
+      ],
+      "backgroundConclusion": "传统检测方式每板需 40分钟以上，需 6台以上设备并行，成本高、效率低。",
+      "solution": "费米视觉方案：预扫描 + 飞拍融合技术",
+      "solutionContent": "费米视觉重新构建了检测流程，分为两个阶段：",
+      "preScanTitle": "预扫描路径规划",
+      "preScanContent": "低分辨率全板扫描，快速定位所有检测目标区域",
+      "flyCaptureTitle": "高速飞拍执行",
+      "flyCaptureContent": "高速相机按照预规划路径执行测量，实现 高速移动中微米级精度拍摄",
+      "solutionBenefits": "该方案不再需要点到点移动与停顿，从根本上解决了以下问题：",
+      "benefits": [
+        "覆盖所有检测尺寸点",
+        "检测时间从 40分钟压缩至3分钟以内",
+        "全流程仅需 1台设备"
+      ],
+      "conclusion": "结语",
+      "conclusionContent": "随着天线板与高频板的快速发展，对检测的精度与效率要求日益严苛。费米视觉自主研发的 \"预扫描 + 飞拍\"融合检测方案，彻底突破了传统自动光学检测的性能瓶颈，成为满足 电信级品质检测 的理想方案。"
+    }
   },
   "pcb": {
     "title": "PCB制造：光学计量的现状",

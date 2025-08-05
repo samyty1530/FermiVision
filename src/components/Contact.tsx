@@ -249,7 +249,7 @@ const Contact = () => {
                           <DialogTrigger asChild>
                             <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg transition-colors cursor-pointer flex items-center">
                               <img
-                                src="/images/home_socials-wechat.png"
+                                src={MEDIA.SOCIAL.WECHAT}
                                 alt="WeChat"
                                 className="h-6 w-6 mr-2"
                               />
@@ -266,7 +266,7 @@ const Contact = () => {
                               </h3>
                               <div className="bg-gray-100 p-4 rounded-lg mb-4">
                                 <img
-                                  src="/images/FV_Wechat_QR.png"
+                                  src={MEDIA.SOCIAL.WECHAT_QR}
                                   alt="WeChat QR Code"
                                   className="mx-auto w-48 h-48"
                                 />

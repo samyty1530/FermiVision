@@ -345,7 +345,7 @@ const CustomerRequestForm = () => {
                               </h3>
                       <div className="bg-gray-100 p-4 rounded-lg mb-4">
                         <img
-                          src="/images/FV_Wechat_QR.png"
+                          src={MEDIA.SOCIAL.WECHAT_QR}
                           alt="WeChat QR Code"
                           className="mx-auto w-48 h-48"
                         />

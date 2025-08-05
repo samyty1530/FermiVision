@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Breadcrumbs from "./layout/Breadcrumbs";
+import { MEDIA } from "@/constants/media";
 
 const Industries = () => {
   const { t } = useTranslation();
@@ -17,8 +18,7 @@ const Industries = () => {
         "industries.item1.description",
         "In modern electronics manufacturing, printed circuit boards (PCBs) have evolved into complex, multilayered platforms supporting high-density interconnects, microvias, and ultra-fine trace geometries. Ensuring dimensional integrity at this scale is critical—not only for electrical performance but also for downstream assembly, thermal reliability, and regulatory compliance.\n\nWhile optical metrology has become the industry's preferred approach for non-contact inspection, it still faces key limitations in high-mix production environments.",
       ),
-      image:
-        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+      image: MEDIA.INDUSTRIES.PCB,
     },
     {
       id: 2,
@@ -27,8 +27,7 @@ const Industries = () => {
         "industries.item2.description",
         "As augmented reality (AR), virtual reality (VR), and compact consumer electronics evolve, the demand for ultra-precise components has surged. From curved optical lenses and microdisplays to LiDAR assemblies and wearable sensors, dimensional accuracy directly impacts performance metrics such as latency, field of view, image clarity, and mechanical reliability.\n\nIn these high-precision form factors, even micron-level deviations can degrade optical alignment or compromise enclosure integrity. Metrology plays a crucial role in verifying that every component—from aspheric lenses to housing grooves—meets design intent.",
       ),
-      image:
-        "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80",
+      image: MEDIA.INDUSTRIES.ARVR,
     },
     {
       id: 3,
@@ -37,8 +36,7 @@ const Industries = () => {
         "industries.item3.description",
         "In aerospace manufacturing, tolerances aren't just specifications—they're safety-critical. From turbine blades and fuselage panels to guidance components and composite structures, dimensional accuracy ensures aerodynamic performance, structural reliability, and mission success.\n\nOptical metrology plays a pivotal role in verifying parts with complex geometries, reflective surfaces, or thermal sensitivity—where contact-based measurement is often impractical. As aircraft and spacecraft incorporate more lightweight materials and complex assemblies, manufacturers are under growing pressure to inspect faster, with tighter accuracy, and across increasingly varied production environments.",
       ),
-      image:
-        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=800&q=80",
+      image: MEDIA.INDUSTRIES.AEROSPACE,
     },
     {
       id: 4,
@@ -47,8 +45,7 @@ const Industries = () => {
         "industries.item4.description",
         "The rise of electric and hybrid vehicles has introduced new manufacturing demands centered on ultra-tight tolerances, high-volume battery assembly, and precision motor components. As performance, range, and safety hinge on component accuracy, metrology has become a critical enabler across EV powertrain and structural production lines.\n\nUnlike traditional combustion vehicles, new energy platforms rely on dense, thermally sensitive assemblies—like pouch cells, busbars, stators, and rotor housings—where even sub-millimeter deviations can lead to efficiency losses or safety risks. In this fast-evolving field, inspection systems must keep pace with high-throughput environments, rapid design iterations, and vertically integrated supply chains.",
       ),
-      image:
-        "https://images.unsplash.com/photo-1593508512255-86ab42a8e620?w=800&q=80",
+      image: MEDIA.INDUSTRIES.NEW_ENERGY,
     },
   ];
 
@@ -56,7 +53,7 @@ const Industries = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo.png"
+        logo={MEDIA.LOGO.PRIMARY}
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
