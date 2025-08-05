@@ -14,7 +14,7 @@ const IndustryPCB = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo_250625.png"
+        logo="/images/FV_logo.png"
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -41,7 +41,7 @@ const IndustryPCB = () => {
               {/* Industry Title */}
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
                 {t(
-                  "industries.pcb.title",
+                  "pcb.title",
                   "PCB Manufacturing: The State of Optical Metrology",
                 )}
               </h1>
@@ -49,7 +49,7 @@ const IndustryPCB = () => {
               {/* Industry Overview */}
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 {t(
-                  "industries.pcb.subtitle",
+                  "pcb.subtitle",
                   "Advanced metrology solutions for modern printed circuit board manufacturing processes.",
                 )}
               </p>
@@ -74,14 +74,14 @@ const IndustryPCB = () => {
                 <div>
                   <p className="text-lg mb-6">
                     {t(
-                      "industries.pcb.overview1",
+                      "pcb.overview1",
                       "In modern electronics manufacturing, printed circuit boards (PCBs) have evolved into complex, multilayered platforms supporting high-density interconnects, microvias, and ultra-fine trace geometries. Ensuring dimensional integrity at this scale is critical—not only for electrical performance but also for downstream assembly, thermal reliability, and regulatory compliance.",
                     )}
                   </p>
 
                   <p className="text-lg">
                     {t(
-                      "industries.pcb.overview2",
+                      "pcb.overview2",
                       "While optical metrology has become the industry's preferred approach for non-contact inspection, it still faces key limitations in high-mix production environments:",
                     )}
                   </p>
@@ -90,7 +90,7 @@ const IndustryPCB = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
                     {t(
-                      "industries.pcb.challengesTitle",
+                      "pcb.challengesTitle",
                       "Common Challenges in PCB Optical Inspection",
                     )}
                   </h2>
@@ -99,13 +99,13 @@ const IndustryPCB = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {t(
-                          "industries.pcb.challenge1Title",
+                          "pcb.challenge1Title",
                           "Manual Programming Bottlenecks:",
                         )}
                       </h3>
                       <p className="text-lg">
                         {t(
-                          "industries.pcb.challenge1Desc",
+                          "pcb.challenge1Desc",
                           "Most systems still rely on time-consuming, manual feature selection and alignment workflows, which scale poorly with diverse board types.",
                         )}
                       </p>
@@ -114,13 +114,13 @@ const IndustryPCB = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {t(
-                          "industries.pcb.challenge2Title",
+                          "pcb.challenge2Title",
                           "Limited CAD Integration:",
                         )}
                       </h3>
                       <p className="text-lg">
                         {t(
-                          "industries.pcb.challenge2Desc",
+                          "pcb.challenge2Desc",
                           "Inspection systems often operate in isolation from upstream design tools, forcing duplication of effort and increasing the risk of oversight.",
                         )}
                       </p>
@@ -129,13 +129,13 @@ const IndustryPCB = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {t(
-                          "industries.pcb.challenge3Title",
+                          "pcb.challenge3Title",
                           "Rigid Standards Support:",
                         )}
                       </h3>
                       <p className="text-lg">
                         {t(
-                          "industries.pcb.challenge3Desc",
+                          "pcb.challenge3Desc",
                           "Some equipment lacks flexibility to support different international dimensional standards or composite fitting benchmarks.",
                         )}
                       </p>
@@ -144,13 +144,13 @@ const IndustryPCB = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {t(
-                          "industries.pcb.challenge4Title",
+                          "pcb.challenge4Title",
                           "Measurement Throughput:",
                         )}
                       </h3>
                       <p className="text-lg">
                         {t(
-                          "industries.pcb.challenge4Desc",
+                          "pcb.challenge4Desc",
                           "High-resolution imaging over large boards with thousands of features can lead to long cycle times—especially when multiple machines are required.",
                         )}
                       </p>
@@ -159,13 +159,13 @@ const IndustryPCB = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
                         {t(
-                          "industries.pcb.challenge5Title",
+                          "pcb.challenge5Title",
                           "Complex Feature Interpretation:",
                         )}
                       </h3>
                       <p className="text-lg">
                         {t(
-                          "industries.pcb.challenge5Desc",
+                          "pcb.challenge5Desc",
                           "Features like curved traces, irregular pads, or gold-powdered terminals present challenges for traditional edge-detection and measurement algorithms.",
                         )}
                       </p>
@@ -176,13 +176,13 @@ const IndustryPCB = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
                     {t(
-                      "industries.pcb.industryLagsTitle",
+                      "pcb.industryLagsTitle",
                       "Where the Industry Lags",
                     )}
                   </h2>
                   <p className="text-lg">
                     {t(
-                      "industries.pcb.industryLagsDesc",
+                      "pcb.industryLagsDesc",
                       "Despite advances in imaging hardware, many PCB inspection tools are constrained by legacy software architectures that limit their adaptability, automation potential, and integration into modern production workflows. As a result, inspection becomes a rate-limiting step—slowing new product introductions (NPI), increasing operational overhead, and introducing quality risks.",
                     )}
                   </p>
@@ -191,13 +191,13 @@ const IndustryPCB = () => {
                 <div>
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">
                     {t(
-                      "industries.pcb.fermiApproachTitle",
+                      "pcb.fermiApproachTitle",
                       "Fermi Vision's Approach",
                     )}
                   </h2>
                   <p className="text-lg">
                     {t(
-                      "industries.pcb.fermiApproachDesc",
+                      "pcb.fermiApproachDesc",
                       "Fermi Vision addresses these gaps by rethinking the relationship between hardware precision and software intelligence. With support for CAD-driven auto-programming, dynamic multi-standard tolerancing, and hybrid scan workflows (e.g., pre-scan + fly-capture), we help manufacturers unlock new levels of inspection speed, accuracy, and flexibility—without scaling floor space or increasing headcount.",
                     )}
                   </p>

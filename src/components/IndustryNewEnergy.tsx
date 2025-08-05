@@ -14,7 +14,7 @@ const IndustryNewEnergy = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo_250625.png"
+        logo="/images/FV_logo.png"
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -40,13 +40,13 @@ const IndustryNewEnergy = () => {
             <div className="max-w-4xl mx-auto">
               {/* Industry Title */}
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                {t("industries.newEnergy.title", "New Energy Automotive")}
+                {t("newEnergy.title", "New Energy Automotive")}
               </h1>
 
               {/* Industry Overview */}
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 {t(
-                  "industries.newEnergy.subtitle",
+                  "newEnergy.subtitle",
                   "Precision measurement solutions for electric and hybrid vehicle manufacturing and battery assembly.",
                 )}
               </p>
@@ -70,27 +70,27 @@ const IndustryNewEnergy = () => {
               <div className="text-gray-700 leading-relaxed space-y-6">
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   {t(
-                    "industries.newEnergy.overviewTitle",
+                    "newEnergy.overviewTitle",
                     "Driving Precision in Electrification",
                   )}
                 </h2>
                 <p className="text-lg">
                   {t(
-                    "industries.newEnergy.overview1",
+                    "newEnergy.overview1",
                     "The rise of electric and hybrid vehicles has introduced new manufacturing demands centered on ultra-tight tolerances, high-volume battery assembly, and precision motor components. As performance, range, and safety hinge on component accuracy, metrology has become a critical enabler across EV powertrain and structural production lines.",
                   )}
                 </p>
 
                 <p className="text-lg">
                   {t(
-                    "industries.newEnergy.overview2",
+                    "newEnergy.overview2",
                     "Unlike traditional combustion vehicles, new energy platforms rely on dense, thermally sensitive assemblies—like pouch cells, busbars, stators, and rotor housings—where even sub-millimeter deviations can lead to efficiency losses or safety risks. In this fast-evolving field, inspection systems must keep pace with high-throughput environments, rapid design iterations, and vertically integrated supply chains.",
                   )}
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-10">
                   {t(
-                    "industries.newEnergy.challengesTitle",
+                    "newEnergy.challengesTitle",
                     "Challenges in EV and Hybrid Component Metrology",
                   )}
                 </h2>
@@ -99,13 +99,13 @@ const IndustryNewEnergy = () => {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {t(
-                        "industries.newEnergy.challenge1Title",
+                        "newEnergy.challenge1Title",
                         "Battery Cell Uniformity",
                       )}
                     </h3>
                     <p className="text-lg">
                       {t(
-                        "industries.newEnergy.challenge1Desc",
+                        "newEnergy.challenge1Desc",
                         "Tight control over electrode alignment, terminal positioning, and cell flatness is essential for thermal safety and energy efficiency.",
                       )}
                     </p>
@@ -114,13 +114,13 @@ const IndustryNewEnergy = () => {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {t(
-                        "industries.newEnergy.challenge2Title",
+                        "newEnergy.challenge2Title",
                         "Motor and Gear Component Precision",
                       )}
                     </h3>
                     <p className="text-lg">
                       {t(
-                        "industries.newEnergy.challenge2Desc",
+                        "newEnergy.challenge2Desc",
                         "Stator slot width, rotor concentricity, and shaft alignment require micrometer-scale measurement at production speed.",
                       )}
                     </p>
@@ -129,13 +129,13 @@ const IndustryNewEnergy = () => {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {t(
-                        "industries.newEnergy.challenge3Title",
+                        "newEnergy.challenge3Title",
                         "Busbar and Connector Validation",
                       )}
                     </h3>
                     <p className="text-lg">
                       {t(
-                        "industries.newEnergy.challenge3Desc",
+                        "newEnergy.challenge3Desc",
                         "These conductive elements must meet electrical clearance and mechanical fit standards, often with minimal margin for error.",
                       )}
                     </p>
@@ -144,13 +144,13 @@ const IndustryNewEnergy = () => {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {t(
-                        "industries.newEnergy.challenge4Title",
+                        "newEnergy.challenge4Title",
                         "Reflective & Mixed Materials",
                       )}
                     </h3>
                     <p className="text-lg">
                       {t(
-                        "industries.newEnergy.challenge4Desc",
+                        "newEnergy.challenge4Desc",
                         "Copper, aluminum, ceramics, and polymer coatings present optical challenges for traditional inspection systems.",
                       )}
                     </p>
@@ -159,13 +159,13 @@ const IndustryNewEnergy = () => {
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <h3 className="text-xl font-bold text-gray-900 mb-3">
                       {t(
-                        "industries.newEnergy.challenge5Title",
+                        "newEnergy.challenge5Title",
                         "Fast-Cycle Inspection",
                       )}
                     </h3>
                     <p className="text-lg">
                       {t(
-                        "industries.newEnergy.challenge5Desc",
+                        "newEnergy.challenge5Desc",
                         "Assembly lines for battery modules and drive units demand full-surface, in-line measurements without slowing production.",
                       )}
                     </p>
@@ -174,14 +174,14 @@ const IndustryNewEnergy = () => {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-10">
                   {t(
-                    "industries.newEnergy.industryLagsTitle",
+                    "newEnergy.industryLagsTitle",
                     "Where Conventional Metrology Falls Short",
                   )}
                 </h2>
                 <div className="bg-red-50 border-l-4 border-red-400 p-6 rounded-r-lg">
                   <p className="text-lg">
                     {t(
-                      "industries.newEnergy.industryLagsDesc",
+                      "newEnergy.industryLagsDesc",
                       "Most legacy systems are optimized for slower, rigid geometries and often lack the flexibility or speed needed for EV component inspection. Manual measurement workflows can't scale with gigafactory-level output, while traditional vision systems may fail to resolve fine details on reflective or layered surfaces.",
                     )}
                   </p>
@@ -189,20 +189,20 @@ const IndustryNewEnergy = () => {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6 mt-10">
                   {t(
-                    "industries.newEnergy.fermiApproachTitle",
+                    "newEnergy.fermiApproachTitle",
                     "Fermi Vision's Advantage",
                   )}
                 </h2>
                 <div className="bg-blue-50 border-l-4 border-blue-400 p-6 rounded-r-lg">
                   <p className="text-lg font-medium">
                     {t(
-                      "industries.newEnergy.fermiApproach1",
+                      "newEnergy.fermiApproach1",
                       "Fermi Vision offers high-speed, non-contact metrology systems equipped with adaptive optics, programmable illumination, and CAD-integrated workflows—ideal for the inspection of high-mix EV components.",
                     )}
                   </p>
                   <p className="text-lg mt-4">
                     {t(
-                      "industries.newEnergy.fermiApproach2",
+                      "newEnergy.fermiApproach2",
                       "Our platforms support precision inspection of battery tabs, busbars, stator profiles, and more—delivering sub-second measurement cycles without compromising on accuracy. Whether in pilot lines or full-scale production, Fermi Vision empowers EV manufacturers to scale innovation with confidence and control.",
                     )}
                   </p>

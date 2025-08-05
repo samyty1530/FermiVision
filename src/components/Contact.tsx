@@ -113,7 +113,7 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        placeholder="John Doe"
+                        placeholder=""
                       />
                     </div>
 
@@ -130,7 +130,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        placeholder="john.doe@example.com"
+                        placeholder=""
                       />
                     </div>
 
@@ -146,7 +146,7 @@ const Contact = () => {
                         value={formData.subject}
                         onChange={handleInputChange}
                         required
-                        placeholder="Product Inquiry"
+                        placeholder={t("contact.form.subjectPlaceholder", "Product Inquiry")}
                       />
                     </div>
 
@@ -162,7 +162,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleInputChange}
                         required
-                        placeholder="Your message here..."
+                        placeholder={t("contact.form.messagePlaceholder", "Your message here...")}
                         rows={6}
                       />
                     </div>
@@ -193,17 +193,20 @@ const Contact = () => {
                           {t("contact.info.address", "Headquarter")}
                         </h3>
                         <p className="text-gray-600">
-                          Quanzhi Technology Innovation Center
-                        </p>
-                        <p className="text-gray-600">Kechuang Building 9C</p>
-                        <p className="text-gray-600">
-                          Houting Community, Shajing Sub-district, Bao'an
-                          District
+                          {t("contact.info.addressDetails.line1", "Quanzhi Technology Innovation Center")}
                         </p>
                         <p className="text-gray-600">
-                          Shenzhen City, Guangdong Province, China
+                          {t("contact.info.addressDetails.line2", "Kechuang Building 9C")}
                         </p>
-                        <p className="text-gray-600">Zip Code: 518104</p>
+                        <p className="text-gray-600">
+                          {t("contact.info.addressDetails.line3", "Houting Community, Shajing Sub-district, Bao'an District")}
+                        </p>
+                        <p className="text-gray-600">
+                          {t("contact.info.addressDetails.line4", "Shenzhen City, Guangdong Province, China")}
+                        </p>
+                        <p className="text-gray-600">
+                          {t("contact.info.addressDetails.zipCode", "Zip Code: 518104")}
+                        </p>
                       </div>
                     </div>
 
@@ -214,7 +217,9 @@ const Contact = () => {
                         <h3 className="font-semibold text-gray-900 mb-1">
                           {t("contact.info.phone", "Phone")}
                         </h3>
-                        <p className="text-gray-600">+86 189 2346 0852</p>
+                        <p className="text-gray-600">
+                          {t("contact.info.phoneNumber", "+86 189 2346 0852")}
+                        </p>
                       </div>
                     </div>
 
@@ -226,7 +231,9 @@ const Contact = () => {
                           {t("contact.info.email", "Email")}
                         </h3>
 
-                        <p className="text-gray-600">sales@fermivision.com</p>
+                        <p className="text-gray-600">
+                          {t("contact.info.emailAddress", "sales@fermivision.com")}
+                        </p>
                       </div>
                     </div>
 
@@ -235,7 +242,7 @@ const Contact = () => {
                       <MessageCircle className="h-6 w-6 text-primary mr-4 mt-1" />
                       <div>
                         <h3 className="font-semibold text-gray-900 mb-1">
-                          WeChat
+                          {t("contact.info.wechat", "WeChat")}
                         </h3>
                         <Dialog>
                           <DialogTrigger asChild>
@@ -254,7 +261,7 @@ const Contact = () => {
                           <DialogContent className="max-w-md">
                             <div className="text-center">
                               <h3 className="text-lg font-semibold mb-4">
-                                Connect with WeChat
+                                {t("contact.info.connectWechat", "Connect with WeChat")}
                               </h3>
                               <div className="bg-gray-100 p-4 rounded-lg mb-4">
                                 <img

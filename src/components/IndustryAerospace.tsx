@@ -14,7 +14,7 @@ const IndustryAerospace = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo_250625.png"
+        logo="/images/FV_logo.png"
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -41,7 +41,7 @@ const IndustryAerospace = () => {
               {/* Industry Title */}
               <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
                 {t(
-                  "industries.aerospace.title",
+                  "aerospace.title",
                   "Aerospace: Precision Under Extreme Demands",
                 )}
               </h1>
@@ -49,7 +49,7 @@ const IndustryAerospace = () => {
               {/* Industry Overview */}
               <p className="text-xl text-gray-600 leading-relaxed mb-8">
                 {t(
-                  "industries.aerospace.subtitle",
+                  "aerospace.subtitle",
                   "In aerospace manufacturing, tolerances aren't just specifications—they're safety-critical. From turbine blades and fuselage panels to guidance components and composite structures, dimensional accuracy ensures aerodynamic performance, structural reliability, and mission success.",
                 )}
               </p>
@@ -73,117 +73,117 @@ const IndustryAerospace = () => {
               <div className="text-gray-700 leading-relaxed space-y-6">
                 <p className="text-lg">
                   {t(
-                    "industries.aerospace.overview",
+                    "aerospace.overview",
                     "Optical metrology plays a pivotal role in verifying parts with complex geometries, reflective surfaces, or thermal sensitivity—where contact-based measurement is often impractical. As aircraft and spacecraft incorporate more lightweight materials and complex assemblies, manufacturers are under growing pressure to inspect faster, with tighter accuracy, and across increasingly varied production environments.",
                   )}
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">
-                  {t(
-                    "industries.aerospace.challengesTitle",
-                    "Core Challenges in Aerospace Metrology",
-                  )}
+                                      {t(
+                      "aerospace.challengesTitle",
+                      "Core Challenges in Aerospace Metrology",
+                    )}
                 </h2>
 
                 <div className="space-y-4">
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {t(
-                        "industries.aerospace.challenge1Title",
-                        "Complex 3D Geometries:",
-                      )}
+                                              {t(
+                          "aerospace.challenge1Title",
+                          "Complex 3D Geometries:",
+                        )}
                     </h3>
                     <p className="text-lg">
-                      {t(
-                        "industries.aerospace.challenge1Desc",
-                        "Many aerospace parts feature freeform surfaces or tight internal cavities that traditional CMMs or edge-detection tools cannot easily inspect.",
-                      )}
+                                              {t(
+                          "aerospace.challenge1Desc",
+                          "Many aerospace parts feature freeform surfaces or tight internal cavities that traditional CMMs or edge-detection tools cannot easily inspect.",
+                        )}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {t(
-                        "industries.aerospace.challenge2Title",
-                        "Large Component Sizes with Micron-Level Tolerance:",
-                      )}
+                                              {t(
+                          "aerospace.challenge2Title",
+                          "Large Component Sizes with Micron-Level Tolerance:",
+                        )}
                     </h3>
                     <p className="text-lg">
-                      {t(
-                        "industries.aerospace.challenge2Desc",
-                        "Full-field measurement is difficult when large structural elements require both macro alignment and micro-scale verification.",
-                      )}
+                                              {t(
+                          "aerospace.challenge2Desc",
+                          "Full-field measurement is difficult when large structural elements require both macro alignment and micro-scale verification.",
+                        )}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {t(
-                        "industries.aerospace.challenge3Title",
-                        "Material Variety & Reflectivity:",
-                      )}
-                    </h3>
-                    <p className="text-lg">
-                      {t(
-                        "industries.aerospace.challenge3Desc",
-                        "Aerospace often uses mixed-material assemblies—aluminum alloys, titanium, composites—each of which behaves differently under optical inspection.",
-                      )}
+                                              {t(
+                          "aerospace.challenge3Title",
+                          "Material Variety & Reflectivity:",
+                        )}
+                      </h3>
+                      <p className="text-lg">
+                        {t(
+                          "aerospace.challenge3Desc",
+                          "Aerospace often uses mixed-material assemblies—aluminum alloys, titanium, composites—each of which behaves differently under optical inspection.",
+                        )}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {t(
-                        "industries.aerospace.challenge4Title",
-                        "High Documentation Standards:",
-                      )}
-                    </h3>
-                    <p className="text-lg">
-                      {t(
-                        "industries.aerospace.challenge4Desc",
-                        "Traceability and compliance (e.g., AS9100, NADCAP) require repeatable, audit-ready measurement systems.",
-                      )}
+                                              {t(
+                          "aerospace.challenge4Title",
+                          "High Documentation Standards:",
+                        )}
+                      </h3>
+                      <p className="text-lg">
+                        {t(
+                          "aerospace.challenge4Desc",
+                          "Traceability and compliance (e.g., AS9100, NADCAP) require repeatable, audit-ready measurement systems.",
+                        )}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                      {t(
-                        "industries.aerospace.challenge5Title",
-                        "Low-Volume, High-Cost Production:",
-                      )}
-                    </h3>
-                    <p className="text-lg">
-                      {t(
-                        "industries.aerospace.challenge5Desc",
-                        "Prototypes and short-run assemblies demand flexible inspection tools that minimize setup time without sacrificing rigor.",
-                      )}
+                                              {t(
+                          "aerospace.challenge5Title",
+                          "Low-Volume, High-Cost Production:",
+                        )}
+                      </h3>
+                      <p className="text-lg">
+                        {t(
+                          "aerospace.challenge5Desc",
+                          "Prototypes and short-run assemblies demand flexible inspection tools that minimize setup time without sacrificing rigor.",
+                        )}
                     </p>
                   </div>
                 </div>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">
-                  {t(
-                    "industries.aerospace.industryLagsTitle",
-                    "Where Traditional Systems Fall Behind",
-                  )}
-                </h2>
-                <p className="text-lg">
-                  {t(
-                    "industries.aerospace.industryLagsDesc",
-                    "Legacy metrology platforms may be precise but lack the flexibility to rapidly adapt to new parts, complex surfaces, or edge-case material behaviors. Long programming cycles, limited data visualization, and sensitivity to surface finishes reduce usability on the shop floor—especially during time-critical assembly or final inspection phases.",
-                  )}
+                                      {t(
+                      "aerospace.industryLagsTitle",
+                      "Where Traditional Systems Fall Behind",
+                    )}
+                  </h2>
+                  <p className="text-lg">
+                    {t(
+                      "aerospace.industryLagsDesc",
+                      "Legacy metrology platforms may be precise but lack the flexibility to rapidly adapt to new parts, complex surfaces, or edge-case material behaviors. Long programming cycles, limited data visualization, and sensitivity to surface finishes reduce usability on the shop floor—especially during time-critical assembly or final inspection phases.",
+                    )}
                 </p>
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-4 mt-8">
-                  {t(
-                    "industries.aerospace.fermiApproachTitle",
-                    "Fermi Vision's Differentiation",
-                  )}
-                </h2>
-                <p className="text-lg">
-                  {t(
-                    "industries.aerospace.fermiApproachDesc",
+                                      {t(
+                      "aerospace.fermiApproachTitle",
+                      "Fermi Vision's Differentiation",
+                    )}
+                  </h2>
+                  <p className="text-lg">
+                    {t(
+                      "aerospace.fermiApproachDesc",
                     "Fermi Vision systems integrate high-resolution imaging with programmable lighting and multi-angle lensing to capture both small features and sweeping surfaces. Our software supports CAD-based measurement planning, composite material analysis, and real-time feedback to operators—all critical for aerospace manufacturers pushing for higher reliability with lower lead times. Whether it's verifying the concentricity of an engine component or the edge profile of a composite panel, we deliver precision at the pace of production.",
                   )}
                 </p>

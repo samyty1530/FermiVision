@@ -130,9 +130,7 @@ const CustomerRequestForm = () => {
               ) : (
                 <div className="bg-white rounded-lg shadow-md p-8">
                   <p className="text-lg font-bold text-gray-900 mb-8 text-left">
-                    Complete the form below to receive our products catalog and
-                    our technical experts can help you select the best solution
-                    for your specific application.
+                    {t("customerRequest.subtitle", "Complete the form below to receive our products catalog and our technical experts can help you select the best solution for your specific application.")}
                   </p>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     {/* Name */}
@@ -147,7 +145,7 @@ const CustomerRequestForm = () => {
                         value={formData.name}
                         onChange={handleInputChange}
                         required
-                        placeholder="John Doe"
+                        placeholder=""
                       />
                     </div>
 
@@ -163,7 +161,7 @@ const CustomerRequestForm = () => {
                         value={formData.company}
                         onChange={handleInputChange}
                         required
-                        placeholder="Acme Corporation"
+                        placeholder=""
                       />
                     </div>
 
@@ -180,7 +178,7 @@ const CustomerRequestForm = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        placeholder="john.doe@company.com"
+                        placeholder=""
                       />
                     </div>
 
@@ -334,16 +332,16 @@ const CustomerRequestForm = () => {
                           )}
                         </h3>
                         <p className="text-gray-600 text-sm">
-                          Connect with one of our representatives
+                          {t("customerRequest.representatives.connectDescription", "Connect with one of our representatives")}
                         </p>
                       </div>
                     </button>
                   </DialogTrigger>
                   <DialogContent className="max-w-md">
                     <div className="text-center">
-                      <h3 className="text-lg font-semibold mb-4">
-                        Connect with WeChat
-                      </h3>
+                                                    <h3 className="text-lg font-semibold mb-4">
+                                {t("customerRequest.representatives.connectWechat", "Connect with WeChat")}
+                              </h3>
                       <div className="bg-gray-100 p-4 rounded-lg mb-4">
                         <img
                           src="/images/FV_Wechat_QR.png"
@@ -352,7 +350,7 @@ const CustomerRequestForm = () => {
                         />
                       </div>
                       <p className="text-gray-600">
-                        Connect with one of our representatives
+                        {t("customerRequest.representatives.connectDescription", "Connect with one of our representatives")}
                       </p>
                     </div>
                   </DialogContent>
@@ -365,7 +363,9 @@ const CustomerRequestForm = () => {
                     <h3 className="font-semibold text-gray-900">
                       {t("customerRequest.representatives.phone", "Phone")}
                     </h3>
-                    <p className="text-gray-600 text-sm">+86 189 2346 0852</p>
+                    <p className="text-gray-600 text-sm">
+                      {t("customerRequest.representatives.phoneNumber", "+86 189 2346 0852")}
+                    </p>
                   </div>
                 </div>
               </div>

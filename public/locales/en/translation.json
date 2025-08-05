@@ -55,24 +55,34 @@
       "title": "Product Series",
       "subtitle": "Tailored to your product manufacturing needs",
       "item1": {
-        "title": "Vision Series U",
-        "description": "Designed for full-panel, high-speed precision inspection of PCBs, FPCs, HDIs, IC substrates, and 3C products",
-        "alt": "Vision Series U Product"
-      },
-      "item2": {
         "title": "Vision Series A",
         "description": "Advanced vision technology for high-speed applications",
         "alt": "Vision Series A Product"
       },
+      "item2": {
+        "title": "Vision Series B",
+        "description": "Advanced vision technology for specialized applications",
+        "alt": "Vision Series B Product"
+      },
       "item3": {
+        "title": "Vision Series C",
+        "description": "Advanced vision technology for complex industrial applications",
+        "alt": "Vision Series C Product"
+      },
+      "item4": {
         "title": "Vision Series F",
         "description": "Advanced vision technology for complex environments",
         "alt": "Vision Series F Product"
       },
-      "item4": {
-        "title": "Vision Series B",
-        "description": "Advanced vision technology for specialized applications",
-        "alt": "Vision Series B Product"
+      "item5": {
+        "title": "Vision Series U",
+        "description": "Vision technology with balance of performance and affordability",
+        "alt": "Vision Series U Product"
+      },
+      "item6": {
+        "title": "Accessories & Components",
+        "description": "Professional accessories and components to enhance your vision system",
+        "alt": "Accessories & Components"
       }
     },
     "categories": {
@@ -255,14 +265,29 @@
       "message": "Message",
       "submit": "Send Message",
       "success": "Your message has been sent successfully. We will get back to you soon.",
-      "required": "Required field"
+      "required": "Required field",
+      "namePlaceholder": "John Doe",
+      "emailPlaceholder": "john.doe@example.com",
+      "subjectPlaceholder": "Product Inquiry",
+      "messagePlaceholder": "Your message here..."
     },
     "info": {
       "title": "Contact Information",
       "address": "Headquarter",
       "phone": "Phone",
       "email": "Email",
-      "hours": "Business Hours"
+      "hours": "Business Hours",
+      "addressDetails": {
+        "line1": "Quanzhi Technology Innovation Center",
+        "line2": "Kechuang Building 9C",
+        "line3": "Houting Community, Shajing Sub-district, Bao'an District",
+        "line4": "Shenzhen City, Guangdong Province, China",
+        "zipCode": "Zip Code: 518104"
+      },
+      "phoneNumber": "+86 189 2346 0852",
+      "emailAddress": "sales@fermivision.com",
+      "wechat": "WeChat",
+      "connectWechat": "Connect with WeChat"
     }
   },
   "footer": {
@@ -318,13 +343,19 @@
       "applicationConsultation": "Application consultation",
       "applicationTesting": "Application testing",
       "generalInquiry": "General inquiry",
-      "submit": "Request Product Catalog"
+      "submit": "Request Product Catalog",
+      "namePlaceholder": "John Doe",
+      "companyPlaceholder": "Acme Corporation",
+      "emailPlaceholder": "john.doe@company.com"
     },
     "representatives": {
-      "title": "Would you like to connect with one of our technical representatives?",
+      "title": "Connect with one of our representatives",
       "wechat": "WeChat",
       "wechatId": "ID: FermiVision2024",
-      "phone": "Phone"
+      "phone": "Phone",
+      "connectWechat": "Connect with WeChat",
+      "connectDescription": "Connect with one of our representatives",
+      "phoneNumber": "+86 189 2346 0852"
     }
   },
   "pcb": {

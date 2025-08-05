@@ -55,24 +55,34 @@
       "title": "产品系列",
       "subtitle": "为您的产品制造需求量身定制",
       "item1": {
-        "title": "视觉系列 U",
-        "description": "专为PCB、FPC、HDI、IC基板和3C产品的全面板高速精密检测而设计",
-        "alt": "视觉系列 U 产品"
-      },
-      "item2": {
         "title": "视觉系列 A",
         "description": "用于高速应用的先进视觉技术",
         "alt": "视觉系列 A 产品"
       },
+      "item2": {
+        "title": "视觉系列 B",
+        "description": "用于专业应用的先进视觉技术",
+        "alt": "视觉系列 B 产品"
+      },
       "item3": {
+        "title": "视觉系列 C",
+        "description": "用于复杂工业应用的先进视觉技术",
+        "alt": "视觉系列 C 产品"
+      },
+      "item4": {
         "title": "视觉系列 F",
         "description": "用于复杂环境的先进视觉技术",
         "alt": "视觉系列 F 产品"
       },
-      "item4": {
-        "title": "视觉系列 B",
-        "description": "用于专业应用的先进视觉技术",
-        "alt": "视觉系列 B 产品"
+      "item5": {
+        "title": "视觉系列 U",
+        "description": "性能与性价比平衡的视觉技术",
+        "alt": "视觉系列 U 产品"
+      },
+      "item6": {
+        "title": "配件和组件",
+        "description": "专业配件和组件，增强您的视觉系统功能",
+        "alt": "配件和组件"
       }
     },
     "categories": {
@@ -281,14 +291,29 @@
       "message": "消息",
       "submit": "发送消息",
       "success": "您的消息已成功发送。我们将尽快回复您。",
-      "required": "必填字段"
+      "required": "必填字段",
+      "namePlaceholder": "张三",
+      "emailPlaceholder": "zhangsan@example.com",
+      "subjectPlaceholder": "产品咨询",
+      "messagePlaceholder": "您的消息..."
     },
     "info": {
       "title": "联系信息",
       "address": "总部",
       "phone": "电话",
       "email": "电子邮件",
-      "hours": "营业时间"
+      "hours": "营业时间",
+      "addressDetails": {
+        "line1": "深圳市宝安区沙井街道后亭社区",
+        "line2": "茅洲山工业园 工业大厦",
+        "line3": "全至科技创新园科创大厦9层C",
+        "line4": "中国",
+        "zipCode": "邮编：518104"
+      },
+      "phoneNumber": "+86 189 2346 0852",
+      "emailAddress": "sales@fermivision.com",
+      "wechat": "微信",
+      "connectWechat": "连接微信"
     }
   },
   "footer": {
@@ -345,13 +370,19 @@
       "applicationConsultation": "应用咨询",
       "applicationTesting": "应用测试",
       "generalInquiry": "一般咨询",
-      "submit": "申请产品目录"
+      "submit": "申请产品目录",
+      "namePlaceholder": "张三",
+      "companyPlaceholder": "示例公司",
+      "emailPlaceholder": "zhangsan@company.com"
     },
     "representatives": {
-      "title": "您是否希望与我们的技术代表联系？",
+      "title": "与我们的代表联系",
       "wechat": "微信",
       "wechatId": "ID: FermiVision2024",
-      "phone": "电话"
+      "phone": "电话",
+      "connectWechat": "连接微信",
+      "connectDescription": "与我们的代表联系",
+      "phoneNumber": "+86 189 2346 0852"
     }
   },
   "newsArticles": {
