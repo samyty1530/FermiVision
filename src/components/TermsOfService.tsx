@@ -16,8 +16,8 @@ const TermsOfService = () => {
         ]}
       />
 
-      <div className="container mx-auto pt-[132px] pb-12 px-6 md:px-12">
-        <h1 className="text-4xl font-bold mb-8 text-gray-900">
+      <div className="container mx-auto pt-[180px] pb-12 px-6 md:px-12">
+        <h1 className="text-4xl font-bold mb-12 text-gray-900">
           {currentLanguage === "en" ? "Terms of Service" : "使用条款"}
         </h1>
 
