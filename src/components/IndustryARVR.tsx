@@ -6,6 +6,7 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Breadcrumbs from "./layout/Breadcrumbs";
 import { ArrowLeft } from "lucide-react";
+import { MEDIA } from "@/constants/media";
 
 const IndustryARVR = () => {
   const { t } = useTranslation();
@@ -14,7 +15,7 @@ const IndustryARVR = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo.png"
+        logo={MEDIA.LOGO.PRIMARY}
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -57,7 +58,7 @@ const IndustryARVR = () => {
               {/* Featured Image */}
               <div className="mb-12">
                 <img
-                  src="/images/home_industries-2.jpg"
+                  src={MEDIA.INDUSTRIES.ARVR}
                   alt="AR/VR and Personal Devices"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />

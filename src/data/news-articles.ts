@@ -1,3 +1,5 @@
+import { MEDIA } from "@/constants/media";
+
 export interface NewsArticle {
   id: string;
   slug: string;
@@ -111,8 +113,7 @@ export const newsArticles: NewsArticle[] = [
         <p>Learn more at: <a href="https://www.fermivision.com">www.fermivision.com</a> or contact <a href="mailto:sales@fermivision.com">sales@fermivision.com</a> for a demo.</p>
       </div>
     `,
-    imageUrl:
-      "/images/news_engBreakthrough.webp",
+    imageUrl: MEDIA.NEWS.ENGINEERING_BREAKTHROUGH,
     author: "Fermi Vision Engineering Team",
     tags: ["PCB Manufacturing", "Computer Vision", "Optical Metrology"],
     externalLink: "/products",
@@ -151,8 +152,7 @@ export const newsArticles: NewsArticle[] = [
         <p>Learn more at: <a href="https://www.fermivision.com">www.fermivision.com</a> or contact <a href="mailto:sales@fermivision.com">sales@fermivision.com</a> for a demo.</p>
       </div>
     `,
-    imageUrl:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&q=80",
+    imageUrl: MEDIA.NEWS.ADAPTIVE_METROLOGY,
     tags: ["PCB Manufacturing", "Compliance", "Standards", "Metrology"],
     externalLink: "/products",
   },
@@ -205,8 +205,7 @@ export const newsArticles: NewsArticle[] = [
         <p>Learn more at: <a href="https://www.fermivision.com">www.fermivision.com</a> or contact <a href="mailto:sales@fermivision.com">sales@fermivision.com</a> for a demo.</p>
       </div>
     `,
-    imageUrl:
-      "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=800&q=80",
+    imageUrl: MEDIA.NEWS.ANTENNA_BOARD_INSPECTION,
     tags: ["PCB Manufacturing", "Computer Vision", "Optical Metrology"],
     externalLink: "/products",
   },
@@ -280,8 +279,7 @@ export const newsArticles: NewsArticle[] = [
         <p>Learn more at: <a href="https://www.fermivision.com">www.fermivision.com</a> or contact <a href="mailto:sales@fermivision.com">sales@fermivision.com</a> for a demo.</p>
       </div>
     `,
-    imageUrl:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
+    imageUrl: MEDIA.NEWS.MANUAL_PIN_GAUGING,
     tags: [
       "PCB Manufacturing",
       "Computer Vision",

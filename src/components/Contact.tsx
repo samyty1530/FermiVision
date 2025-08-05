@@ -9,6 +9,7 @@ import Footer from "./layout/Footer";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Breadcrumbs from "./layout/Breadcrumbs";
+import { MEDIA } from "@/constants/media";
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -46,7 +47,7 @@ const Contact = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo.png"
+        logo={MEDIA.LOGO.PRIMARY}
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },

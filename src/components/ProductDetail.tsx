@@ -6,6 +6,7 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { ArrowLeft, Check, Play, Image } from "lucide-react";
 import Breadcrumbs from "./layout/Breadcrumbs";
+import { MEDIA } from "@/constants/media";
 
 interface ProductData {
   series: string;
@@ -153,7 +154,7 @@ const ProductDetail = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       <Header
-        logo="/images/FV_logo.png"
+        logo={MEDIA.LOGO.PRIMARY}
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },

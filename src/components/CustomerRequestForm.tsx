@@ -11,6 +11,7 @@ import { ArrowLeft, MessageCircle, Phone } from "lucide-react";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
 import Breadcrumbs from "./layout/Breadcrumbs";
+import { MEDIA } from "@/constants/media";
 
 const CustomerRequestForm = () => {
   const { t } = useTranslation();
@@ -69,7 +70,7 @@ const CustomerRequestForm = () => {
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
       <Header
-        logo="/images/FV_logo.png"
+        logo={MEDIA.LOGO.PRIMARY}
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },

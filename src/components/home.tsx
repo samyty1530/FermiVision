@@ -6,6 +6,7 @@ import Footer from "./layout/Footer";
 import Breadcrumbs from "./layout/Breadcrumbs";
 import { Link } from "react-router-dom";
 import { Search, ChevronLeft, ChevronRight } from "lucide-react";
+import { MEDIA, getProductImage, getIndustryImage } from "@/constants/media";
 
 const Home = () => {
   const { t, ready } = useTranslation();
@@ -19,8 +20,7 @@ const Home = () => {
   // Hero backgrounds data
   const heroBackgrounds = [
     {
-      image:
-        "/images/news_engBreakthrough.webp",
+      image: MEDIA.HERO.ENGINEERING_BREAKTHROUGH,
       title:
         "Engineering Breakthrough: Cutting PCB Programming Time from Hours to Minutes",
       subtitle:
@@ -29,8 +29,7 @@ const Home = () => {
       slug: "engineering-breakthrough-pcb-programming-efficiency",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=1200&q=80",
+      image: MEDIA.HERO.ADAPTIVE_METROLOGY,
       title: "Adaptive Metrology for Export-Grade PCB Compliance",
       subtitle:
         "A Zhuhai PCB factory adopts Fermi Vision to ensure compliance across new and legacy U.S. standards with unmatched speed.",
@@ -38,8 +37,7 @@ const Home = () => {
       slug: "adaptive-metrology-export-grade-pcb-compliance",
     },
     {
-      image:
-        "/images/news_SK.png",
+      image: MEDIA.HERO.SK_HYNIX,
       title: "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix",
       subtitle:
         "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3",
@@ -138,8 +136,8 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
-      <Header
-        logo="/images/FV_logo.png"
+              <Header
+          logo={MEDIA.LOGO.PRIMARY}
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
@@ -315,7 +313,7 @@ const Home = () => {
                       <div className="overflow-hidden rounded-xl shadow-lg bg-white relative group-hover:shadow-xl">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <img
-                          src={`/images/home_industries-${item}.jpg`}
+                          src={getIndustryImage(item)}
                           alt={t(
                             `industries.item${item}.alt`,
                             item === 1
@@ -436,7 +434,7 @@ const Home = () => {
                       <div className="overflow-hidden rounded-xl shadow-lg bg-white relative group-hover:shadow-xl">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                         <img
-                          src={`/images/home-products-1-${series === "U" ? "U" : series === "A" ? "A8" : series === "F" ? "F5" : series === "B" ? "A8" : series === "C" ? "F5" : "U"}.jpg`}
+                          src={getProductImage(series)}
                           alt={t(
                             `products.featured.item${index + 1}.alt`,
                             `Vision Series ${series}`,
@@ -512,7 +510,7 @@ const Home = () => {
               <div className="md:w-1/2">
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&q=80"
+                    src={MEDIA.NEWS.ANTENNA_BOARD_INSPECTION}
                     alt="8000 Dimensions, 3 Minutes, One Machine"
                     className="w-full h-full object-cover"
                   />
@@ -541,7 +539,7 @@ const Home = () => {
               <div className="md:w-1/2">
                 <div className="rounded-lg overflow-hidden shadow-md">
                   <img
-                    src="/images/news_SK.png"
+                    src={MEDIA.NEWS.SK_HYNIX}
                     alt="Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix"
                     className="w-full h-full object-cover"
                   />

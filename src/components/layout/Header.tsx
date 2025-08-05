@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 // Import the default export from LanguageSwitcher
 import LanguageSwitcher from "../LanguageSwitcher";
 import { Input } from "@/components/ui/input";
+import { MEDIA } from "@/constants/media";
 
 interface HeaderProps {
   logo?: string;
@@ -12,7 +13,7 @@ interface HeaderProps {
 }
 
 const Header = ({
-  logo = "/images/FV_logo.png",
+  logo = MEDIA.LOGO.PRIMARY,
   navLinks = [
     { label: "Products", href: "/products" },
     { label: "Industries", href: "/industries" },
@@ -62,7 +63,7 @@ const Header = ({
             className="h-20"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = "/images/FV_logo.png";
+              target.src = MEDIA.LOGO.PRIMARY;
             }}
           />
         </Link>
