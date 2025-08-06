@@ -154,8 +154,8 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
-              <Header
-          logo={MEDIA.LOGO.PRIMARY}
+      <Header
+        logo={MEDIA.LOGO.PRIMARY}
         navLinks={[
           { label: t("nav.products", "Products"), href: "/products" },
           { label: t("nav.industries", "Industries"), href: "/industries" },
