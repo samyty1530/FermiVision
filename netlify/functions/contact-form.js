@@ -36,6 +36,29 @@ exports.handler = async (event, context) => {
   }
 
   try {
+    // Check for required environment variables
+    if (!process.env.GOOGLE_SERVICE_ACCOUNT_KEY) {
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          error: 'Google Sheets configuration error',
+          details: 'GOOGLE_SERVICE_ACCOUNT_KEY environment variable is missing'
+        }),
+      };
+    }
+    
+    if (!process.env.GOOGLE_SHEET_ID) {
+      return {
+        statusCode: 500,
+        headers,
+        body: JSON.stringify({ 
+          error: 'Google Sheets configuration error',
+          details: 'GOOGLE_SHEET_ID environment variable is missing'
+        }),
+      };
+    }
+
     // Parse form data
     const formData = JSON.parse(event.body);
     const { name, email, subject, message } = formData;
@@ -107,11 +130,23 @@ exports.handler = async (event, context) => {
   } catch (error) {
     console.error('Error processing form submission:', error);
     
+    // Provide more specific error messages
+    let errorMessage = 'Internal server error';
+    if (error.message.includes('GOOGLE_SERVICE_ACCOUNT_KEY')) {
+      errorMessage = 'Google Sheets configuration error';
+    } else if (error.message.includes('GOOGLE_SHEET_ID')) {
+      errorMessage = 'Google Sheets ID not configured';
+    } else if (error.message.includes('credentials')) {
+      errorMessage = 'Google API credentials error';
+    } else if (error.message.includes('spreadsheet')) {
+      errorMessage = 'Google Sheets access error';
+    }
+    
     return {
       statusCode: 500,
       headers,
       body: JSON.stringify({ 
-        error: 'Internal server error',
+        error: errorMessage,
         details: error.message 
       }),
     };

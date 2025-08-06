@@ -37,13 +37,19 @@ const Contact = () => {
     setSubmitError("");
 
     try {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      
       const response = await fetch('/.netlify/functions/contact-form', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
+        signal: controller.signal,
       });
+      
+      clearTimeout(timeoutId);
 
       const result = await response.json();
 
@@ -56,11 +62,22 @@ const Contact = () => {
           message: "",
         });
       } else {
-        setSubmitError(result.error || 'Failed to submit form');
+        // More specific error messages based on the response
+        if (response.status === 400) {
+          setSubmitError(result.error || 'Please fill in all required fields');
+        } else if (response.status === 500) {
+          setSubmitError('Server configuration error. Please contact support.');
+        } else {
+          setSubmitError(result.error || 'Failed to submit form. Please try again.');
+        }
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setSubmitError('Network error. Please try again.');
+      if (error.name === 'AbortError') {
+        setSubmitError('Request timed out. Please try again.');
+      } else {
+        setSubmitError('Connection error. Please check your internet connection and try again.');
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -191,11 +208,26 @@ const Contact = () => {
                       />
                     </div>
 
-                    {submitError && (
-                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
-                        <p className="text-red-700 text-sm">{submitError}</p>
-                      </div>
+                                    {submitError && (
+                  <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                    <p className="text-red-700 text-sm font-medium mb-2">{submitError}</p>
+                    {submitError.includes('Server configuration error') && (
+                      <p className="text-red-600 text-xs">
+                        This is likely due to missing Google Sheets configuration. Please contact support.
+                      </p>
                     )}
+                    {submitError.includes('Connection error') && (
+                      <p className="text-red-600 text-xs">
+                        Please check your internet connection and try again.
+                      </p>
+                    )}
+                    {submitError.includes('Request timed out') && (
+                      <p className="text-red-600 text-xs">
+                        The server is taking too long to respond. Please try again later.
+                      </p>
+                    )}
+                  </div>
+                )}
 
                     <Button
                       type="submit"
