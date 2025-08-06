@@ -272,8 +272,6 @@ export const newsArticles: NewsArticle[] = [
         <li><strong>Consistent Results:</strong> Measurements matched experienced human inspectors with higher repeatability and traceability</li>
       </ul>
       
-      <p>A company spokesperson noted: &quot;We had a long-standing challenge — even the best software couldn't replicate how a pin would behave in the hole. Fermi Vision nailed it.&quot;</p>
-      
       <p>This deployment further underscores Fermi Vision's unique position in the industry — providing not just optical measurements, but opto-mechanical insight with unmatched efficiency.</p>
       
       <div class="contact-info">

@@ -153,7 +153,7 @@
         "title": "Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection",
         "excerpt": "Thousands of press-fit holes measured in seconds with a physically simulated contact algorithm (PGA)",
         "date": "February 1, 2025",
-        "content": "<p><em>Shenzhen, China — February 1, 2025</em></p><p>A major PCB manufacturing facility has retired its legacy pin gauges in favor of a Fermi Vision-powered inspection system that measures thousands of press-fit holes in seconds — all without human intervention.</p><p>Previously, QA teams relied on manual pin tools to validate hole diameters — a labor-intensive process prone to variability and fatigue. While vision systems existed, most failed to simulate the true mechanical interface of a press-fit pin.</p><p>Fermi Vision solved this problem through a new proprietary algorithm that physically simulates contact behavior using enhanced optical modeling and high-pass filtering. CAD data is imported directly, enabling full-board, multi-thousand hole inspection at the click of a button.</p><h3>Breakthrough Highlights:</h3><ul><li><strong>Auto-Hole Detection:</strong> Holes are measured in bulk with CAD alignment; no individual setup required</li><li><strong>Physical Simulation Engine:</strong> Mimics real-world press-fit insertion to produce results equivalent to manual gauge fitting</li><li><strong>Consistent Results:</strong> Measurements matched experienced human inspectors with higher repeatability and traceability</li></ul><p>A company spokesperson noted: &quot;We had a long-standing challenge — even the best software couldn't replicate how a pin would behave in the hole. Fermi Vision nailed it.&quot;</p><p>This deployment further underscores Fermi Vision's unique position in the industry — providing not just optical measurements, but opto-mechanical insight with unmatched efficiency.</p><div class=\"contact-info\"><p>Learn more at: <a href=\"https://www.fermivision.com\">www.fermivision.com</a> or contact <a href=\"mailto:sales@fermivision.com\">sales@fermivision.com</a> for a demo.</p></div>"
+        "content": "<p><em>Shenzhen, China — February 1, 2025</em></p><p>A major PCB manufacturing facility has retired its legacy pin gauges in favor of a Fermi Vision-powered inspection system that measures thousands of press-fit holes in seconds — all without human intervention.</p><p>Previously, QA teams relied on manual pin tools to validate hole diameters — a labor-intensive process prone to variability and fatigue. While vision systems existed, most failed to simulate the true mechanical interface of a press-fit pin.</p><p>Fermi Vision solved this problem through a new proprietary algorithm that physically simulates contact behavior using enhanced optical modeling and high-pass filtering. CAD data is imported directly, enabling full-board, multi-thousand hole inspection at the click of a button.</p><h3>Breakthrough Highlights:</h3><ul><li><strong>Auto-Hole Detection:</strong> Holes are measured in bulk with CAD alignment; no individual setup required</li><li><strong>Physical Simulation Engine:</strong> Mimics real-world press-fit insertion to produce results equivalent to manual gauge fitting</li><li><strong>Consistent Results:</strong> Measurements matched experienced human inspectors with higher repeatability and traceability</li></ul><p>This deployment further underscores Fermi Vision's unique position in the industry — providing not just optical measurements, but opto-mechanical insight with unmatched efficiency.</p><div class=\"contact-info\"><p>Learn more at: <a href=\"https://www.fermivision.com\">www.fermivision.com</a> or contact <a href=\"mailto:sales@fermivision.com\">sales@fermivision.com</a> for a demo.</p></div>"
       }
     },
     "tags": {
@@ -263,7 +263,8 @@
       "email": "Email Address",
       "subject": "Subject",
       "message": "Message",
-      "submit": "Send Message",
+              "submit": "Send Message",
+        "sending": "Sending...",
       "success": "Your message has been sent successfully. We will get back to you soon.",
       "required": "Required field",
       "namePlaceholder": "John Doe",
@@ -343,7 +344,8 @@
       "applicationConsultation": "Application consultation",
       "applicationTesting": "Application testing",
       "generalInquiry": "General inquiry",
-      "submit": "Request Product Catalog",
+              "submit": "Request Product Catalog",
+        "sending": "Submitting...",
       "namePlaceholder": "John Doe",
       "companyPlaceholder": "Acme Corporation",
       "emailPlaceholder": "john.doe@company.com"

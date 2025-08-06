@@ -28,19 +28,42 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log("Form submitted:", formData);
-    setFormSubmitted(true);
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    // In a real app, you would handle success/error states
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch('/.netlify/functions/contact-form', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setFormSubmitted(true);
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        setSubmitError(result.error || 'Failed to submit form');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitError('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -168,11 +191,25 @@ const Contact = () => {
                       />
                     </div>
 
+                    {submitError && (
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-4">
+                        <p className="text-red-700 text-sm">{submitError}</p>
+                      </div>
+                    )}
+
                     <Button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary-700 text-white"
+                      disabled={isSubmitting}
+                      className="w-full bg-primary hover:bg-primary-700 text-white disabled:opacity-50"
                     >
-                      {t("contact.form.submit", "Send Message")}
+                      {isSubmitting ? (
+                        <div className="flex items-center justify-center">
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                          {t("contact.form.sending", "Sending...")}
+                        </div>
+                      ) : (
+                        t("contact.form.submit", "Send Message")
+                      )}
                     </Button>
                   </form>
                 )}

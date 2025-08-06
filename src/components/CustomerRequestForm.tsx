@@ -46,24 +46,48 @@ const CustomerRequestForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, you would send this data to your backend
-    console.log("Form submitted:", formData);
-    setFormSubmitted(true);
-    // Reset form
-    setFormData({
-      name: "",
-      company: "",
-      email: "",
-      description: "",
-      interests: {
-        priceRequest: false,
-        applicationConsultation: false,
-        applicationTesting: false,
-        generalInquiry: false,
-      },
-    });
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    try {
+      const response = await fetch('/.netlify/functions/customer-request', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setFormSubmitted(true);
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          description: "",
+          interests: {
+            priceRequest: false,
+            applicationConsultation: false,
+            applicationTesting: false,
+            generalInquiry: false,
+          },
+        });
+      } else {
+        setSubmitError(result.error || 'Failed to submit request');
+      }
+    } catch (error) {
+      console.error('Error submitting request:', error);
+      setSubmitError('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -293,13 +317,24 @@ const CustomerRequestForm = () => {
                       </div>
                     </div>
 
+                    {submitError && (
+                      <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+                        <p className="text-red-700 text-sm">{submitError}</p>
+                      </div>
+                    )}
+
                     <Button
                       type="submit"
-                      className="w-full bg-primary hover:bg-primary-700 text-white py-3 text-lg"
+                      disabled={isSubmitting}
+                      className="w-full bg-primary hover:bg-primary-700 text-white py-3 text-lg disabled:opacity-50"
                     >
-                      {t(
-                        "customerRequest.form.submit",
-                        "Request Product Catalog",
+                      {isSubmitting ? (
+                        <div className="flex items-center justify-center">
+                          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                          {t("customerRequest.form.sending", "Submitting...")}
+                        </div>
+                      ) : (
+                        t("customerRequest.form.submit", "Request Product Catalog")
                       )}
                     </Button>
                   </form>
