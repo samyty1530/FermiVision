@@ -17,8 +17,6 @@ i18n
     debug: import.meta.env.DEV,
     // Default language
     fallbackLng: "en",
-    // Debug mode in development
-    debug: import.meta.env.DEV,
     // Namespace for translations
     ns: ["translation"],
     defaultNS: "translation",
