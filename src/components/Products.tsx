@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import Breadcrumbs from "./layout/Breadcrumbs";
+import { getProductImage, MEDIA } from "@/constants/media";
 
 interface Product {
   series: string;
@@ -29,7 +30,7 @@ const Products = () => {
         "products.series.c.description",
         "High-precision optical measurement system for complex industrial applications",
       ),
-      image: "/images/product-series/vision-c.jpg",
+      image: getProductImage("c"),
     },
     {
       series: "a",
@@ -38,7 +39,7 @@ const Products = () => {
         "products.series.a.description",
         "Automated metrology solution designed for high-volume manufacturing environments",
       ),
-      image: "/images/product-series/vision-a.jpg",
+      image: getProductImage("a"),
     },
     {
       series: "f",
@@ -47,7 +48,7 @@ const Products = () => {
         "products.series.f.description",
         "Specialized optical metrology system for fine feature measurement",
       ),
-      image: "/images/product-series/vision-f.jpg",
+      image: getProductImage("f"),
     },
     {
       series: "b",
@@ -56,7 +57,7 @@ const Products = () => {
         "products.series.b.description",
         "Robust inspection system for harsh industrial environments",
       ),
-      image: "/images/product-series/vision-b.jpg",
+      image: getProductImage("b"),
     },
     {
       series: "u",
@@ -65,7 +66,7 @@ const Products = () => {
         "products.series.u.description",
         "Versatile imaging solution for general-purpose quality control applications",
       ),
-      image: "/images/product-series/vision-u.jpg",
+      image: getProductImage("u"),
     },
     {
       series: "accessories",
@@ -74,7 +75,7 @@ const Products = () => {
         "products.series.accessories.description",
         "Enhance the capabilities of your Fermi Vision systems with our range of specialized accessories",
       ),
-      image: "/images/product-series/accessories.jpg",
+      image: getProductImage("accessories"),
     },
   ];
 
@@ -88,7 +89,12 @@ const Products = () => {
 
         if (response.ok) {
           const data = await response.json();
-          setProducts(data);
+          // Resolve HERO variables to actual image paths
+          const resolvedData = data.map((product: Product) => ({
+            ...product,
+            image: resolveHeroImage(product.image, product.series)
+          }));
+          setProducts(resolvedData);
         } else {
           // Fallback to fixed products if JSON fetch fails
           setProducts(fixedProducts);
@@ -104,6 +110,29 @@ const Products = () => {
 
     fetchProducts();
   }, [i18n.language]);
+
+  // Helper function to resolve HERO variables to actual image paths
+  const resolveHeroImage = (imagePath: string, series: string): string => {
+    if (imagePath === "HERO") {
+      switch (series) {
+        case "a":
+          return MEDIA.VISION_SERIES_A.HERO;
+        case "b":
+          return MEDIA.VISION_SERIES_B.HERO;
+        case "c":
+          return MEDIA.VISION_SERIES_C.HERO;
+        case "f":
+          return MEDIA.VISION_SERIES_F.HERO;
+        case "u":
+          return MEDIA.VISION_SERIES_U.HERO;
+        case "accessories":
+          return MEDIA.ACCESSORIES.HERO;
+        default:
+          return MEDIA.VISION_SERIES_A.HERO; // fallback
+      }
+    }
+    return imagePath; // Return as-is if not a HERO variable
+  };
 
   // Parse search query from URL when component mounts or URL changes
   useEffect(() => {

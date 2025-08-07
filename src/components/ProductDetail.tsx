@@ -6,7 +6,7 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import { ArrowLeft, Check, Play, Image } from "lucide-react";
 import Breadcrumbs from "./layout/Breadcrumbs";
-import { MEDIA } from "@/constants/media";
+import { MEDIA, getProductDetailHero, getProductDetailImages, getProductDetailVideo } from "@/constants/media";
 
 interface ProductData {
   series: string;
@@ -22,7 +22,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState<ProductData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [showVideo, setShowVideo] = useState(false);
+  const [selectedMediaIndex, setSelectedMediaIndex] = useState(0);
 
   useEffect(() => {
     const fetchProductData = async () => {
@@ -39,7 +39,12 @@ const ProductDetail = () => {
         const productData = data.find((item) => item.series === series);
 
         if (productData) {
-          setProduct(productData);
+          // Resolve HERO image if needed
+          const resolvedProduct = {
+            ...productData,
+            image: resolveHeroImage(productData.image, productData.series)
+          };
+          setProduct(resolvedProduct);
           setError(null);
         } else {
           setError("Product not found");
@@ -62,6 +67,42 @@ const ProductDetail = () => {
     const target = e.target as HTMLImageElement;
     target.src =
       "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80";
+  };
+
+  // Helper function to resolve HERO variables to actual image paths
+  const resolveHeroImage = (imagePath: string, series: string): string => {
+    if (imagePath === "HERO") {
+      switch (series) {
+        case "a":
+          return MEDIA.VISION_SERIES_A.HERO;
+        case "b":
+          return MEDIA.VISION_SERIES_B.HERO;
+        case "c":
+          return MEDIA.VISION_SERIES_C.HERO;
+        case "f":
+          return MEDIA.VISION_SERIES_F.HERO;
+        case "u":
+          return MEDIA.VISION_SERIES_U.HERO;
+        case "accessories":
+          return MEDIA.ACCESSORIES.HERO;
+        default:
+          return MEDIA.VISION_SERIES_A.HERO; // fallback
+      }
+    }
+    return imagePath; // Return as-is if not a HERO variable
+  };
+
+  // Get all media items for the gallery
+  const getGalleryMedia = (series: string) => {
+    const images = getProductDetailImages(series);
+    const video = getProductDetailVideo(series);
+    
+    return [
+      { type: 'image', src: images.IMAGE_1, alt: `${product?.title} - Image 1` },
+      { type: 'image', src: images.IMAGE_2, alt: `${product?.title} - Image 2` },
+      { type: 'image', src: images.IMAGE_3, alt: `${product?.title} - Image 3` },
+      { type: 'video', src: video, alt: `${product?.title} - Product Video` }
+    ];
   };
 
   if (loading) {
@@ -178,63 +219,94 @@ const ProductDetail = () => {
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Product Media */}
-              <div className="space-y-4">
-                {/* Main Media Window */}
-                <div className="rounded-lg overflow-hidden shadow-lg">
-                  {showVideo ? (
-                    <div className="relative bg-gray-900 aspect-video flex items-center justify-center">
-                      <div className="text-center text-white">
-                        <Play className="h-16 w-16 mx-auto mb-4 opacity-70" />
-                        <p className="text-lg">
-                          {t("products.videoPlaceholder", "Product Video")}
-                        </p>
-                        <p className="text-sm opacity-70 mt-2">
-                          {t("products.videoComingSoon", "Video coming soon")}
-                        </p>
-                      </div>
+              {/* Product Media Gallery */}
+              <div className="space-y-6">
+                {/* Main Media Display */}
+                <div className="rounded-lg overflow-hidden shadow-lg bg-white">
+                  {selectedMediaIndex === 3 ? (
+                    // Video Display
+                    <div className="relative bg-gray-900 aspect-video">
+                      {getProductDetailVideo(series || 'a').includes('/videos/') && !getProductDetailVideo(series || 'a').includes('xx.mp4') ? (
+                        <video
+                          src={getProductDetailVideo(series || 'a')}
+                          controls
+                          className="w-full h-full object-cover"
+                        >
+                          {t("products.videoNotSupported", "Your browser does not support the video tag.")}
+                        </video>
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <div className="text-center text-white">
+                            <Play className="h-16 w-16 mx-auto mb-4 opacity-70" />
+                            <p className="text-lg">
+                              {t("products.videoPlaceholder", "Product Video")}
+                            </p>
+                            <p className="text-sm opacity-70 mt-2">
+                              {t("products.videoComingSoon", "Video coming soon")}
+                            </p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                   ) : (
+                    // Image Display
                     <img
-                      src={product.image}
-                      alt={product.title}
+                      src={getGalleryMedia(series || 'a')[selectedMediaIndex].src}
+                      alt={getGalleryMedia(series || 'a')[selectedMediaIndex].alt}
                       className="w-full h-auto object-cover"
                       onError={handleImageError}
                     />
                   )}
                 </div>
 
-                {/* Media Thumbnails */}
-                <div className="flex gap-3">
-                  {/* Image Thumbnail */}
-                  <button
-                    onClick={() => setShowVideo(false)}
-                    className={`rounded-lg overflow-hidden border-2 transition-all duration-200 ${
-                      !showVideo
-                        ? "border-primary opacity-100"
-                        : "border-gray-300 opacity-60 hover:opacity-80"
-                    }`}
-                  >
-                    <img
-                      src={product.image}
-                      alt={`${product.title} thumbnail`}
-                      className="w-20 h-16 object-cover"
-                      onError={handleImageError}
-                    />
-                  </button>
+                {/* Gallery Thumbnails */}
+                <div className="grid grid-cols-4 gap-3">
+                  {getGalleryMedia(series || 'a').map((media, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedMediaIndex(index)}
+                      className={`rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                        selectedMediaIndex === index
+                          ? "border-primary opacity-100"
+                          : "border-gray-300 opacity-60 hover:opacity-80"
+                      }`}
+                    >
+                      {media.type === 'video' ? (
+                        <div className="w-full h-20 bg-gray-900 flex items-center justify-center">
+                          <Play className="h-6 w-6 text-white" />
+                        </div>
+                      ) : (
+                        <img
+                          src={media.src}
+                          alt={media.alt}
+                          className="w-full h-20 object-cover"
+                          onError={handleImageError}
+                        />
+                      )}
+                    </button>
+                  ))}
+                </div>
 
-                  {/* Video Thumbnail */}
+                {/* Gallery Navigation */}
+                <div className="flex justify-between items-center">
                   <button
-                    onClick={() => setShowVideo(true)}
-                    className={`rounded-lg overflow-hidden border-2 transition-all duration-200 relative ${
-                      showVideo
-                        ? "border-primary opacity-100"
-                        : "border-gray-300 opacity-60 hover:opacity-80"
-                    }`}
+                    onClick={() => setSelectedMediaIndex(prev => prev > 0 ? prev - 1 : 3)}
+                    className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
                   >
-                    <div className="w-20 h-16 bg-gray-900 flex items-center justify-center">
-                      <Play className="h-6 w-6 text-white" />
-                    </div>
+                    <ArrowLeft className="h-4 w-4" />
+                    {t("products.previous", "Previous")}
+                  </button>
+                  
+                  <span className="text-sm text-gray-500">
+                    {selectedMediaIndex + 1} / 4
+                  </span>
+                  
+                  <button
+                    onClick={() => setSelectedMediaIndex(prev => prev < 3 ? prev + 1 : 0)}
+                    className="flex items-center gap-2 text-gray-600 hover:text-primary transition-colors"
+                  >
+                    {t("products.next", "Next")}
+                    <ArrowLeft className="h-4 w-4 rotate-180" />
                   </button>
                 </div>
               </div>

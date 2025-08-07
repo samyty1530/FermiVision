@@ -116,7 +116,12 @@
       "step7Title": "7. Ongoing Technical Support",
       "step7": "Our team provides installation guidance, user training, and continued technical support throughout the warranty period.",
       "optional": "Optional:",
-      "startProcess": "Start Your Technical Evaluation"
+      "startProcess": "Start Your Technical Evaluation",
+      "previous": "Previous",
+      "next": "Next",
+      "videoPlaceholder": "Product Video",
+      "videoComingSoon": "Video coming soon",
+      "videoNotSupported": "Your browser does not support the video tag."
     }
   },
   "news": {

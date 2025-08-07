@@ -3,7 +3,7 @@
     "series": "c",
     "title": "Vision Series C",
     "description": "Engineered for rapid, high-precision measurement across full-panel PCB and substrate applications, the C6 Series delivers fast, fixture-free inspection with powerful automation and advanced image processing.",
-    "image": "/images/product-series/vision-c.jpg",
+    "image": "HERO",
     "features": [
       "Designed for full-panel, high-precision inspection of PCBs, FPCs, HDIs, IC substrates, and 3C products",
       "Dual-lens system enables both wide-area and fine-feature measurements in a single scan",
@@ -16,7 +16,7 @@
     "series": "a",
     "title": "Vision Series A",
     "description": "Designed for high-speed applications requiring full-range image scanning and stitching, the A Series offers unmatched precision for large-scale inspections.",
-    "image": "/images/product-series/vision-a.jpg",
+    "image": "HERO",
     "features": [
       "Specifically designed for products requiring full-range size measurements - PCBs, FPCs, HDI boards, IC carrier, boards, mass-produced 3C products, and more",
       "Supports a flexible combination of multiple lenses and cameras addressing the combined requirements of efficiency and precision in various measurement environments",
@@ -29,7 +29,7 @@
     "series": "f",
     "title": "Vision Series F",
     "description": "The F Series sets the benchmark for next-generation efficiency with its high-speed stroboscopic measurement capabilities, ideal for rapid throughput environments.",
-    "image": "/images/product-series/vision-f.jpg",
+    "image": "HERO",
     "features": [
       "Satisfies the full-range measurement requirements for high-density, high-precision products, including Mini-LEDs, IC carrier boards, photovoltaic components, and more.",
       "Optional additional sensors and lasers available for precise height difference and flatness measurements",
@@ -42,7 +42,7 @@
     "series": "b",
     "title": "Vision Series B",
     "description": "Engineered for instantaneous measurements of a large number of micron-sized features. The B Series delivers unparalleled accuracy in the inspection of fine-scale components.",
-    "image": "/images/product-series/vision-b.jpg",
+    "image": "HERO",
     "features": [
       "Satisfies the full-range measurement requirements for high-density, high-precision products, including silicon-based carrier boards, micro-sized holes, line widths/spacings, Mini-LEDs, IC carrier boards, and more",
       "Advanced stroboscopic synchronous electric control system",
@@ -55,7 +55,7 @@
     "series": "u",
     "title": "Vision Series U",
     "description": "Versatile imaging solution for general-purpose quality control applications. The Vision Series U offers an excellent balance of performance and affordability for diverse inspection needs.",
-    "image": "/images/product-series/vision-u.jpg",
+    "image": "HERO",
     "features": [
       "High-speed, full-panel inspection of PCBs, FPCs, HDIs, IC substrates, and 3C products",
       "5–10× faster than traditional vision systems with full 2.5D capability",
@@ -67,7 +67,7 @@
     "series": "accessories",
     "title": "Accessories & Components",
     "description": "Enhance the capabilities of your Fermi Vision systems with our range of specialized accessories and components. From advanced lighting solutions to precision mounting hardware, we offer everything needed to optimize your measurement setup.",
-    "image": "/images/product-series/accessories.jpg",
+    "image": "HERO",
     "features": [
       "Specialized illumination systems",
       "Precision mounting hardware",

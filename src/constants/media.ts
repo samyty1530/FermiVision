@@ -1,4 +1,8 @@
 // Media file constants for centralized management
+
+// *** WATCH OUT FOR LOWERCASE .JPG instead of .jpg
+
+
 export const MEDIA = {
   // Logo
   LOGO: {
@@ -24,16 +28,6 @@ export const MEDIA = {
     SK: "/images/home-partners-SK.png",
     UNIMICRON: "/images/home-partners-unimicron.png",
   },
-
-// Products - Home page carousel images
-    PRODUCTS: {
-    SERIES_A: "/images/product_A8.jpg",
-    SERIES_B: "/images/xx.jpg", // placeholder - needs actual B series image
-    SERIES_C: "/images/xx.jpg", // placeholder - needs actual C series image
-    SERIES_F: "/images/product_F8.jpg",
-    SERIES_U: "/images/product_U.jpg",
-    ACCESSORIES: "/images/xx.jpg", // placeholder - needs actual accessories image
-    },
 
     // Industries - Home page carousel images
     INDUSTRIES: {
@@ -68,21 +62,33 @@ export const MEDIA = {
     WECHAT_QR: "/images/FV_Wechat_QR.png",
   },
 
+  // Products - Home page carousel images
+  PRODUCTS: {
+    SERIES_A: "/images/product_A_1.jpg",
+    SERIES_B: "/images/product_F8.jpg", // placeholder - needs actual B series image
+    SERIES_C: "/images/product_F8.jpg", // placeholder - needs actual C series image
+    SERIES_F: "/images/product_F8.jpg",
+    SERIES_U: "/images/product_U.jpg",
+    ACCESSORIES: "/images/product_F8.jpg", // placeholder - needs actual accessories image
+    },
+
+  // HERO - the 2x3 product page
+  // IMAGE_1, etc. are for each individual pages
   // Vision Series A - Product Detail Page Images
   VISION_SERIES_A: {
-    HERO: "/images/product_A8.jpg",
+    HERO: "/images/product_A_1.jpg",
     IMAGE_1: "/images/product_A_1.jpg",
     IMAGE_2: "/images/product_A_2.jpg", 
     IMAGE_3: "/images/product_A_3.jpg",
-    VIDEO: "/videos/vision-series-a-demo.mp4", // placeholder - needs actual demo video
+    VIDEO: "/videos/xx.mp4", // placeholder - needs actual demo video
   },
 
   // Vision Series B - Product Detail Page Images
   VISION_SERIES_B: {
-    HERO: "/images/product_.jpg", // placeholder - needs actual B series hero image
-    IMAGE_1: "/images/product_xx.jpg", // placeholder - needs actual B series image 1
-    IMAGE_2: "/images/product_xx.jpg", // placeholder - needs actual B series image 2
-    IMAGE_3: "/images/product_xx.jpg", // placeholder - needs actual B series image 3
+    HERO: "/images/product_F8.jpg", // placeholder - needs actual B series hero image
+    IMAGE_1: "/images/product_F8.jpg", // placeholder - needs actual B series image 1
+    IMAGE_2: "/images/product_A_2.jpg", // placeholder - needs actual B series image 2
+    IMAGE_3: "/images/product_A_3.jpg", // placeholder - needs actual B series image 3
     VIDEO: "/videos/vision-series-b-demo.mp4", // placeholder - needs actual demo video
   },
 
@@ -90,24 +96,24 @@ export const MEDIA = {
   VISION_SERIES_C: {
     HERO: "/images/product_F5.jpg", // placeholder - needs actual C series hero image
     IMAGE_1: "/images/product_F_3.jpg",
-    IMAGE_2: "/images/xx.jpg",
-    IMAGE_3: "/images/xx", // placeholder - needs actual C series image 3
+    IMAGE_2: "/images/product_F5_1.jpg",
+    IMAGE_3: "/images/product_F5_1.jpg", // placeholder - needs actual C series image 3
     VIDEO: "/videos/vision-series-c-demo.mp4", // placeholder - needs actual demo video
   },
 
   // Vision Series F - Product Detail Page Images
   VISION_SERIES_F: {
-    HERO: "/images/product_F8.JPG",
-    IMAGE_1: "/images/product_F5_1.jpg",
-    IMAGE_2: "/images/product_F5_2.jpg",
-    IMAGE_3: "/images/product_F_3.jpg",
+    HERO: "/images/product_F8.jpg",
+    IMAGE_1: "/images/product_F8.jpg",
+    IMAGE_2: "/images/product_F_3.jpg",
+    IMAGE_3: "/images/xx.jpg",
     VIDEO: "/videos/vision-series-f-demo.mp4", // placeholder - needs actual demo video
   },
 
   // Vision Series U - Product Detail Page Images
   VISION_SERIES_U: {
     HERO: "/images/product_U.jpg",
-    IMAGE_1: "/images/product_A_1.jpg", // placeholder - needs actual U series image 1
+    IMAGE_1: "/images/product_U.jpg", // placeholder - needs actual U series image 1
     IMAGE_2: "/images/product_A_2.jpg", // placeholder - needs actual U series image 2
     IMAGE_3: "/images/product_A_3.jpg", // placeholder - needs actual U series image 3
     VIDEO: "/videos/vision-series-u-demo.mp4", // placeholder - needs actual demo video
@@ -115,8 +121,8 @@ export const MEDIA = {
 
   // Accessories & Components - Product Detail Page Images
   ACCESSORIES: {
-    HERO: "/images/product_U.jpg", // placeholder - needs actual accessories hero image
-    IMAGE_1: "/images/product_A_1.jpg", // placeholder - needs actual accessories image 1
+    HERO: "/images/product_F8.jpg", // placeholder - needs actual accessories hero image
+    IMAGE_1: "/images/product_F8.jpg", // placeholder - needs actual accessories image 1
     IMAGE_2: "/images/product_A_2.jpg", // placeholder - needs actual accessories image 2
     IMAGE_3: "/images/product_A_3.jpg", // placeholder - needs actual accessories image 3
     VIDEO: "/videos/accessories-demo.mp4", // placeholder - needs actual demo video
