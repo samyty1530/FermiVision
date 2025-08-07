@@ -59,6 +59,15 @@ exports.handler = async (event, context) => {
       };
     }
 
+    // Log the service account email for debugging
+    try {
+      const serviceAccount = JSON.parse(process.env.GOOGLE_SERVICE_ACCOUNT_KEY);
+      console.log('Service account email:', serviceAccount.client_email);
+      console.log('Sheet ID:', process.env.GOOGLE_SHEET_ID);
+    } catch (error) {
+      console.log('Error parsing service account key:', error.message);
+    }
+
     // Parse form data
     const formData = JSON.parse(event.body);
     const { name, email, subject, message } = formData;
@@ -76,16 +85,41 @@ exports.handler = async (event, context) => {
     const timestamp = new Date().toISOString();
     const rowData = [timestamp, name, email, subject, message];
 
-    // Append to Google Sheet
-    const response = await sheets.spreadsheets.values.append({
-      spreadsheetId: process.env.GOOGLE_SHEET_ID,
-      range: 'Contact Form!A:E',
-      valueInputOption: 'USER_ENTERED',
-      insertDataOption: 'INSERT_ROWS',
-      resource: {
-        values: [rowData],
-      },
-    });
+    // First, let's try to read the sheet to see if we have access
+    console.log('Testing sheet access...');
+    console.log('Sheet ID:', process.env.GOOGLE_SHEET_ID);
+    
+    try {
+      // Try to read the sheet first
+      const readResponse = await sheets.spreadsheets.get({
+        spreadsheetId: process.env.GOOGLE_SHEET_ID,
+      });
+      
+      console.log('Sheet access successful!');
+      console.log('Sheet title:', readResponse.data.properties.title);
+      console.log('Available sheets:', readResponse.data.sheets.map(s => s.properties.title));
+      
+      // Now try to append
+      console.log('Attempting to append to sheet:', process.env.GOOGLE_SHEET_ID);
+      console.log('Sheet range: Contact Form!A:E');
+      console.log('Row data:', rowData);
+      
+      const response = await sheets.spreadsheets.values.append({
+        spreadsheetId: process.env.GOOGLE_SHEET_ID,
+        range: 'Contact Form!A:E',
+        valueInputOption: 'USER_ENTERED',
+        insertDataOption: 'INSERT_ROWS',
+        resource: {
+          values: [rowData],
+        },
+      });
+      
+      console.log('Sheet append successful:', response.data);
+      
+    } catch (error) {
+      console.error('Sheet access error:', error.message);
+      throw error;
+    }
 
     // Send email notification (temporarily disabled)
     // Uncomment the code below when you're ready to set up email notifications
