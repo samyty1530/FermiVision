@@ -41,7 +41,7 @@ const NewsArticle = () => {
       <Breadcrumbs
         items={[
           { label: t("nav.news", "News"), href: "/news" },
-          { label: article.title },
+          { label: t(`news.articles.${article.id}.title`, article.title) },
         ]}
       />
 
@@ -101,7 +101,7 @@ const NewsArticle = () => {
               <div className="mb-12">
                 <img
                   src={article.imageUrl}
-                  alt={article.title}
+                  alt={t(`news.articles.${article.id}.title`, article.title)}
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />
               </div>

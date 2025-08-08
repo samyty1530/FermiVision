@@ -51,6 +51,32 @@
     "overview": "Fermi Vision provides cutting-edge computer vision solutions across multiple industries."
   },
   "products": {
+    "series": {
+      "a": {
+        "title": "Vision Series A",
+        "description": "Advanced vision technology for high-speed applications"
+      },
+      "b": {
+        "title": "Vision Series B",
+        "description": "Advanced vision technology for specialized applications"
+      },
+      "c": {
+        "title": "Vision Series C",
+        "description": "Advanced vision technology for complex industrial applications"
+      },
+      "f": {
+        "title": "Vision Series F",
+        "description": "Advanced vision technology for complex environments"
+      },
+      "u": {
+        "title": "Vision Series U",
+        "description": "Vision technology with balance of performance and affordability"
+      },
+      "accessories": {
+        "title": "Accessories & Components",
+        "description": "Professional accessories and components to enhance your vision system"
+      }
+    },
     "featured": {
       "title": "Product Series",
       "subtitle": "Tailored to your product manufacturing needs",
@@ -97,6 +123,22 @@
     "pageSubtitle": "Discover our comprehensive range of computer vision and optical solutions.",
     "searchResults": "Search Results for ",
     "searchSubtitle": "Showing products matching your search criteria",
+    "noResults": "No products found",
+    "notFound": "Product Not Found",
+    "notFoundMessage": "The requested product could not be found.",
+    "backToProducts": "Back to Products",
+    "videoNotSupported": "Your browser does not support the video tag.",
+    "videoPlaceholder": "Product Video",
+    "videoComingSoon": "Video coming soon",
+    "previous": "Previous",
+    "next": "Next",
+    "keyFeatures": "Applications & Key Features",
+    "relatedProducts": "Related Products",
+    "viewAllProducts": "View All Products",
+    "downloadCatalog": "Download Product Catalog",
+    "technicalSpecifications": "Technical Specifications",
+    "specificationMessage": "For detailed technical specifications and customization options, please contact our sales team.",
+    "requestSpecs": "Request Detailed Specifications",
     "technicalProcess": {
       "title": "Our Technical Solution Process",
       "subtitle": "We value your time and offer a streamlined, expert-driven process to ensure you receive the optimal solution for your inspection needs.",
@@ -303,7 +345,6 @@
     "quickLinks": "Quick Links",
     "resources": "Resources",
     "contactUs": "Contact Us for More Information",
-    "downloadCatalog": "Download Product Catalog",
     "copyright": "All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",

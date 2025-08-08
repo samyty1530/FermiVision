@@ -135,7 +135,10 @@ const News = () => {
                             <div
                               className="text-gray-700 leading-relaxed text-lg prose prose-lg max-w-none"
                               dangerouslySetInnerHTML={{
-                                __html: item.content.substring(0, 500) + "...",
+                                __html: t(
+                                  `news.articles.${item.id}.content`,
+                                  item.content
+                                ).substring(0, 500) + "...",
                               }}
                             />
                             <div className="mt-4">

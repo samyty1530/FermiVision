@@ -197,13 +197,13 @@ const Home = () => {
         <div className="container mx-auto px-4 z-20 text-center relative">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-white mb-4 md:mb-6 px-2">
             {t(
-              `news.item${currentHeroIndex + 1}.title`,
+              `news.articles.${currentHeroIndex + 1}.title`,
               heroBackgrounds[currentHeroIndex].title,
             )}
           </h1>
           <p className="text-sm sm:text-lg md:text-xl lg:text-2xl text-gray-200 max-w-3xl mx-auto mb-6 md:mb-8 px-4">
             {t(
-              `news.item${currentHeroIndex + 1}.description`,
+              `news.articles.${currentHeroIndex + 1}.excerpt`,
               heroBackgrounds[currentHeroIndex].subtitle,
             )}
           </p>
@@ -515,13 +515,13 @@ const Home = () => {
                     <div className="p-4">
                       <h3 className="text-lg font-semibold mb-2 text-gray-900">
                         {t(
-                          `products.featured.item${index + 1}.title`,
+                          `products.series.${series.toLowerCase()}.title`,
                           `Vision Series ${series}`,
                         )}
                       </h3>
                       <p className="text-sm text-gray-600 leading-relaxed">
                         {t(
-                          `products.featured.item${index + 1}.description`,
+                          `products.series.${series.toLowerCase()}.description`,
                           `Advanced vision technology for precision applications`,
                         )}
                       </p>
@@ -573,13 +573,13 @@ const Home = () => {
                         <div className="mt-4 pb-4">
                           <h3 className="text-xl font-semibold mb-2 text-center text-gray-900">
                             {t(
-                              `products.featured.item${index + 1}.title`,
+                              `products.series.${series.toLowerCase()}.title`,
                               `Vision Series ${series}`,
                             )}
                           </h3>
                           <p className="text-sm leading-relaxed text-gray-600 text-center">
                             {t(
-                              `products.featured.item${index + 1}.description`,
+                              `products.series.${series.toLowerCase()}.description`,
                               `Advanced vision technology for precision applications`,
                             )}
                           </p>
@@ -632,26 +632,25 @@ const Home = () => {
       <section className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-gray-900 px-4">
-            {t("news.title", "费米视觉 News & Events")}
+            {t("news.title", "Fermi Vision News & Events")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 md:h-56">
                 <img
                   src={MEDIA.NEWS.ANTENNA_BOARD_INSPECTION}
-                  alt="8000 Dimensions, 3 Minutes, One Machine"
+                  alt={t("news.articles.3.title", "8000 Dimensions, 3 Minutes, One Machine")}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-4 md:p-5">
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
-                  8000 Dimensions, 3 Minutes, One Machine
+                  {t("news.articles.3.title", "8000 Dimensions, 3 Minutes, One Machine")}
                 </h3>
                 <p className="text-sm text-gray-600 mb-3 md:mb-4">
-                  How an international PCB trader hit telecom-grade inspection
-                  standards without scaling floor space
+                  {t("news.articles.3.excerpt", "How an international PCB trader hit telecom-grade inspection standards without scaling floor space")}
                 </p>
-                <p className="text-xs text-gray-500 mb-3 md:mb-4">April 11, 2024</p>
+                <p className="text-xs text-gray-500 mb-3 md:mb-4">{t("news.articles.3.date", "April 11, 2024")}</p>
                 <Link to="/news/unlocking-high-volume-antenna-board-inspection">
                   <Button
                     variant="outline"
@@ -666,18 +665,18 @@ const Home = () => {
               <div className="h-48 md:h-56">
                 <img
                   src={MEDIA.NEWS.SK_HYNIX}
-                  alt="Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix"
+                  alt={t("news.articles.4.title", "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix")}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-4 md:p-5">
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
-                  Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix
+                  {t("news.articles.4.title", "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix")}
                 </h3>
                 <p className="text-sm text-gray-600 mb-3 md:mb-4">
-                  Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3
+                  {t("news.articles.4.excerpt", "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3")}
                 </p>
-                <p className="text-xs text-gray-500 mb-3 md:mb-4">September 9, 2024</p>
+                <p className="text-xs text-gray-500 mb-3 md:mb-4">{t("news.articles.4.date", "September 9, 2024")}</p>
                 <Link to="/news/sk-hynix-semiconductor-efficiency-leap">
                   <Button
                     variant="outline"
@@ -692,20 +691,18 @@ const Home = () => {
               <div className="h-48 md:h-56">
                 <img
                   src={MEDIA.NEWS.MANUAL_PIN_GAUGING}
-                  alt="Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection"
+                  alt={t("news.articles.5.title", "Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection")}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-4 md:p-5">
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
-                  Fermi Vision Replaces Manual Pin Gauging with CAD-Driven
-                  Optical Inspection
+                  {t("news.articles.5.title", "Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection")}
                 </h3>
                 <p className="text-sm text-gray-600 mb-3 md:mb-4">
-                  Thousands of press-fit holes measured in seconds with a
-                  physically simulated contact algorithm (PGA)
+                  {t("news.articles.5.excerpt", "Thousands of press-fit holes measured in seconds with a physically simulated contact algorithm (PGA)")}
                 </p>
-                <p className="text-xs text-gray-500 mb-3 md:mb-4">February 1, 2025</p>
+                <p className="text-xs text-gray-500 mb-3 md:mb-4">{t("news.articles.5.date", "February 1, 2025")}</p>
                 <Link to="/news/fermi-vision-replaces-manual-pin-gauging-cad-driven-optical-inspection">
                   <Button
                     variant="outline"
