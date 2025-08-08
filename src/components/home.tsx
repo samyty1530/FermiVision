@@ -9,7 +9,15 @@ import { Search, ChevronLeft, ChevronRight } from "lucide-react";
 import { MEDIA, getProductImage, getIndustryImage } from "@/constants/media";
 
 const Home = () => {
-  const { t, ready } = useTranslation();
+  const { t, ready, i18n } = useTranslation();
+  
+  // Debug translation loading
+  useEffect(() => {
+    console.log('Home component - Translation ready:', ready);
+    console.log('Home component - Current language:', i18n.language);
+    console.log('Home component - Available languages:', i18n.languages);
+    console.log('Home component - Test translation:', t('nav.home'));
+  }, [ready, i18n.language, t]);
   
 
   const [currentIndustryIndex, setCurrentIndustryIndex] = useState(2);

@@ -14,7 +14,7 @@ i18n
   // Initialize i18next
   .init({
     // Debug mode in development
-    debug: import.meta.env.DEV,
+    debug: true, // Enable debug mode to see what's happening
     // Default language
     fallbackLng: "en",
     // Namespace for translations
@@ -28,7 +28,7 @@ i18n
     backend: {
       // Path to load translations from
       loadPath: "/locales/{{lng}}/{{ns}}.json",
-      crossDomain: true,
+      crossDomain: false,
       // Add some debugging
       requestOptions: {
         cache: 'no-cache'
@@ -53,10 +53,17 @@ i18n
     react: {
       useSuspense: true,
     },
+  }).then(() => {
+    console.log('i18n initialized successfully');
+    console.log('Current language:', i18n.language);
+    console.log('Available languages:', i18n.languages);
+  }).catch((error) => {
+    console.error('i18n initialization failed:', error);
   });
 
 // Helper function to change language
 export const changeLanguage = (language: string) => {
+  console.log('Changing language to:', language);
   return i18n.changeLanguage(language);
 };
 

@@ -28,7 +28,17 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({
     languages.find((lang) => lang.code === i18n.language) || languages[0];
 
   const changeLanguage = (languageCode: string) => {
-    i18n.changeLanguage(languageCode);
+    console.log('LanguageSwitcher: Changing to', languageCode);
+    console.log('Current language before change:', i18n.language);
+    console.log('i18n ready state:', i18n.isInitialized);
+    console.log('Available languages:', i18n.languages);
+    
+    i18n.changeLanguage(languageCode).then(() => {
+      console.log('Language changed to:', i18n.language);
+      console.log('Translation test:', i18n.t('nav.home'));
+    }).catch((error) => {
+      console.error('Error changing language:', error);
+    });
     setOpen(false);
   };
 
