@@ -77,8 +77,7 @@ const ProductDetail = () => {
           return MEDIA.VISION_SERIES_A.HERO;
         case "b":
           return MEDIA.VISION_SERIES_B.HERO;
-        case "c":
-          return MEDIA.VISION_SERIES_C.HERO;
+
         case "f":
           return MEDIA.VISION_SERIES_F.HERO;
         case "u":
@@ -105,35 +104,7 @@ const ProductDetail = () => {
     ];
   };
 
-  if (loading) {
-    return (
-      <div className="flex flex-col min-h-screen bg-background">
-        <Header
-          logo="/images/FV_logo.png"
-          navLinks={[
-            { label: t("nav.products", "Products"), href: "/products" },
-            { label: t("nav.industries", "Industries"), href: "/industries" },
-            { label: t("nav.downloads", "Downloads"), href: "/downloads" },
-            { label: t("nav.news", "News"), href: "/news" },
-            { label: t("nav.about", "About"), href: "/about" },
-            { label: t("nav.contact", "Contact"), href: "/contact" },
-          ]}
-        />
-        <main className="flex-grow pt-24 pb-16 flex items-center justify-center">
-          <div className="text-xl">{t("common.loading", "Loading...")}</div>
-        </main>
-        <Footer
-          companyName="Fermi Vision"
-          companyAddress="Shenzhen, China"
-          companyPhone="+86 158 8956 4803"
-          companyEmail="sales@fermivision.com"
-          socialLinks={{
-            linkedin: "https://linkedin.com",
-          }}
-        />
-      </div>
-    );
-  }
+
 
   if (error || !product) {
     return (
@@ -185,7 +156,7 @@ const ProductDetail = () => {
           companyPhone="+86 158 8956 4803"
           companyEmail="sales@fermivision.com"
           socialLinks={{
-            linkedin: "https://linkedin.com",
+            linkedin: "https://www.linkedin.com/company/fermi-vision/",
           }}
         />
       </div>
@@ -542,7 +513,7 @@ const ProductDetail = () => {
         companyPhone="+86 158 8956 4803"
         companyEmail="sales@fermivision.com"
         socialLinks={{
-          linkedin: "https://linkedin.com",
+          linkedin: "https://www.linkedin.com/company/fermi-vision/",
         }}
       />
     </div>

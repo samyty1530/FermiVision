@@ -51,7 +51,7 @@ export const MEDIA = {
     ENGINEERING_BREAKTHROUGH: "/images/news_engBreakthrough.webp",
     // Placeholders for missing news images
     ADAPTIVE_METROLOGY: "/images/news_adaptive_metro.png",
-    MANUAL_PIN_GAUGING: "/images/news_pin_gauge.jpg",
+    MANUAL_PIN_GAUGING: "/images/news_pin_gauge.webp",
     ANTENNA_BOARD_INSPECTION: "/images/news_8000.jpg", // placeholder - needs actual antenna board inspection image
   },
 
@@ -66,7 +66,6 @@ export const MEDIA = {
   PRODUCTS: {
     SERIES_A: "/images/product_A_1.jpg",
     SERIES_B: "/images/product_F8.jpg", // placeholder - needs actual B series image
-    SERIES_C: "/images/product_F8.jpg", // placeholder - needs actual C series image
     SERIES_F: "/images/product_F8.jpg",
     SERIES_U: "/images/product_U.jpg",
     ACCESSORIES: "/images/product_F8.jpg", // placeholder - needs actual accessories image
@@ -92,14 +91,7 @@ export const MEDIA = {
     VIDEO: "/videos/vision-series-b-demo.mp4", // placeholder - needs actual demo video
   },
 
-  // Vision Series C - Product Detail Page Images
-  VISION_SERIES_C: {
-    HERO: "/images/product_F5.jpg", // placeholder - needs actual C series hero image
-    IMAGE_1: "/images/product_F_3.jpg",
-    IMAGE_2: "/images/product_F5_1.jpg",
-    IMAGE_3: "/images/product_F5_1.jpg", // placeholder - needs actual C series image 3
-    VIDEO: "/videos/vision-series-c-demo.mp4", // placeholder - needs actual demo video
-  },
+
 
   // Vision Series F - Product Detail Page Images
   VISION_SERIES_F: {
@@ -154,8 +146,6 @@ export const getProductImage = (series: string): string => {
       return MEDIA.PRODUCTS.SERIES_A;
     case "B":
       return MEDIA.PRODUCTS.SERIES_B;
-    case "C":
-      return MEDIA.PRODUCTS.SERIES_C;
     case "F":
       return MEDIA.PRODUCTS.SERIES_F;
     case "U":
@@ -174,8 +164,6 @@ export const getProductDetailHero = (series: string): string => {
       return MEDIA.VISION_SERIES_A.HERO;
     case "B":
       return MEDIA.VISION_SERIES_B.HERO;
-    case "C":
-      return MEDIA.VISION_SERIES_C.HERO;
     case "F":
       return MEDIA.VISION_SERIES_F.HERO;
     case "U":
@@ -202,12 +190,7 @@ export const getProductDetailImages = (series: string): { IMAGE_1: string; IMAGE
         IMAGE_2: MEDIA.VISION_SERIES_B.IMAGE_2,
         IMAGE_3: MEDIA.VISION_SERIES_B.IMAGE_3,
       };
-    case "C":
-      return {
-        IMAGE_1: MEDIA.VISION_SERIES_C.IMAGE_1,
-        IMAGE_2: MEDIA.VISION_SERIES_C.IMAGE_2,
-        IMAGE_3: MEDIA.VISION_SERIES_C.IMAGE_3,
-      };
+
     case "F":
       return {
         IMAGE_1: MEDIA.VISION_SERIES_F.IMAGE_1,
@@ -242,8 +225,7 @@ export const getProductDetailVideo = (series: string): string => {
       return MEDIA.VISION_SERIES_A.VIDEO;
     case "B":
       return MEDIA.VISION_SERIES_B.VIDEO;
-    case "C":
-      return MEDIA.VISION_SERIES_C.VIDEO;
+
     case "F":
       return MEDIA.VISION_SERIES_F.VIDEO;
     case "U":
@@ -258,13 +240,13 @@ export const getProductDetailVideo = (series: string): string => {
 // Helper function to get industry image by index (for home page carousel)
 export const getIndustryImage = (index: number): string => {
   switch (index) {
-    case 0:
-      return MEDIA.INDUSTRIES.PCB;
     case 1:
-      return MEDIA.INDUSTRIES.ARVR;
+      return MEDIA.INDUSTRIES.PCB;
     case 2:
-      return MEDIA.INDUSTRIES.AEROSPACE;
+      return MEDIA.INDUSTRIES.ARVR;
     case 3:
+      return MEDIA.INDUSTRIES.AEROSPACE;
+    case 4:
       return MEDIA.INDUSTRIES.NEW_ENERGY;
     default:
       return MEDIA.INDUSTRIES.PCB; // fallback

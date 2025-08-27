@@ -1,18 +1,5 @@
 [
   {
-    "series": "c",
-    "title": "Vision Series C",
-    "description": "Engineered for rapid, high-precision measurement across full-panel PCB and substrate applications, the C6 Series delivers fast, fixture-free inspection with powerful automation and advanced image processing.",
-    "image": "HERO",
-    "features": [
-      "Designed for full-panel, high-precision inspection of PCBs, FPCs, HDIs, IC substrates, and 3C products",
-      "Dual-lens system enables both wide-area and fine-feature measurements in a single scan",
-      "No fixture required — automatically aligns parts regardless of placement or rotation",
-      "Supports optional sensors for height and flatness measurement",
-      "Includes FlashPro software with full 2D metrology tools, CAD import, SPC, and offline programming"
-    ]
-  },
-  {
     "series": "a",
     "title": "Vision Series A",
     "description": "Designed for high-speed applications requiring full-range image scanning and stitching, the A Series offers unmatched precision for large-scale inspections.",

@@ -1,24 +1,26 @@
-import { Suspense, useEffect } from "react";
+import { Suspense, useEffect, lazy } from "react";
 import { useRoutes, Routes, Route, useLocation } from "react-router-dom";
 import Home from "./components/home";
-import Products from "./components/Products";
-import ProductDetail from "./components/ProductDetail";
-import Industries from "./components/Industries";
-import IndustryPCB from "./components/IndustryPCB";
-import IndustryARVR from "./components/IndustryARVR";
-import IndustryAerospace from "./components/IndustryAerospace";
-import IndustryNewEnergy from "./components/IndustryNewEnergy";
-import News from "./components/News";
-import NewsArticle from "./components/NewsArticle";
-import About from "./components/About";
-import Contact from "./components/Contact";
-import CustomerRequestForm from "./components/CustomerRequestForm";
-import PrivacyPolicy from "./components/PrivacyPolicy";
-import TermsOfService from "./components/TermsOfService";
 import routes from "tempo-routes";
 import "./i18n/i18n";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/i18n";
+
+// Lazy load heavy components
+const Products = lazy(() => import("./components/Products"));
+const ProductDetail = lazy(() => import("./components/ProductDetail"));
+const Industries = lazy(() => import("./components/Industries"));
+const IndustryPCB = lazy(() => import("./components/IndustryPCB"));
+const IndustryARVR = lazy(() => import("./components/IndustryARVR"));
+const IndustryAerospace = lazy(() => import("./components/IndustryAerospace"));
+const IndustryNewEnergy = lazy(() => import("./components/IndustryNewEnergy"));
+const News = lazy(() => import("./components/News"));
+const NewsArticle = lazy(() => import("./components/NewsArticle"));
+const About = lazy(() => import("./components/About"));
+const Contact = lazy(() => import("./components/Contact"));
+const CustomerRequestForm = lazy(() => import("./components/CustomerRequestForm"));
+const PrivacyPolicy = lazy(() => import("./components/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./components/TermsOfService"));
 
 function App() {
   const location = useLocation();
@@ -36,7 +38,11 @@ function App() {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={
+        <div className="flex items-center justify-center min-h-screen bg-background">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+        </div>
+      }>
         <>
           <Routes>
             <Route path="/" element={<Home />} />

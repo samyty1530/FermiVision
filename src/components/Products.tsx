@@ -24,15 +24,6 @@ const Products = () => {
   // Fixed product offerings
   const fixedProducts: Product[] = [
     {
-      series: "c",
-      title: t("products.series.c.title", "Vision Series C"),
-      description: t(
-        "products.series.c.description",
-        "High-precision optical measurement system for complex industrial applications",
-      ),
-      image: getProductImage("c"),
-    },
-    {
       series: "a",
       title: t("products.series.a.title", "Vision Series A"),
       description: t(
@@ -42,15 +33,6 @@ const Products = () => {
       image: getProductImage("a"),
     },
     {
-      series: "f",
-      title: t("products.series.f.title", "Vision Series F"),
-      description: t(
-        "products.series.f.description",
-        "Specialized optical metrology system for fine feature measurement",
-      ),
-      image: getProductImage("f"),
-    },
-    {
       series: "b",
       title: t("products.series.b.title", "Vision Series B"),
       description: t(
@@ -58,6 +40,15 @@ const Products = () => {
         "Robust inspection system for harsh industrial environments",
       ),
       image: getProductImage("b"),
+    },
+    {
+      series: "f",
+      title: t("products.series.f.title", "Vision Series F"),
+      description: t(
+        "products.series.f.description",
+        "Specialized optical metrology system for fine feature measurement",
+      ),
+      image: getProductImage("f"),
     },
     {
       series: "u",
@@ -119,8 +110,7 @@ const Products = () => {
           return MEDIA.VISION_SERIES_A.HERO;
         case "b":
           return MEDIA.VISION_SERIES_B.HERO;
-        case "c":
-          return MEDIA.VISION_SERIES_C.HERO;
+
         case "f":
           return MEDIA.VISION_SERIES_F.HERO;
         case "u":
@@ -208,11 +198,7 @@ const Products = () => {
         {/* Products Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            {loading ? (
-              <div className="flex justify-center items-center py-20">
-                <p className="text-xl">{t("common.loading", "Loading...")}</p>
-              </div>
-            ) : displayedProducts.length > 0 ? (
+            {displayedProducts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {displayedProducts.map((product) => (
                   <Link
@@ -266,7 +252,7 @@ const Products = () => {
         companyPhone="+86 189 2346 0852"
         companyEmail="sales@fermivision.com"
         socialLinks={{
-          linkedin: "https://linkedin.com",
+          linkedin: "https://www.linkedin.com/company/fermi-vision/",
         }}
       />
     </div>

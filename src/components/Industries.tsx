@@ -158,7 +158,7 @@ const Industries = () => {
         companyPhone="+86 189 2346 0852"
         companyEmail="sales@fermivision.com"
         socialLinks={{
-          linkedin: "https://linkedin.com",
+          linkedin: "https://www.linkedin.com/company/fermi-vision/",
         }}
       />
     </div>

@@ -60,10 +60,7 @@
         "title": "Vision Series B",
         "description": "Advanced vision technology for specialized applications"
       },
-      "c": {
-        "title": "Vision Series C",
-        "description": "Advanced vision technology for complex industrial applications"
-      },
+
       "f": {
         "title": "Vision Series F",
         "description": "Advanced vision technology for complex environments"
@@ -90,11 +87,7 @@
         "description": "Advanced vision technology for specialized applications",
         "alt": "Vision Series B Product"
       },
-      "item3": {
-        "title": "Vision Series C",
-        "description": "Advanced vision technology for complex industrial applications",
-        "alt": "Vision Series C Product"
-      },
+
       "item4": {
         "title": "Vision Series F",
         "description": "Advanced vision technology for complex environments",

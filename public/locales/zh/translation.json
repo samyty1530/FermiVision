@@ -60,10 +60,7 @@
         "title": "视觉系列 B",
         "description": "适用于特定应用的先进视觉技术"
       },
-      "c": {
-        "title": "视觉系列 C",
-        "description": "适用于复杂工业应用的先进视觉技术"
-      },
+
       "f": {
         "title": "视觉系列 F",
         "description": "适用于复杂环境的先进视觉技术"
@@ -90,11 +87,7 @@
         "description": "适用于特定应用的先进视觉技术",
         "alt": "视觉系列 B 产品"
       },
-      "item3": {
-        "title": "视觉系列 C",
-        "description": "适用于复杂工业应用的先进视觉技术",
-        "alt": "视觉系列 C 产品"
-      },
+
       "item4": {
         "title": "视觉系列 F",
         "description": "适用于复杂环境的先进视觉技术",

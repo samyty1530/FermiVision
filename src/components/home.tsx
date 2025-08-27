@@ -25,7 +25,7 @@ const Home = () => {
   const [currentHeroIndex, setCurrentHeroIndex] = useState(0);
   const [isUserControlled, setIsUserControlled] = useState(false);
   const industries = [1, 2, 3, 4];
-  const products = ["A", "B", "C", "F", "U", "accessories"];
+  const products = ["A", "B", "F", "U", "accessories"];
 
   // Hero backgrounds data
   const heroBackgrounds = [
@@ -150,14 +150,7 @@ const Home = () => {
     }
   }, [isUserControlled, currentHeroIndex]);
 
-  // Show a simple loading state if translations aren't ready yet
-  if (!ready) {
-    return (
-      <div className="flex items-center justify-center min-h-screen bg-background">
-        <div className="text-xl">{t("common.loading", "Loading...")}</div>
-      </div>
-    );
-  }
+
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -376,7 +369,9 @@ const Home = () => {
               <div
                 className="flex gap-6 md:gap-8 transition-transform duration-700 ease-out"
                 style={{
-                  transform: `translateX(calc(-${currentIndustryIndex * (384 + 24)}px + 50%))`,
+                  transform: currentIndustryIndex === 0 
+                    ? 'translateX(calc(-1 * (384 + 24)px + 50%))' 
+                    : `translateX(calc(-${currentIndustryIndex * (384 + 24)}px + 50%))`,
                 }}
               >
                 {industries.map((item, index) => (
@@ -541,7 +536,9 @@ const Home = () => {
               <div
                 className="flex gap-6 md:gap-8 transition-transform duration-700 ease-out"
                 style={{
-                  transform: `translateX(calc(-${currentProductIndex * (320 + 24)}px + 50%))`,
+                  transform: currentProductIndex === 0 
+                    ? 'translateX(calc(-1 * (320 + 24)px + 50%))' 
+                    : `translateX(calc(-${currentProductIndex * (320 + 24)}px + 50%))`,
                 }}
               >
                 {products.map((series, index) => (
@@ -635,7 +632,7 @@ const Home = () => {
             {t("news.title", "Fermi Vision News & Events")}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
               <div className="h-48 md:h-56">
                 <img
                   src={MEDIA.NEWS.ANTENNA_BOARD_INSPECTION}
@@ -643,7 +640,7 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4 md:p-5">
+              <div className="p-4 md:p-5 flex flex-col flex-grow">
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
                   {t("news.articles.3.title", "8000 Dimensions, 3 Minutes, One Machine")}
                 </h3>
@@ -651,17 +648,19 @@ const Home = () => {
                   {t("news.articles.3.excerpt", "How an international PCB trader hit telecom-grade inspection standards without scaling floor space")}
                 </p>
                 <p className="text-xs text-gray-500 mb-3 md:mb-4">{t("news.articles.3.date", "April 11, 2024")}</p>
-                <Link to="/news/unlocking-high-volume-antenna-board-inspection">
-                  <Button
-                    variant="outline"
-                    className="text-primary border-primary hover:bg-accent-50 text-sm"
-                  >
-                    {t("news.readMore", "Read More")}
-                  </Button>
-                </Link>
+                <div className="mt-auto">
+                  <Link to="/news/unlocking-high-volume-antenna-board-inspection">
+                    <Button
+                      variant="outline"
+                      className="text-primary border-primary hover:bg-accent-50 text-sm"
+                    >
+                      {t("news.readMore", "Read More")}
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
               <div className="h-48 md:h-56">
                 <img
                   src={MEDIA.NEWS.SK_HYNIX}
@@ -669,7 +668,7 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4 md:p-5">
+              <div className="p-4 md:p-5 flex flex-col flex-grow">
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
                   {t("news.articles.4.title", "Fermi Vision Powers Semiconductor Efficiency Leap at SK Hynix")}
                 </h3>
@@ -677,17 +676,19 @@ const Home = () => {
                   {t("news.articles.4.excerpt", "Precision algorithms and ultra-fast imaging reduce inspection time from 50+ minutes to under 3")}
                 </p>
                 <p className="text-xs text-gray-500 mb-3 md:mb-4">{t("news.articles.4.date", "September 9, 2024")}</p>
-                <Link to="/news/sk-hynix-semiconductor-efficiency-leap">
-                  <Button
-                    variant="outline"
-                    className="text-primary border-primary hover:bg-accent-50 text-sm"
-                  >
-                    {t("news.readMore", "Read More")}
-                  </Button>
-                </Link>
+                <div className="mt-auto">
+                  <Link to="/news/sk-hynix-semiconductor-efficiency-leap">
+                    <Button
+                      variant="outline"
+                      className="text-primary border-primary hover:bg-accent-50 text-sm"
+                    >
+                      {t("news.readMore", "Read More")}
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
               <div className="h-48 md:h-56">
                 <img
                   src={MEDIA.NEWS.MANUAL_PIN_GAUGING}
@@ -695,7 +696,7 @@ const Home = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-4 md:p-5">
+              <div className="p-4 md:p-5 flex flex-col flex-grow">
                 <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3">
                   {t("news.articles.5.title", "Fermi Vision Replaces Manual Pin Gauging with CAD-Driven Optical Inspection")}
                 </h3>
@@ -703,14 +704,16 @@ const Home = () => {
                   {t("news.articles.5.excerpt", "Thousands of press-fit holes measured in seconds with a physically simulated contact algorithm (PGA)")}
                 </p>
                 <p className="text-xs text-gray-500 mb-3 md:mb-4">{t("news.articles.5.date", "February 1, 2025")}</p>
-                <Link to="/news/fermi-vision-replaces-manual-pin-gauging-cad-driven-optical-inspection">
-                  <Button
-                    variant="outline"
-                    className="text-primary border-primary hover:bg-accent-50 text-sm"
-                  >
-                    {t("news.readMore", "Read More")}
-                  </Button>
-                </Link>
+                <div className="mt-auto">
+                  <Link to="/news/fermi-vision-replaces-manual-pin-gauging-cad-driven-optical-inspection">
+                    <Button
+                      variant="outline"
+                      className="text-primary border-primary hover:bg-accent-50 text-sm"
+                    >
+                      {t("news.readMore", "Read More")}
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -724,7 +727,7 @@ const Home = () => {
         companyPhone="+86 189 2346 0852"
         companyEmail="sales@fermivision.com"
         socialLinks={{
-          linkedin: "https://linkedin.com",
+          linkedin: "https://www.linkedin.com/company/fermi-vision/",
           // WeChat doesn't have a direct URL, but we'll include it for the icon
           // The actual WeChat QR code would be shown on click in a real implementation
         }}
